@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Fashion_Infrastructure.Data.Migrations
+namespace Fashion_Admin.Data.Migrations
 {
     public partial class init : Migration
     {
