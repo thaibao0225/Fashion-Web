@@ -5,7 +5,11 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fashion-Web", "Fashion-Web\Fashion-Web.csproj", "{1C89AC0F-8958-4DAF-B11E-BD6F1D5F965A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fashion-Admin", "Fashion-Admin\Fashion-Admin.csproj", "{7BD04D6E-78A7-4075-BDDE-2744B726D4B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fashion-Admin", "Fashion-Admin\Fashion-Admin.csproj", "{7BD04D6E-78A7-4075-BDDE-2744B726D4B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fashion-Infrastructure", "Fashion-Infrastructure\Fashion-Infrastructure.csproj", "{57C60B75-7B13-4A36-8A11-664075FEC940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fashion-Model", "Fashion-Model\Fashion-Model.csproj", "{003B394F-AA66-4343-B936-61AD223AD2B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{7BD04D6E-78A7-4075-BDDE-2744B726D4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BD04D6E-78A7-4075-BDDE-2744B726D4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BD04D6E-78A7-4075-BDDE-2744B726D4B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57C60B75-7B13-4A36-8A11-664075FEC940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57C60B75-7B13-4A36-8A11-664075FEC940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57C60B75-7B13-4A36-8A11-664075FEC940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57C60B75-7B13-4A36-8A11-664075FEC940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{003B394F-AA66-4343-B936-61AD223AD2B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003B394F-AA66-4343-B936-61AD223AD2B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003B394F-AA66-4343-B936-61AD223AD2B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003B394F-AA66-4343-B936-61AD223AD2B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
