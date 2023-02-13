@@ -4,6 +4,7 @@ using Fashion_Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fashion_Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230213171828_init8")]
+    partial class init8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,8 +46,9 @@ namespace Fashion_Infrastructure.Migrations
                     b.Property<string>("UpdateOn")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("bill_Code")
-                        .HasColumnType("int");
+                    b.Property<string>("bill_Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("bill_Price")
                         .HasColumnType("float");
@@ -54,17 +57,15 @@ namespace Fashion_Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("bill_ProductPriceList")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("bill_ProductPriceList")
+                        .HasColumnType("float");
 
                     b.Property<string>("bill_ProductSizeList")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("bill_ProductUnitList")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("bill_ProductUnitList")
+                        .HasColumnType("int");
 
                     b.Property<string>("bill_ProductsIdList")
                         .IsRequired()
@@ -79,59 +80,6 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasIndex("bill_UserId");
 
                     b.ToTable("Bills", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            bill_Id = "58f23a31-a072-4b4b-9eec-c09a5ee99cc3",
-                            CreateBy = "CreateBy",
-                            CreateOn = "CreateOn",
-                            IsDelete = false,
-                            UpdateBy = "UpdateBy",
-                            UpdateOn = "UpdateOn",
-                            bill_Code = 1,
-                            bill_Price = 0.0,
-                            bill_ProductColorList = "",
-                            bill_ProductPriceList = "",
-                            bill_ProductSizeList = "",
-                            bill_ProductUnitList = "",
-                            bill_ProductsIdList = "",
-                            bill_UserId = "7742eeba-76d5-41ec-bdc1-c31304862a78"
-                        },
-                        new
-                        {
-                            bill_Id = "6f50bca8-dea2-463c-af13-f678bf6ce1e6",
-                            CreateBy = "CreateBy",
-                            CreateOn = "CreateOn",
-                            IsDelete = false,
-                            UpdateBy = "UpdateBy",
-                            UpdateOn = "UpdateOn",
-                            bill_Code = 1,
-                            bill_Price = 0.0,
-                            bill_ProductColorList = "",
-                            bill_ProductPriceList = "",
-                            bill_ProductSizeList = "",
-                            bill_ProductUnitList = "",
-                            bill_ProductsIdList = "",
-                            bill_UserId = "7742eeba-76d5-41ec-bdc1-c31304862a78"
-                        },
-                        new
-                        {
-                            bill_Id = "d00c9360-fb82-4554-a6ae-3d0c32a9ea1f",
-                            CreateBy = "CreateBy",
-                            CreateOn = "CreateOn",
-                            IsDelete = false,
-                            UpdateBy = "UpdateBy",
-                            UpdateOn = "UpdateOn",
-                            bill_Code = 1,
-                            bill_Price = 0.0,
-                            bill_ProductColorList = "",
-                            bill_ProductPriceList = "",
-                            bill_ProductSizeList = "",
-                            bill_ProductUnitList = "",
-                            bill_ProductsIdList = "",
-                            bill_UserId = "6018b7d5-9db3-4de7-94ac-e142f1ca862a"
-                        });
                 });
 
             modelBuilder.Entity("Fashion_Infrastructure.Entities.CategoriesTable", b =>
@@ -171,7 +119,7 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            category_Id = "1d78bcfe-137b-42b8-8fc6-8dcddbaa1904",
+                            category_Id = "801ea538-7923-4119-b023-a76d0f85ab82",
                             CreateBy = "CreateBy",
                             CreateOn = "CreateOn",
                             IsDelete = false,
@@ -265,13 +213,13 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            product_Id = "046b7f5d-883c-45c6-a1ab-d5ac3afc06e6",
+                            product_Id = "44a16b4d-6ab0-4971-92d0-cd3bf4e76c24",
                             CreateBy = "CreateBy",
                             CreateOn = "CreateOn",
                             IsDelete = false,
                             UpdateBy = "UpdateBy",
                             UpdateOn = "UpdateOn",
-                            product_CategoryId = "1d78bcfe-137b-42b8-8fc6-8dcddbaa1904",
+                            product_CategoryId = "801ea538-7923-4119-b023-a76d0f85ab82",
                             product_Description = "Guard dog",
                             product_Img1 = "img1",
                             product_Img2 = "img2",
@@ -483,13 +431,13 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "7742eeba-76d5-41ec-bdc1-c31304862a78",
-                            RoleId = "dea4d762-a23f-4cba-a038-2259193cc7da"
+                            UserId = "538944f7-233a-432f-8407-92f720cc615d",
+                            RoleId = "7d7e2c2a-a873-4f43-89bc-a04de9f96dd1"
                         },
                         new
                         {
-                            UserId = "6018b7d5-9db3-4de7-94ac-e142f1ca862a",
-                            RoleId = "f12299e3-23c0-4d65-b6be-66f0293b3f1b"
+                            UserId = "7b1e666b-fba5-4694-a1d4-6989eb355c3e",
+                            RoleId = "4f41e410-e79c-4895-91ce-3357c8163238"
                         });
                 });
 
@@ -526,16 +474,16 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "dea4d762-a23f-4cba-a038-2259193cc7da",
-                            ConcurrencyStamp = "f983d701-bf69-4f2f-b170-135b7aa6be8f",
+                            Id = "7d7e2c2a-a873-4f43-89bc-a04de9f96dd1",
+                            ConcurrencyStamp = "8765d586-7ceb-47e6-a6e7-b815f1ac9500",
                             Name = "ADMIN",
                             NormalizedName = "admin",
                             IsDelete = false
                         },
                         new
                         {
-                            Id = "f12299e3-23c0-4d65-b6be-66f0293b3f1b",
-                            ConcurrencyStamp = "cd22a37c-e024-4ae2-b46a-804c0ca1893c",
+                            Id = "4f41e410-e79c-4895-91ce-3357c8163238",
+                            ConcurrencyStamp = "156e415d-422b-407c-8291-1ac9c0d5ae74",
                             Name = "STAFF",
                             NormalizedName = "staff",
                             IsDelete = false
@@ -566,17 +514,17 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7742eeba-76d5-41ec-bdc1-c31304862a78",
+                            Id = "538944f7-233a-432f-8407-92f720cc615d",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "40b73046-51c3-4f27-8299-de1c22c6df03",
+                            ConcurrencyStamp = "65ebfa2e-fc42-42ce-a32a-52e3f7c47554",
                             Email = "staff@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "STAFF@GMAIL.COM",
                             NormalizedUserName = "STAFF@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEP9j1yE6I4yhq3pDni0Inl1udl+zez87W+sZQlEnz5V9pxoREX7fjDoaArHbFL28Mg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMhxq9pJYcXT5qs5WepFOy8kKlUQLUw2jHFTYluLfmbaa3QmRT8GtJwgDKoTdaYu7Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b36b60a6-6d6d-4dfd-b2d3-29cfa96da326",
+                            SecurityStamp = "80fbee80-2ed0-46ab-9246-f26b598a466f",
                             TwoFactorEnabled = false,
                             UserName = "Staft",
                             Address = "",
@@ -586,17 +534,17 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = "6018b7d5-9db3-4de7-94ac-e142f1ca862a",
+                            Id = "7b1e666b-fba5-4694-a1d4-6989eb355c3e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "42fa9d3b-90c3-4684-af27-1c9318e8e93e",
+                            ConcurrencyStamp = "b9cccb1c-63fb-44e3-b846-e682e137d6ce",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAaFLIphmICD1X/ZfY68x6oYyfI+88H6o/h1BdyLjDmwp7WAM4MkpUNvaruCsYbWXg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGx+jzYVkjl3KIWbJBIeYeJekxQukddJ/tCTzyXa7jbv9p++/TdtGGot6gOoo6XXEQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "edc99be5-d742-4dbf-a466-42f0054fb125",
+                            SecurityStamp = "f20b0be0-2718-4e81-83e8-921258945cbe",
                             TwoFactorEnabled = false,
                             UserName = "Admin",
                             Address = "",

@@ -244,4 +244,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Fashion-Infrastructure\Fashion-Infrastructure.csproj" />
+    <ProjectReference Include="..\Fashion-Model\Fashion-Model.csproj" />
+  </ItemGroup>
+
 </Project>

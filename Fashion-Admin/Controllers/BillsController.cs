@@ -1,15 +1,24 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Fashion_Infrastructure.Data;
 
 namespace Fashion_Admin.Controllers
 {
     public class BillsController : Controller
     {
+        private ApplicationDbContext _context;
+        public BillsController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         // GET: BillsController
         [Route("/bills")]
         public ActionResult Index()
         {
-            return View();
+            var queryBill = _context.billsTable.ToList();
+
+            return View(queryBill);
         }
 
         // GET: BillsController/Details/5

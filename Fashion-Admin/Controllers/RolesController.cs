@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Fashion_Admin.Controllers
 {
-    public class RoliesController : Controller
+    public class RolesController : Controller
     {
         // GET: RoliesController
-        [Route("/rolies")]
+        [Route("/roles")]
         public ActionResult Index()
         {
             return View();

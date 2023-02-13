@@ -1,4 +1,4 @@
-using Fashion_Admin.Data;
+using Fashion_Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

@@ -13,6 +13,7 @@ namespace Fashion_Infrastructure.Controllers
             _logger = logger;
         }
 
+        [Route("homedata")]
         public IActionResult Index()
         {
             return View();
