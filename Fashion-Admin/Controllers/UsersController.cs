@@ -1,15 +1,35 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Fashion_Infrastructure.Data;
+using Fashion_Model.Models;
 
 namespace Fashion_Admin.Controllers
 {
     public class UsersController : Controller
     {
+        private ApplicationDbContext _context;
+        public UsersController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+
         // GET: UsersController
         [Route("/users")]
         public ActionResult Index()
         {
-            return View();
+            var query = _context.usersTable.ToList();
+            var userMobdel = query.Select(x => new UsersModel()
+            {
+                user_Id = x.Id,
+                user_FirstName = x.FirstName,
+                user_LastName = x.LastName,
+                user_Email = x.Email,
+                user_UserName = x.UserName,
+                is_Delete = x.IsDelete
+            });
+
+            return View(userMobdel);
         }
 
         // GET: UsersController/Details/5

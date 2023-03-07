@@ -49,8 +49,8 @@ namespace Fashion_Infrastructure.Data
                 {
                     Id = newUser_Id1,
                     UserName = "Staft",
-                    FirstName = "FirstName",
-                    LastName = "LastName",
+                    FirstName = "",
+                    LastName = "",
                     NormalizedUserName = "STAFF@GMAIL.COM",
                     NormalizedEmail = "STAFF@GMAIL.COM",
                     Email = "staff@gmail.com",
@@ -63,8 +63,8 @@ namespace Fashion_Infrastructure.Data
                 {
                     Id = newUser_Id2,
                     UserName = "Admin",
-                    FirstName = "FirstName",
-                    LastName = "LastName",
+                    FirstName = "",
+                    LastName = "",
                     NormalizedUserName = "ADMIN@GMAIL.COM",
                     NormalizedEmail = "ADMIN@GMAIL.COM",
                     Email = "admin@gmail.com",
