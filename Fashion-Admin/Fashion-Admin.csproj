@@ -246,7 +246,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Fashion-Infrastructure\Fashion-Infrastructure.csproj" />
-    <ProjectReference Include="..\Fashion-Model\Fashion-Model.csproj" />
   </ItemGroup>
 
 </Project>

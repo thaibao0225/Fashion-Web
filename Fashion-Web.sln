@@ -5,11 +5,9 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fashion-Web", "Fashion-Web\Fashion-Web.csproj", "{1C89AC0F-8958-4DAF-B11E-BD6F1D5F965A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fashion-Model", "Fashion-Model\Fashion-Model.csproj", "{003B394F-AA66-4343-B936-61AD223AD2B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fashion-Infrastructure", "Fashion-Infrastructure\Fashion-Infrastructure.csproj", "{163D5E1D-6E93-49FE-A0D3-88614E6A5ED3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fashion-Infrastructure", "Fashion-Infrastructure\Fashion-Infrastructure.csproj", "{163D5E1D-6E93-49FE-A0D3-88614E6A5ED3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fashion-Admin", "Fashion-Admin\Fashion-Admin.csproj", "{2CFC43B1-48B0-4B27-AEE0-478F368CFDB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fashion-Admin", "Fashion-Admin\Fashion-Admin.csproj", "{2CFC43B1-48B0-4B27-AEE0-478F368CFDB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{1C89AC0F-8958-4DAF-B11E-BD6F1D5F965A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C89AC0F-8958-4DAF-B11E-BD6F1D5F965A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C89AC0F-8958-4DAF-B11E-BD6F1D5F965A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{003B394F-AA66-4343-B936-61AD223AD2B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{003B394F-AA66-4343-B936-61AD223AD2B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{003B394F-AA66-4343-B936-61AD223AD2B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{003B394F-AA66-4343-B936-61AD223AD2B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{163D5E1D-6E93-49FE-A0D3-88614E6A5ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{163D5E1D-6E93-49FE-A0D3-88614E6A5ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{163D5E1D-6E93-49FE-A0D3-88614E6A5ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
