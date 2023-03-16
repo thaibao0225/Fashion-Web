@@ -11,8 +11,8 @@ namespace Fashion_Infrastructure.Configurations
             builder.ToTable("Bills");
             builder.HasKey(t => new { t.bill_Id });
 
-            builder.HasOne(t => t.userTable_UserId).WithMany(ur => ur.billsTablesList)
-            .HasForeignKey(pc => pc.bill_UserId);
+            //builder.HasOne(t => t.userTable_UserId).WithMany(ur => ur.billsTablesList)
+            //.HasForeignKey(pc => pc.bill_UserId);
 
             
 

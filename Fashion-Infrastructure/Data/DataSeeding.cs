@@ -109,10 +109,10 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductColorList = "",
                     bill_ProductSizeList = "",
 
-                    CreateBy = BaseData.CreateBy,
-                    CreateOn = BaseData.CreateOn,
-                    UpdateBy = BaseData.UpdateBy,
-                    UpdateOn = BaseData.UpdateOn,
+                    //CreateBy = BaseData.CreateBy,
+                    //CreateOn = BaseData.CreateOn,
+                    //UpdateBy = BaseData.UpdateBy,
+                    //UpdateOn = BaseData.UpdateOn,
                     IsDelete = false
                 },
                 new BillsTable()
@@ -127,10 +127,10 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductColorList = "",
                     bill_ProductSizeList = "",
 
-                    CreateBy = BaseData.CreateBy,
-                    CreateOn = BaseData.CreateOn,
-                    UpdateBy = BaseData.UpdateBy,
-                    UpdateOn = BaseData.UpdateOn,
+                    //CreateBy = BaseData.CreateBy,
+                    //CreateOn = BaseData.CreateOn,
+                    //UpdateBy = BaseData.UpdateBy,
+                    //UpdateOn = BaseData.UpdateOn,
                     IsDelete = false
                 },
                 new BillsTable()
@@ -145,10 +145,10 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductColorList = "",
                     bill_ProductSizeList = "",
 
-                    CreateBy = BaseData.CreateBy,
-                    CreateOn = BaseData.CreateOn,
-                    UpdateBy = BaseData.UpdateBy,
-                    UpdateOn = BaseData.UpdateOn,
+                    //CreateBy = BaseData.CreateBy,
+                    //CreateOn = BaseData.CreateOn,
+                    //UpdateBy = BaseData.UpdateBy,
+                    //UpdateOn = BaseData.UpdateOn,
                     IsDelete = false
                 }
                 );
@@ -161,12 +161,12 @@ namespace Fashion_Infrastructure.Data
                 {
                     category_Id = newCategory_Id1,
                     category_Name = "category_Name",
-                    categpry_Description = "category_Description",
+                    //categpry_Description = "category_Description",
 
-                    CreateBy = BaseData.CreateBy,
-                    CreateOn = BaseData.CreateOn,
-                    UpdateBy = BaseData.UpdateBy,
-                    UpdateOn = BaseData.UpdateOn,
+                    //CreateBy = BaseData.CreateBy,
+                    //CreateOn = BaseData.CreateOn,
+                    //UpdateBy = BaseData.UpdateBy,
+                    //UpdateOn = BaseData.UpdateOn,
                     IsDelete = false
                 }
             );
@@ -193,10 +193,10 @@ namespace Fashion_Infrastructure.Data
                     product_ViewNumber = 10,
                     product_CategoryId = newCategory_Id1,
 
-                    CreateBy = BaseData.CreateBy,
-                    CreateOn = BaseData.CreateOn,
-                    UpdateBy = BaseData.UpdateBy,
-                    UpdateOn = BaseData.UpdateOn,
+                    //CreateBy = BaseData.CreateBy,
+                    //CreateOn = BaseData.CreateOn,
+                    //UpdateBy = BaseData.UpdateBy,
+                    //UpdateOn = BaseData.UpdateOn,
                     IsDelete = false
                 }
                 );

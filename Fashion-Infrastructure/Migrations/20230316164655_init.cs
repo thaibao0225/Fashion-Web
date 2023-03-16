@@ -15,6 +15,7 @@ namespace Fashion_Infrastructure.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -31,6 +32,9 @@ namespace Fashion_Infrastructure.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -52,21 +56,184 @@ namespace Fashion_Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Bills",
+                columns: table => new
+                {
+                    bill_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    bill_Code = table.Column<int>(type: "int", nullable: false),
+                    bill_UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    bill_Price = table.Column<int>(type: "int", nullable: false),
+                    bill_ProductsIdList = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    bill_ProductPriceList = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    bill_ProductUnitList = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    bill_ProductColorList = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    bill_ProductSizeList = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    bill_CreateOn = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    bill_IsConfirm = table.Column<bool>(type: "bit", nullable: false),
+                    bill_IsPayment = table.Column<bool>(type: "bit", nullable: false),
+                    CreateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    UpdateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Bills", x => x.bill_Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Categories",
                 columns: table => new
                 {
                     category_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     category_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    categpry_Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreateBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreateOn = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UpdateBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UpdateOn = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsDelete = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    category_Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    category_IsDelete = table.Column<bool>(type: "bit", nullable: false),
+                    CreateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    UpdateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categories", x => x.category_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Color",
+                columns: table => new
+                {
+                    color_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    color_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    color_IdDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Color", x => x.color_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ColorInProduct",
+                columns: table => new
+                {
+                    cip_ColorId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    cip_ProductId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    cip_IsDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ColorInProduct", x => x.cip_ColorId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Comment",
+                columns: table => new
+                {
+                    comment_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    comment_Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    comment_ProductId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    comment_UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    UpdateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comment", x => x.comment_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Contact",
+                columns: table => new
+                {
+                    contact_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    contact_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    contact_EmailId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    emailC_Subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    emailC_Message = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    emailC_IsCheck = table.Column<bool>(type: "bit", nullable: false),
+                    CreateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    UpdateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Contact", x => x.contact_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EmailCustomer",
+                columns: table => new
+                {
+                    emailC_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    emailC_Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    emailC_IsDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EmailCustomer", x => x.emailC_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    product_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    product_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_Img1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_Img2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_Img3 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_Img4 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_Img5 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_ShortDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_Price = table.Column<double>(type: "float", nullable: false),
+                    product_Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    product_Sold = table.Column<int>(type: "int", nullable: true),
+                    product_Rate = table.Column<int>(type: "int", nullable: true),
+                    product_ViewNumber = table.Column<int>(type: "int", nullable: true),
+                    product_CategoryId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    UpdateBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdateOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.product_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Size",
+                columns: table => new
+                {
+                    size_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    size_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    size_IsDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Size", x => x.size_Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SizeInProduct",
+                columns: table => new
+                {
+                    sip_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    sip_ProductId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    sip_IsDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SizeInProduct", x => x.sip_Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -175,62 +342,6 @@ namespace Fashion_Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Bills",
-                columns: table => new
-                {
-                    bill_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    bill_Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    bill_UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    bill_Price = table.Column<double>(type: "float", nullable: false),
-                    CreateBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreateOn = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UpdateBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UpdateOn = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsDelete = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Bills", x => x.bill_Id);
-                    table.ForeignKey(
-                        name: "FK_Bills_AspNetUsers_bill_UserId",
-                        column: x => x.bill_UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Products",
-                columns: table => new
-                {
-                    product_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    product_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    product_Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    product_ShortDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    product_Price = table.Column<double>(type: "float", nullable: false),
-                    product_Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    product_Sold = table.Column<int>(type: "int", nullable: false),
-                    product_Rate = table.Column<int>(type: "int", nullable: false),
-                    product_ViewNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    product_CategoryId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    CreateBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreateOn = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UpdateBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UpdateOn = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsDelete = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Products", x => x.product_Id);
-                    table.ForeignKey(
-                        name: "FK_Products_Categories_product_CategoryId",
-                        column: x => x.product_CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "category_Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -269,16 +380,6 @@ namespace Fashion_Infrastructure.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Bills_bill_UserId",
-                table: "Bills",
-                column: "bill_UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_product_CategoryId",
-                table: "Products",
-                column: "product_CategoryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -302,16 +403,37 @@ namespace Fashion_Infrastructure.Migrations
                 name: "Bills");
 
             migrationBuilder.DropTable(
+                name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "Color");
+
+            migrationBuilder.DropTable(
+                name: "ColorInProduct");
+
+            migrationBuilder.DropTable(
+                name: "Comment");
+
+            migrationBuilder.DropTable(
+                name: "Contact");
+
+            migrationBuilder.DropTable(
+                name: "EmailCustomer");
+
+            migrationBuilder.DropTable(
                 name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "Size");
+
+            migrationBuilder.DropTable(
+                name: "SizeInProduct");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Categories");
         }
     }
 }

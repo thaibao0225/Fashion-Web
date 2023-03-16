@@ -11,6 +11,6 @@ namespace Fashion_Infrastructure.Entities
 
         public Boolean IsDelete { get; set; } = false;
 
-        public List<BillsTable> billsTablesList { get; set; }
+        //public List<BillsTable> billsTablesList { get; set; }
     }
 }

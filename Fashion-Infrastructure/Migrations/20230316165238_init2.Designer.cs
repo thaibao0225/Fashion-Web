@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fashion_Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230212185015_init4")]
-    partial class init4
+    [Migration("20230316165238_init2")]
+    partial class init2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,12 +30,10 @@ namespace Fashion_Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreateBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreateOn")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("CreateOn")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
@@ -43,29 +41,39 @@ namespace Fashion_Infrastructure.Migrations
                     b.Property<string>("UpdateBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UpdateOn")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("UpdateOn")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("bill_Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("bill_Code")
+                        .HasColumnType("int");
 
-                    b.Property<double>("bill_Price")
-                        .HasColumnType("float");
+                    b.Property<DateTime>("bill_CreateOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("bill_IsConfirm")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("bill_IsPayment")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("bill_Price")
+                        .HasColumnType("int");
 
                     b.Property<string>("bill_ProductColorList")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("bill_ProductPriceList")
-                        .HasColumnType("float");
+                    b.Property<string>("bill_ProductPriceList")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("bill_ProductSizeList")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("bill_ProductUnitList")
-                        .HasColumnType("int");
+                    b.Property<string>("bill_ProductUnitList")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("bill_ProductsIdList")
                         .IsRequired()
@@ -73,11 +81,9 @@ namespace Fashion_Infrastructure.Migrations
 
                     b.Property<string>("bill_UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("bill_Id");
-
-                    b.HasIndex("bill_UserId");
 
                     b.ToTable("Bills", (string)null);
                 });
@@ -88,12 +94,10 @@ namespace Fashion_Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreateBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreateOn")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("CreateOn")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
@@ -101,14 +105,17 @@ namespace Fashion_Infrastructure.Migrations
                     b.Property<string>("UpdateBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UpdateOn")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("UpdateOn")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("category_Name")
+                    b.Property<string>("category_Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("categpry_Description")
+                    b.Property<bool>("category_IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("category_Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -117,21 +124,50 @@ namespace Fashion_Infrastructure.Migrations
                     b.ToTable("Categories", (string)null);
                 });
 
-            modelBuilder.Entity("Fashion_Infrastructure.Entities.ProductsTable", b =>
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.ColorInProductTable", b =>
                 {
-                    b.Property<string>("product_Id")
+                    b.Property<string>("cip_ColorId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("BillsTablebill_Id")
+                    b.Property<bool>("cip_IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("cip_ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("cip_ColorId");
+
+                    b.ToTable("ColorInProduct", (string)null);
+                });
+
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.ColorsTable", b =>
+                {
+                    b.Property<string>("color_Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("color_IdDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("color_Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("color_Id");
+
+                    b.ToTable("Color", (string)null);
+                });
+
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.CommentTable", b =>
+                {
+                    b.Property<string>("comment_Id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreateBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreateOn")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("CreateOn")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
@@ -139,14 +175,132 @@ namespace Fashion_Infrastructure.Migrations
                     b.Property<string>("UpdateBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UpdateOn")
+                    b.Property<DateTime?>("UpdateOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("comment_ProductId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("comment_Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("comment_UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("comment_Id");
+
+                    b.ToTable("Comment", (string)null);
+                });
+
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.ContactTable", b =>
+                {
+                    b.Property<string>("contact_Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CreateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UpdateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("contact_EmailId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("contact_Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("emailC_IsCheck")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("emailC_Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("emailC_Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("contact_Id");
+
+                    b.ToTable("Contact", (string)null);
+                });
+
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.EmailCustomerTable", b =>
+                {
+                    b.Property<string>("emailC_Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("emailC_Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("emailC_IsDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("emailC_Id");
+
+                    b.ToTable("EmailCustomer", (string)null);
+                });
+
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.ProductsTable", b =>
+                {
+                    b.Property<string>("product_Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CreateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UpdateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateOn")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("product_CategoryId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("product_Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("product_Img1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("product_Img2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("product_Img3")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("product_Img4")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("product_Img5")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -157,31 +311,60 @@ namespace Fashion_Infrastructure.Migrations
                     b.Property<double>("product_Price")
                         .HasColumnType("float");
 
-                    b.Property<int>("product_Rate")
+                    b.Property<int?>("product_Rate")
                         .HasColumnType("int");
 
                     b.Property<string>("product_ShortDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("product_Sold")
+                    b.Property<int?>("product_Sold")
                         .HasColumnType("int");
 
                     b.Property<string>("product_Type")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("product_ViewNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("product_ViewNumber")
+                        .HasColumnType("int");
 
                     b.HasKey("product_Id");
 
-                    b.HasIndex("BillsTablebill_Id");
-
-                    b.HasIndex("product_CategoryId");
-
                     b.ToTable("Products", (string)null);
+                });
+
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.SizeInProductTable", b =>
+                {
+                    b.Property<string>("sip_Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("sip_IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("sip_ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("sip_Id");
+
+                    b.ToTable("SizeInProduct", (string)null);
+                });
+
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.SizeTable", b =>
+                {
+                    b.Property<string>("size_Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("size_IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("size_Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("size_Id");
+
+                    b.ToTable("Size", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -402,6 +585,9 @@ namespace Fashion_Infrastructure.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole");
 
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
                     b.HasDiscriminator().HasValue("RolesTable");
                 });
 
@@ -413,33 +599,29 @@ namespace Fashion_Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasDiscriminator().HasValue("UsersTable");
                 });
 
-            modelBuilder.Entity("Fashion_Infrastructure.Entities.BillsTable", b =>
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.ColorInProductTable", b =>
                 {
-                    b.HasOne("Fashion_Infrastructure.Entities.UsersTable", "userTable_UserId")
-                        .WithMany("billsTablesList")
-                        .HasForeignKey("bill_UserId")
+                    b.HasOne("Fashion_Infrastructure.Entities.ColorsTable", "cip_Color")
+                        .WithMany("color_InProductsList")
+                        .HasForeignKey("cip_ColorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("userTable_UserId");
-                });
-
-            modelBuilder.Entity("Fashion_Infrastructure.Entities.ProductsTable", b =>
-                {
-                    b.HasOne("Fashion_Infrastructure.Entities.BillsTable", null)
-                        .WithMany("bill_ProductsList")
-                        .HasForeignKey("BillsTablebill_Id");
-
-                    b.HasOne("Fashion_Infrastructure.Entities.CategoriesTable", "productCategoryId")
-                        .WithMany("Products")
-                        .HasForeignKey("product_CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("productCategoryId");
+                    b.Navigation("cip_Color");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -493,19 +675,9 @@ namespace Fashion_Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Fashion_Infrastructure.Entities.BillsTable", b =>
+            modelBuilder.Entity("Fashion_Infrastructure.Entities.ColorsTable", b =>
                 {
-                    b.Navigation("bill_ProductsList");
-                });
-
-            modelBuilder.Entity("Fashion_Infrastructure.Entities.CategoriesTable", b =>
-                {
-                    b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("Fashion_Infrastructure.Entities.UsersTable", b =>
-                {
-                    b.Navigation("billsTablesList");
+                    b.Navigation("color_InProductsList");
                 });
 #pragma warning restore 612, 618
         }
