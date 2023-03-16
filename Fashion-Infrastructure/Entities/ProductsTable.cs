@@ -17,11 +17,12 @@
         public int? product_Rate { get ; set; } = 0;
         public int? product_ViewNumber { get; set; }
         public string product_CategoryId { get; set; } = string.Empty; 
-        //public CategoriesTable productCategoryId { get; set; }
+        public CategoriesTable product_CategoriesTable { get; set; }
 
 
         public List<ColorInProductTable> product_colorInProductTablesList { get; set; }
         public List<SizeInProductTable> product_sizeInProductTablesList { get; set; }
+        public List<CommentTable> product_CommentTableList { get; set; }
 
     }
 }

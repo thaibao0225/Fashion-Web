@@ -22,14 +22,14 @@ namespace Fashion_Infrastructure.Data
                 new RolesTable()
                 {
                     Id = newRole_Id1,
-                    Name = "ADMIN",
+                    Name = "Admin",
                     NormalizedName = "admin",
                     IsDelete = false
                 },
                 new RolesTable()
                 {
                     Id = newRole_Id2,
-                    Name = "STAFF",
+                    Name = "Staff",
                     NormalizedName = "staff",
                     IsDelete = false
                 }
@@ -90,83 +90,88 @@ namespace Fashion_Infrastructure.Data
                });
 
 
-            // Table Bills
-            string newBill_Id1 = Guid.NewGuid().ToString();
-            string newBill_Id2 = Guid.NewGuid().ToString();
-            string newBill_Id3 = Guid.NewGuid().ToString();
+            //// Table Bills
+            //string newBill_Id1 = Guid.NewGuid().ToString();
+            //string newBill_Id2 = Guid.NewGuid().ToString();
+            //string newBill_Id3 = Guid.NewGuid().ToString();
 
 
-            builder.Entity<BillsTable>().HasData(
-                new BillsTable()
-                {
-                    bill_Id = newBill_Id1,
-                    bill_Code = 1,
-                    bill_UserId = newUser_Id1,
-                    bill_Price = 0,
-                    bill_ProductsIdList = "",
-                    bill_ProductPriceList = "",
-                    bill_ProductUnitList = "",
-                    bill_ProductColorList = "",
-                    bill_ProductSizeList = "",
+            //builder.Entity<BillsTable>().HasData(
+            //    new BillsTable()
+            //    {
+            //        bill_Id = newBill_Id1,
+            //        bill_Code = 1,
+            //        bill_UserId = newUser_Id1,
+            //        bill_Price = 0,
+            //        bill_ProductsIdList = "",
+            //        bill_ProductPriceList = "",
+            //        bill_ProductUnitList = "",
+            //        bill_ProductColorList = "",
+            //        bill_ProductSizeList = "",
 
-                    //CreateBy = BaseData.CreateBy,
-                    //CreateOn = BaseData.CreateOn,
-                    //UpdateBy = BaseData.UpdateBy,
-                    //UpdateOn = BaseData.UpdateOn,
-                    IsDelete = false
-                },
-                new BillsTable()
-                {
-                    bill_Id = newBill_Id2,
-                    bill_Code = 1,
-                    bill_UserId = newUser_Id1,
-                    bill_Price = 0,
-                    bill_ProductsIdList = "",
-                    bill_ProductPriceList = "",
-                    bill_ProductUnitList = "",
-                    bill_ProductColorList = "",
-                    bill_ProductSizeList = "",
+            //        CreateBy = BaseData.CreateBy,
+            //        CreateOn = BaseData.CreateOn,
+            //        UpdateBy = BaseData.UpdateBy,
+            //        UpdateOn = BaseData.UpdateOn,
+            //        IsDelete = false
+            //    },
+            //    new BillsTable()
+            //    {
+            //        bill_Id = newBill_Id2,
+            //        bill_Code = 1,
+            //        bill_UserId = newUser_Id1,
+            //        bill_Price = 0,
+            //        bill_ProductsIdList = "",
+            //        bill_ProductPriceList = "",
+            //        bill_ProductUnitList = "",
+            //        bill_ProductColorList = "",
+            //        bill_ProductSizeList = "",
 
-                    //CreateBy = BaseData.CreateBy,
-                    //CreateOn = BaseData.CreateOn,
-                    //UpdateBy = BaseData.UpdateBy,
-                    //UpdateOn = BaseData.UpdateOn,
-                    IsDelete = false
-                },
-                new BillsTable()
-                {
-                    bill_Id = newBill_Id3,
-                    bill_Code = 1,
-                    bill_UserId = newUser_Id2,
-                    bill_Price = 0,
-                    bill_ProductsIdList = "",
-                    bill_ProductPriceList = "",
-                    bill_ProductUnitList = "",
-                    bill_ProductColorList = "",
-                    bill_ProductSizeList = "",
+            //        CreateBy = BaseData.CreateBy,
+            //        CreateOn = BaseData.CreateOn,
+            //        UpdateBy = BaseData.UpdateBy,
+            //        UpdateOn = BaseData.UpdateOn,
+            //        IsDelete = false
+            //    },
+            //    new BillsTable()
+            //    {
+            //        bill_Id = newBill_Id3,
+            //        bill_Code = 1,
+            //        bill_UserId = newUser_Id2,
+            //        bill_Price = 0,
+            //        bill_ProductsIdList = "",
+            //        bill_ProductPriceList = "",
+            //        bill_ProductUnitList = "",
+            //        bill_ProductColorList = "",
+            //        bill_ProductSizeList = "",
 
-                    //CreateBy = BaseData.CreateBy,
-                    //CreateOn = BaseData.CreateOn,
-                    //UpdateBy = BaseData.UpdateBy,
-                    //UpdateOn = BaseData.UpdateOn,
-                    IsDelete = false
-                }
-                );
+            //        CreateBy = BaseData.CreateBy,
+            //        CreateOn = BaseData.CreateOn,
+            //        UpdateBy = BaseData.UpdateBy,
+            //        UpdateOn = BaseData.UpdateOn,
+            //        IsDelete = false
+            //    }
+            //    );
 
 
             // Category Table
             string newCategory_Id1 = Guid.NewGuid().ToString();
+            string newCategory_Id2 = Guid.NewGuid().ToString();
+
+
             builder.Entity<CategoriesTable>().HasData(
                 new CategoriesTable()
                 {
                     category_Id = newCategory_Id1,
-                    category_Name = "category_Name",
+                    category_Name = "category_Name1",
                     //categpry_Description = "category_Description",
-
-                    //CreateBy = BaseData.CreateBy,
-                    //CreateOn = BaseData.CreateOn,
-                    //UpdateBy = BaseData.UpdateBy,
-                    //UpdateOn = BaseData.UpdateOn,
+                    IsDelete = false
+                },
+                new CategoriesTable()
+                {
+                    category_Id = newCategory_Id2,
+                    category_Name = "category_Name2",
+                    //categpry_Description = "category_Description",
                     IsDelete = false
                 }
             );
@@ -178,25 +183,20 @@ namespace Fashion_Infrastructure.Data
                 new ProductsTable()
                 {
                     product_Id = newProduct_Id1,
-                    product_Name = "Guard dog",
-                    product_Description = "Guard dog",
-                    product_ShortDescription = "Short Description",
-                    product_Img1 = "img1",
-                    product_Img2 = "img2",
-                    product_Img3 = "img3",
-                    product_Img4 = "img4",
-                    product_Img5 = "img5",
+                    product_Name = "",
+                    product_Description = "",
+                    product_ShortDescription = "",
+                    product_Img1 = "",
+                    product_Img2 = "",
+                    product_Img3 = "",
+                    product_Img4 = "",
+                    product_Img5 = "",
                     product_Price = 10,
                     product_Type = CommonProduct.ProductType1,
                     product_Sold = 10,
                     product_Rate = 4,
                     product_ViewNumber = 10,
                     product_CategoryId = newCategory_Id1,
-
-                    //CreateBy = BaseData.CreateBy,
-                    //CreateOn = BaseData.CreateOn,
-                    //UpdateBy = BaseData.UpdateBy,
-                    //UpdateOn = BaseData.UpdateOn,
                     IsDelete = false
                 }
                 );

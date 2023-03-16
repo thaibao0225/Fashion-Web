@@ -37,7 +37,7 @@ namespace Fashion_Infrastructure.Data
             builder.ApplyConfiguration(new SizeTableConfigurations());
             builder.ApplyConfiguration(new UsersTableConfigurations());
 
-            //builder.Seed();
+            builder.Seed();
 
         }
 

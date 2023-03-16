@@ -2,9 +2,9 @@
 {
     public static class BaseData
     {
-        public static string CreateBy = "CreateBy";
-        public static string CreateOn = "CreateOn";
-        public static string UpdateBy = "UpdateBy";
-        public static string UpdateOn = "UpdateOn";
+        public static string CreateBy = "";
+        public static DateTime CreateOn = DateTime.Now;
+        public static string UpdateBy = "";
+        public static DateTime UpdateOn = DateTime.Now;
     }
 }

@@ -11,7 +11,7 @@ namespace Fashion_Infrastructure.Entities
 
 
 
-        //public List<ProductsTable>? Products { get; set; } 
+        public List<ProductsTable> ProductsTableList { get; set; } 
 
 
 

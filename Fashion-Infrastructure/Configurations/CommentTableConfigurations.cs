@@ -11,6 +11,10 @@ namespace Fashion_Infrastructure.Configurations
             builder.ToTable("Comment");
             builder.HasKey(t => new { t.comment_Id });
 
+            builder.HasOne(t => t.comment_ProductsTable).WithMany(ur => ur.product_CommentTableList)
+            .HasForeignKey(pc => pc.comment_ProductId);
+            builder.HasOne(t => t.comment_UsersTable).WithMany(ur => ur.CommentTableList)
+            .HasForeignKey(pc => pc.comment_UserId);
         }
     }
 
