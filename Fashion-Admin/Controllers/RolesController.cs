@@ -1,15 +1,24 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fashion_Admin.Controllers
 {
     public class RolesController : Controller
     {
+        private ApplicationDbContext _context;
+        public RolesController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         // GET: RoliesController
         [Route("/roles")]
         public ActionResult Index()
         {
-            return View();
+            var query = _context.rolesTable;
+
+            return View(query);
         }
 
         // GET: RoliesController/Details/5

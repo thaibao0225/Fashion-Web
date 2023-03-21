@@ -17,18 +17,9 @@ namespace Fashion_Admin.Controllers
         [Route("/users")]
         public ActionResult Index()
         {
-            //var query = _context.usersTable.ToList();
-            //var userMobdel = query.Select(x => new UsersModel()
-            //{
-            //    user_Id = x.Id,
-            //    user_FirstName = x.FirstName,
-            //    user_LastName = x.LastName,
-            //    user_Email = x.Email,
-            //    user_UserName = x.UserName,
-            //    is_Delete = x.IsDelete
-            //});
+            var query = _context.usersTable.ToList();
 
-            return View();
+            return View(query);
         }
 
         // GET: UsersController/Details/5

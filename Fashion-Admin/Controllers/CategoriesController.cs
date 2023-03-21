@@ -1,15 +1,24 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fashion_Admin.Controllers
 {
     public class CategoriesController : Controller
     {
+        private ApplicationDbContext _context;
+        public CategoriesController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         // GET: CategoriesController
         [Route("/categories")]
         public ActionResult Index()
         {
-            return View();
+            var query = _context.categoriesTable;
+
+            return View(query);
         }
 
         // GET: CategoriesController/Details/5
