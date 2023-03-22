@@ -120,9 +120,40 @@ namespace Fashion_Fuction.Services
             return true;
         }
 
-        //public BillModel GetBillById(string billId )
+        //public List<ProductModel> UnGenProductString(
+        //    string productIdString,
+        //    string productPriceString,
+        //    string productQuantityString,
+        //    string productColorString,
+        //    string productSizeString
+        //    )
         //{
 
+
+
+        //    return null;
+        //}
+
+        //public BillModel GetBillById(string billId)
+        //{
+        //    var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id ==  billId);
+
+        //    if (billQuery != null)
+        //    {
+        //        BillModel billModel = new BillModel();
+        //        billModel.bill_Id = billId;
+        //        billModel.bill_UserId = billQuery.bill_UserId;
+        //        billModel.bill_CreateOn = billQuery.bill_CreateOn;
+        //        billModel.bill_IsConfirm = billQuery.bill_IsConfirm;
+        //        billModel.bill_IsPayment = billQuery.bill_IsPayment;
+        //        billModel.bill_Price = billQuery.bill_Price;
+        //        billModel.bill_Price = billQuery.bill_Price;
+
+
+        //    }
+            
+
+        //    return null;
         //}
 
     }
