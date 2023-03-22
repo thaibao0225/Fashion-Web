@@ -90,12 +90,12 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            bill_Id = "2784b4eb-f49e-4bec-834b-24c2333b9543",
+                            bill_Id = "1451d77a-a185-4d10-905c-2bc0a7f629ae",
                             CreateBy = "",
-                            CreateOn = new DateTime(2023, 3, 23, 0, 20, 26, 408, DateTimeKind.Local).AddTicks(275),
+                            CreateOn = new DateTime(2023, 3, 23, 0, 41, 20, 741, DateTimeKind.Local).AddTicks(254),
                             IsDelete = false,
                             UpdateBy = "",
-                            UpdateOn = new DateTime(2023, 3, 23, 0, 20, 26, 409, DateTimeKind.Local).AddTicks(547),
+                            UpdateOn = new DateTime(2023, 3, 23, 0, 41, 20, 742, DateTimeKind.Local).AddTicks(250),
                             bill_Code = 1,
                             bill_CreateOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             bill_IsConfirm = false,
@@ -105,17 +105,17 @@ namespace Fashion_Infrastructure.Migrations
                             bill_ProductPriceList = "10|10|10|10|",
                             bill_ProductSizeList = "X|XL|S|M",
                             bill_ProductUnitList = "1|1|1|1|",
-                            bill_ProductsIdList = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b|034b3077-7ce5-420c-a103-ea795aeb01b6|9ff292f3-1087-49d9-841c-d37c022da2e0|e6cf8556-de00-4c4f-9199-9504357ae64d|",
-                            bill_UserId = "1fd3ca8a-9a44-4600-819c-804b6bd57b85"
+                            bill_ProductsIdList = "9f93172b-77ca-4dde-b634-6a1768975b28|769a1b20-df41-4118-8b17-d5b9468a9079|88457fe7-6ec7-4f01-b039-61aafde239b6|a4f42a4b-b9ab-46a7-b769-72f5962c4e8c|",
+                            bill_UserId = "8704b774-124e-4353-a85f-24da0fcc0313"
                         },
                         new
                         {
-                            bill_Id = "3f85fd19-d1aa-48f1-ac82-210151ecde1a",
+                            bill_Id = "139fb0ca-123e-4841-b97d-06315431a2d1",
                             CreateBy = "",
-                            CreateOn = new DateTime(2023, 3, 23, 0, 20, 26, 408, DateTimeKind.Local).AddTicks(275),
+                            CreateOn = new DateTime(2023, 3, 23, 0, 41, 20, 741, DateTimeKind.Local).AddTicks(254),
                             IsDelete = false,
                             UpdateBy = "",
-                            UpdateOn = new DateTime(2023, 3, 23, 0, 20, 26, 409, DateTimeKind.Local).AddTicks(547),
+                            UpdateOn = new DateTime(2023, 3, 23, 0, 41, 20, 742, DateTimeKind.Local).AddTicks(250),
                             bill_Code = 1,
                             bill_CreateOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             bill_IsConfirm = false,
@@ -125,17 +125,17 @@ namespace Fashion_Infrastructure.Migrations
                             bill_ProductPriceList = "10|10|10|10|",
                             bill_ProductSizeList = "X|XL|S|M",
                             bill_ProductUnitList = "1|1|1|1|",
-                            bill_ProductsIdList = "0b83fb38-7655-419e-bf7a-6da14af19b05|aaedc19f-219e-482f-8b55-b2a6ed29ae0a|d288e05b-9379-4743-9d0e-2d499e3c0065|98e2510d-d2b3-4582-b2a1-cf76399fd262|",
-                            bill_UserId = "a8c43797-7bdb-40aa-aad8-311ad447e64b"
+                            bill_ProductsIdList = "60d3611a-b1b7-48ea-96f3-d80b9884213e|6ad3c1c8-09f7-4388-82d4-aafcd77f6940|9383bda5-e8c2-4351-b071-f0291ddef67f|10867dcf-3634-4316-a4bb-db0ab182e2ec|",
+                            bill_UserId = "ba532b7c-6631-420a-83eb-401605a41e7a"
                         },
                         new
                         {
-                            bill_Id = "2d3bbad9-70e7-4876-8c13-86c377567a1a",
+                            bill_Id = "67bf096d-6f71-4621-bcad-41b3fe09ede1",
                             CreateBy = "",
-                            CreateOn = new DateTime(2023, 3, 23, 0, 20, 26, 408, DateTimeKind.Local).AddTicks(275),
+                            CreateOn = new DateTime(2023, 3, 23, 0, 41, 20, 741, DateTimeKind.Local).AddTicks(254),
                             IsDelete = false,
                             UpdateBy = "",
-                            UpdateOn = new DateTime(2023, 3, 23, 0, 20, 26, 409, DateTimeKind.Local).AddTicks(547),
+                            UpdateOn = new DateTime(2023, 3, 23, 0, 41, 20, 742, DateTimeKind.Local).AddTicks(250),
                             bill_Code = 1,
                             bill_CreateOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             bill_IsConfirm = false,
@@ -145,8 +145,8 @@ namespace Fashion_Infrastructure.Migrations
                             bill_ProductPriceList = "10|10|10|10|",
                             bill_ProductSizeList = "X|XL|S|M",
                             bill_ProductUnitList = "1|1|1|1|",
-                            bill_ProductsIdList = "6f8a9897-c004-4beb-b37d-5e50a5800f87|030f0480-1ed4-4aaf-bbad-ec3e6d2f7b52|eb1b9845-fb95-49e0-8c14-c38fa59e340c|56e3ad0d-ee46-4d9b-a5ff-c3974fd3568c|",
-                            bill_UserId = "6b181921-c620-4adc-8235-dfe9f1101f72"
+                            bill_ProductsIdList = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3|b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c|1a271ff1-e455-4a85-bcc3-6ba0b35c3b89|b245e5c8-ab89-478c-9243-8194eb6e1e4d|",
+                            bill_UserId = "cb97e0a7-bb80-4210-bf07-2987b95ed23d"
                         });
                 });
 
@@ -188,7 +188,7 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            category_Id = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
+                            category_Id = "b0b39ffb-118a-4bb0-8565-c7814ccd6f8f",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -196,7 +196,7 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            category_Id = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
+                            category_Id = "2d81d097-a481-4848-b08d-e36d7d03e161",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -204,7 +204,7 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            category_Id = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
+                            category_Id = "d51b45c1-d670-4ede-9541-e4ccd5b7acb0",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -212,7 +212,7 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            category_Id = "798decc8-17c8-4152-9652-61e55d5f5cce",
+                            category_Id = "667ee33c-102e-4867-be70-67557b81fca0",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -220,7 +220,7 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            category_Id = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
+                            category_Id = "8ea6b7ae-38f8-49e1-901b-7d236db243b0",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -248,26 +248,722 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            cip_ColorId = "bed3d69f-f5db-483f-926f-52992acc3c9a",
-                            cip_ProductId = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
                             cip_IsDelete = false
                         },
                         new
                         {
-                            cip_ColorId = "a6266efc-5930-4473-b9b9-4445cfe1dabd",
-                            cip_ProductId = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
                             cip_IsDelete = false
                         },
                         new
                         {
-                            cip_ColorId = "ffc841ff-ff76-413a-8f33-f4a6c85af330",
-                            cip_ProductId = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
                             cip_IsDelete = false
                         },
                         new
                         {
-                            cip_ColorId = "310eaf57-3ed1-427a-8684-66a1d18d480e",
-                            cip_ProductId = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "1a271ff1-e455-4a85-bcc3-6ba0b35c3b89",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "1a271ff1-e455-4a85-bcc3-6ba0b35c3b89",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "1a271ff1-e455-4a85-bcc3-6ba0b35c3b89",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "1a271ff1-e455-4a85-bcc3-6ba0b35c3b89",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "b245e5c8-ab89-478c-9243-8194eb6e1e4d",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "b245e5c8-ab89-478c-9243-8194eb6e1e4d",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "b245e5c8-ab89-478c-9243-8194eb6e1e4d",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "b245e5c8-ab89-478c-9243-8194eb6e1e4d",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "8e24595b-1be1-4e33-9983-524256e712da",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "8e24595b-1be1-4e33-9983-524256e712da",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "8e24595b-1be1-4e33-9983-524256e712da",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "8e24595b-1be1-4e33-9983-524256e712da",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "ac8682e8-a1b5-42bb-9386-8cd6c71eac0e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "ac8682e8-a1b5-42bb-9386-8cd6c71eac0e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "ac8682e8-a1b5-42bb-9386-8cd6c71eac0e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "ac8682e8-a1b5-42bb-9386-8cd6c71eac0e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "c26c1ca6-514a-426f-9f81-8203ec4bbde3",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "c26c1ca6-514a-426f-9f81-8203ec4bbde3",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "c26c1ca6-514a-426f-9f81-8203ec4bbde3",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "c26c1ca6-514a-426f-9f81-8203ec4bbde3",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "3e2d6ddb-f35b-4df8-be79-750f2313f767",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "3e2d6ddb-f35b-4df8-be79-750f2313f767",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "3e2d6ddb-f35b-4df8-be79-750f2313f767",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "3e2d6ddb-f35b-4df8-be79-750f2313f767",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "712b8b74-7cac-47bd-987a-3b9b78070878",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "712b8b74-7cac-47bd-987a-3b9b78070878",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "712b8b74-7cac-47bd-987a-3b9b78070878",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "712b8b74-7cac-47bd-987a-3b9b78070878",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "424ff46c-a81f-4fed-a342-89161a1825e9",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "424ff46c-a81f-4fed-a342-89161a1825e9",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "424ff46c-a81f-4fed-a342-89161a1825e9",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "424ff46c-a81f-4fed-a342-89161a1825e9",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "705a9428-1524-4142-95b4-5cbcbcd54c2d",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "705a9428-1524-4142-95b4-5cbcbcd54c2d",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "705a9428-1524-4142-95b4-5cbcbcd54c2d",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "705a9428-1524-4142-95b4-5cbcbcd54c2d",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "23c6abde-4590-4235-bc7f-b72710b379e2",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "23c6abde-4590-4235-bc7f-b72710b379e2",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "23c6abde-4590-4235-bc7f-b72710b379e2",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "23c6abde-4590-4235-bc7f-b72710b379e2",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "2adedc2c-fa8e-4f10-baf1-a5a6c9ccbd92",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "2adedc2c-fa8e-4f10-baf1-a5a6c9ccbd92",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "2adedc2c-fa8e-4f10-baf1-a5a6c9ccbd92",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "2adedc2c-fa8e-4f10-baf1-a5a6c9ccbd92",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "25c065c4-4acb-4f0c-a0d3-cccd917199a0",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "25c065c4-4acb-4f0c-a0d3-cccd917199a0",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "25c065c4-4acb-4f0c-a0d3-cccd917199a0",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "25c065c4-4acb-4f0c-a0d3-cccd917199a0",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "6ae0963d-7969-43aa-9f13-79998e0eb218",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "6ae0963d-7969-43aa-9f13-79998e0eb218",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "6ae0963d-7969-43aa-9f13-79998e0eb218",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "6ae0963d-7969-43aa-9f13-79998e0eb218",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "ed952d6d-01f8-42ec-a79a-add965424751",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "ed952d6d-01f8-42ec-a79a-add965424751",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "ed952d6d-01f8-42ec-a79a-add965424751",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "ed952d6d-01f8-42ec-a79a-add965424751",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "7b7dc639-667c-408e-8a52-c3ddd24caf7e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "7b7dc639-667c-408e-8a52-c3ddd24caf7e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "7b7dc639-667c-408e-8a52-c3ddd24caf7e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "7b7dc639-667c-408e-8a52-c3ddd24caf7e",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "487cc631-dd5c-4d66-a839-95f4f748050f",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "487cc631-dd5c-4d66-a839-95f4f748050f",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "487cc631-dd5c-4d66-a839-95f4f748050f",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "487cc631-dd5c-4d66-a839-95f4f748050f",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "81c2cb74-0c83-41d5-988d-d368c023faf0",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "81c2cb74-0c83-41d5-988d-d368c023faf0",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "81c2cb74-0c83-41d5-988d-d368c023faf0",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "81c2cb74-0c83-41d5-988d-d368c023faf0",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "c218ec36-600b-42de-bccc-a78896d0009c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "c218ec36-600b-42de-bccc-a78896d0009c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "c218ec36-600b-42de-bccc-a78896d0009c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "c218ec36-600b-42de-bccc-a78896d0009c",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "8bc63de7-19fc-4911-a0d7-dc6cbbf15232",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "8bc63de7-19fc-4911-a0d7-dc6cbbf15232",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "8bc63de7-19fc-4911-a0d7-dc6cbbf15232",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "8bc63de7-19fc-4911-a0d7-dc6cbbf15232",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
+                            cip_ProductId = "26d3c30b-b2fe-4777-96c7-0ca09274105a",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
+                            cip_ProductId = "26d3c30b-b2fe-4777-96c7-0ca09274105a",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
+                            cip_ProductId = "26d3c30b-b2fe-4777-96c7-0ca09274105a",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
+                            cip_ProductId = "26d3c30b-b2fe-4777-96c7-0ca09274105a",
                             cip_IsDelete = false
                         });
                 });
@@ -291,25 +987,25 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            color_Id = "bed3d69f-f5db-483f-926f-52992acc3c9a",
+                            color_Id = "7b2c09a8-8b5b-4555-845e-eaa80466763b",
                             color_IdDelete = false,
                             color_Name = "Red"
                         },
                         new
                         {
-                            color_Id = "a6266efc-5930-4473-b9b9-4445cfe1dabd",
+                            color_Id = "d094391d-9208-4ffb-a46d-ee018ccc5ab7",
                             color_IdDelete = false,
                             color_Name = "Black"
                         },
                         new
                         {
-                            color_Id = "ffc841ff-ff76-413a-8f33-f4a6c85af330",
+                            color_Id = "2e6bb710-752d-439b-81ac-ddb8cbf97e8c",
                             color_IdDelete = false,
                             color_Name = "Green"
                         },
                         new
                         {
-                            color_Id = "310eaf57-3ed1-427a-8684-66a1d18d480e",
+                            color_Id = "860cbe7b-5063-49ef-9dab-fe0dd158aee3",
                             color_IdDelete = false,
                             color_Name = "Yellow"
                         });
@@ -500,9 +1196,9 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            product_Id = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            product_Id = "9f93172b-77ca-4dde-b634-6a1768975b28",
                             IsDelete = false,
-                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
+                            product_CategoryId = "b0b39ffb-118a-4bb0-8565-c7814ccd6f8f",
                             product_Description = "Nike Air Jordan 1 Low Elevate Low ‘Iced Lilac’ hiện đã có sẵn tại Sneaker Daily Shop, đừng bỏ lỡ cơ hội của mình nhé!",
                             product_Img1 = "StaticFiles/p-1/product-1.png",
                             product_Img2 = "StaticFiles/p-1/product-2.png",
@@ -519,9 +1215,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "034b3077-7ce5-420c-a103-ea795aeb01b6",
+                            product_Id = "769a1b20-df41-4118-8b17-d5b9468a9079",
                             IsDelete = false,
-                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
+                            product_CategoryId = "b0b39ffb-118a-4bb0-8565-c7814ccd6f8f",
                             product_Description = "Nike Air Jordan 1 Elevate Low Neutral Grey (Women’s) DH7004-110",
                             product_Img1 = "StaticFiles/p-2/product-1.png",
                             product_Img2 = "StaticFiles/p-2/product-2.png",
@@ -538,9 +1234,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "9ff292f3-1087-49d9-841c-d37c022da2e0",
+                            product_Id = "88457fe7-6ec7-4f01-b039-61aafde239b6",
                             IsDelete = false,
-                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
+                            product_CategoryId = "b0b39ffb-118a-4bb0-8565-c7814ccd6f8f",
                             product_Description = "Nike Air Jordan 1 Retro High 85 ‘Black White’ BQ4422-001",
                             product_Img1 = "StaticFiles/p-3/product-1.png",
                             product_Img2 = "StaticFiles/p-3/product-2.png",
@@ -557,9 +1253,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "e6cf8556-de00-4c4f-9199-9504357ae64d",
+                            product_Id = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
                             IsDelete = false,
-                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
+                            product_CategoryId = "b0b39ffb-118a-4bb0-8565-c7814ccd6f8f",
                             product_Description = "Nike Air Jordan 1 Mid SE ‘Coconut Milk’ DV1302-100",
                             product_Img1 = "StaticFiles/p-4/product-1.png",
                             product_Img2 = "StaticFiles/p-4/product-2.png",
@@ -576,9 +1272,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "0b83fb38-7655-419e-bf7a-6da14af19b05",
+                            product_Id = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
                             IsDelete = false,
-                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
+                            product_CategoryId = "b0b39ffb-118a-4bb0-8565-c7814ccd6f8f",
                             product_Description = "Nike Air Jordan 1 Low ‘Barely Grape’ (W) DC0774-501",
                             product_Img1 = "StaticFiles/p-5/product-1.png",
                             product_Img2 = "StaticFiles/p-5/product-2.png",
@@ -595,9 +1291,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "aaedc19f-219e-482f-8b55-b2a6ed29ae0a",
+                            product_Id = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
                             IsDelete = false,
-                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
+                            product_CategoryId = "b0b39ffb-118a-4bb0-8565-c7814ccd6f8f",
                             product_Description = "Nike Air Jordan 1 Low ‘Desert’ (W) DC0774-201",
                             product_Img1 = "StaticFiles/p-6/product-1.png",
                             product_Img2 = "StaticFiles/p-6/product-2.png",
@@ -614,9 +1310,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "d288e05b-9379-4743-9d0e-2d499e3c0065",
+                            product_Id = "9383bda5-e8c2-4351-b071-f0291ddef67f",
                             IsDelete = false,
-                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
+                            product_CategoryId = "2d81d097-a481-4848-b08d-e36d7d03e161",
                             product_Description = "Nike Air Force 1 ’07 LV8 ‘Black Sail’ DV0794-001",
                             product_Img1 = "StaticFiles/p-7/product-1.png",
                             product_Img2 = "StaticFiles/p-7/product-2.png",
@@ -633,9 +1329,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "98e2510d-d2b3-4582-b2a1-cf76399fd262",
+                            product_Id = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
                             IsDelete = false,
-                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
+                            product_CategoryId = "2d81d097-a481-4848-b08d-e36d7d03e161",
                             product_Description = "Nike Air Force 1 ’07 LV8 ‘Sanddrift Sail’ DV0794-100",
                             product_Img1 = "StaticFiles/p-8/product-1.png",
                             product_Img2 = "StaticFiles/p-8/product-2.png",
@@ -652,9 +1348,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "6f8a9897-c004-4beb-b37d-5e50a5800f87",
+                            product_Id = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
                             IsDelete = false,
-                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
+                            product_CategoryId = "2d81d097-a481-4848-b08d-e36d7d03e161",
                             product_Description = "Nike Air Force 1 Low Shadow ‘Leopard’ CI0919-120",
                             product_Img1 = "StaticFiles/p-9/product-1.png",
                             product_Img2 = "StaticFiles/p-9/product-2.png",
@@ -671,9 +1367,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "030f0480-1ed4-4aaf-bbad-ec3e6d2f7b52",
+                            product_Id = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
                             IsDelete = false,
-                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
+                            product_CategoryId = "2d81d097-a481-4848-b08d-e36d7d03e161",
                             product_Description = "Nike Air Force 1 Low Shadow ‘Summit White University Red Black’ DR7883-102",
                             product_Img1 = "StaticFiles/p-10/product-1.png",
                             product_Img2 = "StaticFiles/p-10/product-2.png",
@@ -690,9 +1386,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "eb1b9845-fb95-49e0-8c14-c38fa59e340c",
+                            product_Id = "1a271ff1-e455-4a85-bcc3-6ba0b35c3b89",
                             IsDelete = false,
-                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
+                            product_CategoryId = "2d81d097-a481-4848-b08d-e36d7d03e161",
                             product_Description = "Nike Air Force 1 ’07 LX Leap High FD4622-131",
                             product_Img1 = "StaticFiles/p-11/product-1.png",
                             product_Img2 = "StaticFiles/p-11/product-2.png",
@@ -709,9 +1405,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "56e3ad0d-ee46-4d9b-a5ff-c3974fd3568c",
+                            product_Id = "b245e5c8-ab89-478c-9243-8194eb6e1e4d",
                             IsDelete = false,
-                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
+                            product_CategoryId = "2d81d097-a481-4848-b08d-e36d7d03e161",
                             product_Description = "Nike Air Force 1 ’07 Retro Color Of The Month University Red White FD7039-600",
                             product_Img1 = "StaticFiles/p-12/product-1.png",
                             product_Img2 = "StaticFiles/p-12/product-2.png",
@@ -728,9 +1424,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "97d75b09-2176-4eb2-8d39-f63f7421cf2a",
+                            product_Id = "8e24595b-1be1-4e33-9983-524256e712da",
                             IsDelete = false,
-                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
+                            product_CategoryId = "d51b45c1-d670-4ede-9541-e4ccd5b7acb0",
                             product_Description = "Adidas Yeezy Boost 350 V2 ‘Onyx’ HQ4540",
                             product_Img1 = "StaticFiles/p-13/product-1.png",
                             product_Img2 = "StaticFiles/p-13/product-2.png",
@@ -747,9 +1443,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "d6b3ed05-29e8-4290-9cc3-9c6b8403a795",
+                            product_Id = "ac8682e8-a1b5-42bb-9386-8cd6c71eac0e",
                             IsDelete = false,
-                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
+                            product_CategoryId = "d51b45c1-d670-4ede-9541-e4ccd5b7acb0",
                             product_Description = "Adidas Yeezy Boost 350 V2 ‘MX Oat’ GW3773",
                             product_Img1 = "StaticFiles/p-14/product-1.png",
                             product_Img2 = "StaticFiles/p-14/product-2.png",
@@ -766,9 +1462,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "387165a0-4f8c-4a61-a633-9122aaffe6be",
+                            product_Id = "c26c1ca6-514a-426f-9f81-8203ec4bbde3",
                             IsDelete = false,
-                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
+                            product_CategoryId = "d51b45c1-d670-4ede-9541-e4ccd5b7acb0",
                             product_Description = "Adidas Yeezy Boost 350 V2 Sesame F99710",
                             product_Img1 = "StaticFiles/p-15/product-1.png",
                             product_Img2 = "StaticFiles/p-15/product-2.png",
@@ -785,9 +1481,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "efd55c12-1e69-4153-86c4-db283a2e35b2",
+                            product_Id = "3e2d6ddb-f35b-4df8-be79-750f2313f767",
                             IsDelete = false,
-                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
+                            product_CategoryId = "d51b45c1-d670-4ede-9541-e4ccd5b7acb0",
                             product_Description = "Adidas Yeezy Boost 350 V2 ‘Salt’ HQ2060",
                             product_Img1 = "StaticFiles/p-16/product-1.png",
                             product_Img2 = "StaticFiles/p-16/product-2.png",
@@ -804,9 +1500,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "84860176-0c20-493a-b754-564d80908858",
+                            product_Id = "712b8b74-7cac-47bd-987a-3b9b78070878",
                             IsDelete = false,
-                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
+                            product_CategoryId = "d51b45c1-d670-4ede-9541-e4ccd5b7acb0",
                             product_Description = "Adidas Originals Yeezy Foam Runner ‘Stone Sage’ GX4472",
                             product_Img1 = "StaticFiles/p-17/product-1.png",
                             product_Img2 = "StaticFiles/p-17/product-2.png",
@@ -823,9 +1519,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "59c64d19-17fe-4f74-8820-064b08509842",
+                            product_Id = "424ff46c-a81f-4fed-a342-89161a1825e9",
                             IsDelete = false,
-                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
+                            product_CategoryId = "d51b45c1-d670-4ede-9541-e4ccd5b7acb0",
                             product_Description = "Adidas Yeezy Boost 350 V2 ‘Core Black Red’ BY9612",
                             product_Img1 = "StaticFiles/p-18/product-1.png",
                             product_Img2 = "StaticFiles/p-18/product-2.png",
@@ -842,9 +1538,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "8068924e-9800-430e-9565-29fa5f87648b",
+                            product_Id = "705a9428-1524-4142-95b4-5cbcbcd54c2d",
                             IsDelete = false,
-                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
+                            product_CategoryId = "667ee33c-102e-4867-be70-67557b81fca0",
                             product_Description = "Adidas NMD_R1 ‘Black Solar Red’ GZ9274",
                             product_Img1 = "StaticFiles/p-19/product-1.png",
                             product_Img2 = "StaticFiles/p-19/product-2.png",
@@ -861,9 +1557,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "82eb1194-49a4-4387-aae1-6b033f4d1060",
+                            product_Id = "23c6abde-4590-4235-bc7f-b72710b379e2",
                             IsDelete = false,
-                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
+                            product_CategoryId = "667ee33c-102e-4867-be70-67557b81fca0",
                             product_Description = "Adidas BOSSK NMD_R1 SPECTOO ‘Black Yellow’ GX6792",
                             product_Img1 = "StaticFiles/p-20/product-1.png",
                             product_Img2 = "StaticFiles/p-20/product-2.png",
@@ -880,9 +1576,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "bbbad47c-0cef-4827-aa77-ca653828c1b9",
+                            product_Id = "2adedc2c-fa8e-4f10-baf1-a5a6c9ccbd92",
                             IsDelete = false,
-                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
+                            product_CategoryId = "667ee33c-102e-4867-be70-67557b81fca0",
                             product_Description = "Adidas NMD R1 ‘Off White Sand’ FV1793",
                             product_Img1 = "StaticFiles/p-21/product-1.png",
                             product_Img2 = "StaticFiles/p-21/product-2.png",
@@ -899,9 +1595,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "c61362a0-fe0f-4306-ab2c-b6b45cfeeb38",
+                            product_Id = "25c065c4-4acb-4f0c-a0d3-cccd917199a0",
                             IsDelete = false,
-                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
+                            product_CategoryId = "667ee33c-102e-4867-be70-67557b81fca0",
                             product_Description = "Adidas NMD R1 Pixar ‘Black’ GX0997",
                             product_Img1 = "StaticFiles/p-22/product-1.png",
                             product_Img2 = "StaticFiles/p-22/product-2.png",
@@ -918,9 +1614,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "51737ad4-cc97-4e26-86fd-08524731e243",
+                            product_Id = "6ae0963d-7969-43aa-9f13-79998e0eb218",
                             IsDelete = false,
-                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
+                            product_CategoryId = "667ee33c-102e-4867-be70-67557b81fca0",
                             product_Description = "Originals Unisex adidas Nmd R1 ‘Cloud White’ GX0996",
                             product_Img1 = "StaticFiles/p-23/product-1.png",
                             product_Img2 = "StaticFiles/p-23/product-2.png",
@@ -937,9 +1633,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "6f1a4ab3-773b-4eda-9be8-04758f4a59b1",
+                            product_Id = "ed952d6d-01f8-42ec-a79a-add965424751",
                             IsDelete = false,
-                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
+                            product_CategoryId = "667ee33c-102e-4867-be70-67557b81fca0",
                             product_Description = "Adidas EQ19 Run H00933",
                             product_Img1 = "StaticFiles/p-24/product-1.png",
                             product_Img2 = "StaticFiles/p-24/product-2.png",
@@ -956,9 +1652,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "84aef9e1-27be-4c34-ad38-699ee22595dc",
+                            product_Id = "7b7dc639-667c-408e-8a52-c3ddd24caf7e",
                             IsDelete = false,
-                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
+                            product_CategoryId = "8ea6b7ae-38f8-49e1-901b-7d236db243b0",
                             product_Description = "MLB Playball Mule Dia Monogram New York Yankees ‘Black’ 3AMUMDA2N-50BKS",
                             product_Img1 = "StaticFiles/p-25/product-1.png",
                             product_Img2 = "StaticFiles/p-25/product-2.png",
@@ -975,9 +1671,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "6e19f645-cdd0-4ffd-bc30-c8c17f01178b",
+                            product_Id = "487cc631-dd5c-4d66-a839-95f4f748050f",
                             IsDelete = false,
-                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
+                            product_CategoryId = "8ea6b7ae-38f8-49e1-901b-7d236db243b0",
                             product_Description = "MLB Playball Mule Dia Monogram New York Yankees ‘Beige’ 3AMUMDA2N-50BGS",
                             product_Img1 = "StaticFiles/p-26/product-1.png",
                             product_Img2 = "StaticFiles/p-26/product-2.png",
@@ -994,9 +1690,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "9690b826-043a-4168-9326-dcf01b789fd9",
+                            product_Id = "81c2cb74-0c83-41d5-988d-d368c023faf0",
                             IsDelete = false,
-                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
+                            product_CategoryId = "8ea6b7ae-38f8-49e1-901b-7d236db243b0",
                             product_Description = "MLB Playball Mule Dia Monogram New York Yankees ‘Cream’ 3AMUM212N-50BGD",
                             product_Img1 = "StaticFiles/p-27/product-1.png",
                             product_Img2 = "StaticFiles/p-27/product-2.png",
@@ -1013,9 +1709,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "b27dbbf8-c6bf-4a0f-ad86-5b99b94e03be",
+                            product_Id = "c218ec36-600b-42de-bccc-a78896d0009c",
                             IsDelete = false,
-                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
+                            product_CategoryId = "8ea6b7ae-38f8-49e1-901b-7d236db243b0",
                             product_Description = "MLB Playball Origin Mule New York Yankees Black 32SHS1111-50L",
                             product_Img1 = "StaticFiles/p-28/product-1.png",
                             product_Img2 = "StaticFiles/p-28/product-2.png",
@@ -1032,9 +1728,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "b92050ff-1fbd-4cc1-88af-ddbc1d69866d",
+                            product_Id = "8bc63de7-19fc-4911-a0d7-dc6cbbf15232",
                             IsDelete = false,
-                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
+                            product_CategoryId = "8ea6b7ae-38f8-49e1-901b-7d236db243b0",
                             product_Description = "MLB Mule Playball Fur Diamond Monogram New York Yankees Black 3AMUUFS26-50BKS",
                             product_Img1 = "StaticFiles/p-29/product-1.png",
                             product_Img2 = "StaticFiles/p-29/product-2.png",
@@ -1051,9 +1747,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "98cbcb02-246e-42b3-a377-a61f85ccb015",
+                            product_Id = "26d3c30b-b2fe-4777-96c7-0ca09274105a",
                             IsDelete = false,
-                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
+                            product_CategoryId = "8ea6b7ae-38f8-49e1-901b-7d236db243b0",
                             product_Description = "MLB Mule Playball Fur Diamond Monogram Boston Red Sox D.Beige 3AMUUFS26-43BGD",
                             product_Img1 = "StaticFiles/p-30/product-1.png",
                             product_Img2 = "StaticFiles/p-30/product-2.png",
@@ -1086,6 +1782,368 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasIndex("sip_ProductId");
 
                     b.ToTable("SizeInProduct", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "9f93172b-77ca-4dde-b634-6a1768975b28",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "769a1b20-df41-4118-8b17-d5b9468a9079",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "88457fe7-6ec7-4f01-b039-61aafde239b6",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "a4f42a4b-b9ab-46a7-b769-72f5962c4e8c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "60d3611a-b1b7-48ea-96f3-d80b9884213e",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "6ad3c1c8-09f7-4388-82d4-aafcd77f6940",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "9383bda5-e8c2-4351-b071-f0291ddef67f",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "10867dcf-3634-4316-a4bb-db0ab182e2ec",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "f88677ad-231f-4e6c-af2b-4e02b6a9b7d3",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            sip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            sip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            sip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            sip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "b729df62-1400-484e-ad07-006180764855",
+                            sip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            sip_IsDelete = false
+                        },
+                        new
+                        {
+                            sip_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            sip_ProductId = "b759b84f-a72e-4ea7-9aa2-312f4ab1bd1c",
+                            sip_IsDelete = false
+                        });
                 });
 
             modelBuilder.Entity("Fashion_Infrastructure.Entities.SizeTable", b =>
@@ -1096,13 +2154,50 @@ namespace Fashion_Infrastructure.Migrations
                     b.Property<bool>("size_IsDelete")
                         .HasColumnType("bit");
 
-                    b.Property<string>("size_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("size_Name")
+                        .HasColumnType("int");
 
                     b.HasKey("size_Id");
 
                     b.ToTable("Size", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            size_Id = "1ac84ea7-5c36-4ffb-9c2b-a2e606c256ea",
+                            size_IsDelete = false,
+                            size_Name = 35
+                        },
+                        new
+                        {
+                            size_Id = "4fd42937-082b-436a-acdd-e6f960a20282",
+                            size_IsDelete = false,
+                            size_Name = 36
+                        },
+                        new
+                        {
+                            size_Id = "b006312c-c15f-4308-b853-4206bda4fe4a",
+                            size_IsDelete = false,
+                            size_Name = 37
+                        },
+                        new
+                        {
+                            size_Id = "0edbbeb3-c014-4214-9bbb-d113ae504836",
+                            size_IsDelete = false,
+                            size_Name = 38
+                        },
+                        new
+                        {
+                            size_Id = "b729df62-1400-484e-ad07-006180764855",
+                            size_IsDelete = false,
+                            size_Name = 39
+                        },
+                        new
+                        {
+                            size_Id = "4d6582fd-1b5c-4fbc-85e0-88bebfc45de0",
+                            size_IsDelete = false,
+                            size_Name = 35
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1300,18 +2395,18 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "1fd3ca8a-9a44-4600-819c-804b6bd57b85",
-                            RoleId = "c4669085-8d1d-42e2-9dc3-c37cea478060"
+                            UserId = "8704b774-124e-4353-a85f-24da0fcc0313",
+                            RoleId = "9adc7c17-1f8e-4527-b0e3-ac5ea2162ec0"
                         },
                         new
                         {
-                            UserId = "a8c43797-7bdb-40aa-aad8-311ad447e64b",
-                            RoleId = "796fc75d-47ad-4186-b58e-7bfa954942c4"
+                            UserId = "ba532b7c-6631-420a-83eb-401605a41e7a",
+                            RoleId = "ad248906-1815-4d41-9b63-392eeb113f7a"
                         },
                         new
                         {
-                            UserId = "6b181921-c620-4adc-8235-dfe9f1101f72",
-                            RoleId = "c4669085-8d1d-42e2-9dc3-c37cea478060"
+                            UserId = "cb97e0a7-bb80-4210-bf07-2987b95ed23d",
+                            RoleId = "9adc7c17-1f8e-4527-b0e3-ac5ea2162ec0"
                         });
                 });
 
@@ -1348,16 +2443,16 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c4669085-8d1d-42e2-9dc3-c37cea478060",
-                            ConcurrencyStamp = "f56d0f38-1b2b-4153-84ab-6e9d5b4cf4a5",
+                            Id = "9adc7c17-1f8e-4527-b0e3-ac5ea2162ec0",
+                            ConcurrencyStamp = "a019a02d-5ffe-4d59-a37d-a141d9597fa6",
                             Name = "Admin",
                             NormalizedName = "admin",
                             IsDelete = false
                         },
                         new
                         {
-                            Id = "796fc75d-47ad-4186-b58e-7bfa954942c4",
-                            ConcurrencyStamp = "cf6ab091-6f65-45d2-a0f9-88a595c48303",
+                            Id = "ad248906-1815-4d41-9b63-392eeb113f7a",
+                            ConcurrencyStamp = "a3190cd0-8235-43b1-8acb-840bc223e384",
                             Name = "Staff",
                             NormalizedName = "staff",
                             IsDelete = false
@@ -1388,17 +2483,17 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1fd3ca8a-9a44-4600-819c-804b6bd57b85",
+                            Id = "8704b774-124e-4353-a85f-24da0fcc0313",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a66692d4-18d1-45ef-b011-c3bf8e017ae0",
+                            ConcurrencyStamp = "629f273d-edce-4e1c-ac23-1a6f101d83cc",
                             Email = "staff@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "STAFF@GMAIL.COM",
                             NormalizedUserName = "STAFF@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBT4oD4wzygk2gwIvuznJnPyw43A++Q/JzwK6B3sSG5q4i0DDT9BOUpi4IPm9fhFMw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEz+jFLZCXT3GRJqGznc0n45Wk+WKBMDaqmOsXuhUCBOU9P2HZPUTk7lIgVMejVNLA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a8e57601-cb56-4e8e-93ec-00bc6bf53eab",
+                            SecurityStamp = "30f38f54-95d0-4a15-a8d0-16466ec7e5ff",
                             TwoFactorEnabled = false,
                             UserName = "Staff",
                             Address = "",
@@ -1408,17 +2503,17 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = "a8c43797-7bdb-40aa-aad8-311ad447e64b",
+                            Id = "ba532b7c-6631-420a-83eb-401605a41e7a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "bbaa70d6-cd0f-4d34-8627-07dea345d8e2",
+                            ConcurrencyStamp = "2a87fd56-add5-4534-b0b8-7dc275d51b1f",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHdztSxoYW7McWUumOHU6L88qM0Mmb6vlxhXVwBrkbQd13x1SSoHelNRw639Vq3JDw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEK9MOCFkRqEJoJQQFCjwEVzlWUdcss+CKoYJeKCHihSJVFb//Hj/x2X9WmwPVjbvCg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d889eec7-dd5e-4cdd-b5b7-3674a10cc40f",
+                            SecurityStamp = "2f89c0eb-e39a-4936-8dac-2f38f2a1ce23",
                             TwoFactorEnabled = false,
                             UserName = "Admin",
                             Address = "",
@@ -1428,17 +2523,17 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = "6b181921-c620-4adc-8235-dfe9f1101f72",
+                            Id = "cb97e0a7-bb80-4210-bf07-2987b95ed23d",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9c31f342-71da-489c-b3e9-da4ddf0518d8",
+                            ConcurrencyStamp = "ecc575b5-10a5-44c5-a1f4-0a02fd98852e",
                             Email = "staff2@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "STAFF2@GMAIL.COM",
                             NormalizedUserName = "STAFF2@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBcUPL9v9wdBEej0T0xFACRM+WnTZGygPqOqwkFNUV9XR6LmbXSaLhO9cGP7fq8joA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBHKET3jXi0fypAWrYUU6+rvGXqFlJNDQnwWCv003byBtHD+vgyAex8fPzdC5IChlw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "932271e0-df8a-4e13-a9b0-b262381ba8fe",
+                            SecurityStamp = "befbc03b-3a29-4ce3-95d6-08b806afd4f5",
                             TwoFactorEnabled = false,
                             UserName = "Staff2",
                             Address = "",

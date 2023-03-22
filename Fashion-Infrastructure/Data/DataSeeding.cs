@@ -819,6 +819,1113 @@ namespace Fashion_Infrastructure.Data
                     cip_ColorId = newColor_Id4,
                     cip_ProductId = newProduct_Id1,
                     cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id2,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id2,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id2,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id2,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id3,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id3,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id3,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id3,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id4,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id4,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id4,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id4,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id5,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id5,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id5,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id5,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id6,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id6,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id6,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id6,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id7,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id7,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id7,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id7,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id8,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id8,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id8,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id8,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id9,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id9,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id9,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id9,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id10,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id10,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id10,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id10,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id11,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id11,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id11,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id11,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id12,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id12,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id12,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id12,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id13,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id13,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id13,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id13,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id14,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id14,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id14,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id14,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id15,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id15,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id15,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id15,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id16,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id16,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id16,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id16,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id17,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id17,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id17,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id17,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id18,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id18,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id18,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id18,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id19,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id19,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id19,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id19,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id20,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id20,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id20,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id20,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id21,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id21,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id21,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id21,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id22,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id22,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id22,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id22,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id23,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id23,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id23,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id23,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id24,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id24,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id24,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id24,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id25,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id25,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id25,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id25,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id26,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id26,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id26,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id26,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id27,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id27,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id27,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id27,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id28,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id28,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id28,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id28,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id29,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id29,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id29,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id29,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id30,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id30,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id30,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id30,
+                    cip_IsDelete = false
+                }
+                );
+
+            // Color Table
+            string newSize_Id1 = Guid.NewGuid().ToString();
+            string newSize_Id2 = Guid.NewGuid().ToString();
+            string newSize_Id3 = Guid.NewGuid().ToString();
+            string newSize_Id4 = Guid.NewGuid().ToString();
+            string newSize_Id5 = Guid.NewGuid().ToString();
+            string newSize_Id6 = Guid.NewGuid().ToString();
+
+            builder.Entity<SizeTable>().HasData(
+                new SizeTable()
+                {
+                    size_Id = newSize_Id1,
+                    size_Name = 35,
+                    size_IsDelete = false
+                },
+                new SizeTable()
+                {
+                    size_Id = newSize_Id2,
+                    size_Name = 36,
+                    size_IsDelete = false
+                },
+                new SizeTable()
+                {
+                    size_Id = newSize_Id3,
+                    size_Name = 37,
+                    size_IsDelete = false
+                },
+                new SizeTable()
+                {
+                    size_Id = newSize_Id4,
+                    size_Name = 38,
+                    size_IsDelete = false
+                },
+                new SizeTable()
+                {
+                    size_Id = newSize_Id5,
+                    size_Name = 39,
+                    size_IsDelete = false
+                },
+                new SizeTable()
+                {
+                    size_Id = newSize_Id6,
+                    size_Name = 35,
+                    size_IsDelete = false
+                }
+                );
+
+
+            builder.Entity<SizeInProductTable>().HasData(
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id1,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id1,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id1,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id1,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id1,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id1,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id2,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id2,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id2,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id2,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id2,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id2,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id3,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id3,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id3,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id3,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id3,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id3,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id4,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id4,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id4,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id4,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id4,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id4,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id5,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id5,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id5,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id5,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id5,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id5,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id6,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id6,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id6,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id6,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id6,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id6,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id7,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id7,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id7,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id7,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id7,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id7,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id8,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id8,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id8,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id8,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id8,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id8,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id9,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id9,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id9,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id9,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id9,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id9,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id1,
+                    sip_ProductId = newProduct_Id10,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id2,
+                    sip_ProductId = newProduct_Id10,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id3,
+                    sip_ProductId = newProduct_Id10,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id4,
+                    sip_ProductId = newProduct_Id10,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id5,
+                    sip_ProductId = newProduct_Id10,
+                    sip_IsDelete = false
+                },
+                new SizeInProductTable()
+                {
+                    sip_Id = newSize_Id6,
+                    sip_ProductId = newProduct_Id10,
+                    sip_IsDelete = false
                 }
                 );
 
