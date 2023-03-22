@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Fashion_Fuction.Models.EmailModel>;
+﻿@model IEnumerable<Fashion_Fuction.Models.ContactModel>
 @{
     int iRow = 0;
 }
@@ -6,7 +6,9 @@
     <thead>
         <tr>
             <th scope="col">#</th>
+            <th scope="col">Name</th>
             <th scope="col">Email</th>
+            <th scope="col">Subject</th>
             <th scope="col"></th>
         </tr>
     </thead>
@@ -16,7 +18,9 @@
             iRow++;
             <tr>
                 <th scope="row">@iRow</th>
+                <td>@item.Name</td>
                 <td>@item.Email</td>
+                <td>@item.Subject</td>
                 <td>
                     <a>Details</a>|
                     <a>Edit</a>|
@@ -24,6 +28,5 @@
                 </td>
             </tr>
         }
-        
     </tbody>
 </table>

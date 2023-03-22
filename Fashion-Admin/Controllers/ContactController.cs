@@ -1,42 +1,43 @@
-﻿using Fashion_Fuction.Services;
-using Fashion_Infrastructure.Data;
+﻿using Fashion_Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Fashion_Fuction.Models;
+using Fashion_Fuction.Services;
 
 namespace Fashion_Admin.Controllers
 {
-    public class EmailCustomerController : Controller
+    public class ContactController : Controller
     {
         private ApplicationDbContext _context;
         private IContactService _contactService;
-        public EmailCustomerController(ApplicationDbContext context)
+        public ContactController(ApplicationDbContext context)
         {
             _context = context;
-            _contactService = new ContactService(context);
+            _contactService = new ContactService(context); 
         }
 
-        // GET: EmailCustomerController
-        [Route("/emailcustomer")]
+        // GET: ContactController
+        [Route("/contact")]
         public ActionResult Index()
         {
-            //var query = _context.emailCustomerTable.Where(x => x.emailC_IsDelete == false);
-            return View(_contactService.GetAllEmail());
+            
+
+            return View(_contactService.GetAllContact());
         }
 
-        // GET: EmailCustomerController/Details/5
+        // GET: ContactController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: EmailCustomerController/Create
+        // GET: ContactController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: EmailCustomerController/Create
+        // POST: ContactController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -51,13 +52,13 @@ namespace Fashion_Admin.Controllers
             }
         }
 
-        // GET: EmailCustomerController/Edit/5
+        // GET: ContactController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: EmailCustomerController/Edit/5
+        // POST: ContactController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -72,13 +73,13 @@ namespace Fashion_Admin.Controllers
             }
         }
 
-        // GET: EmailCustomerController/Delete/5
+        // GET: ContactController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: EmailCustomerController/Delete/5
+        // POST: ContactController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

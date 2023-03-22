@@ -420,6 +420,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Fashion-Fuction\Fashion-Fuction.csproj" />
     <ProjectReference Include="..\Fashion-Infrastructure\Fashion-Infrastructure.csproj" />
   </ItemGroup>
 
