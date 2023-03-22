@@ -74,5 +74,38 @@ namespace Fashion_Fuction.Services
                 throw;
             }
         }
+
+        public async Task<bool> CreateContact(ContactModel contactModel)
+        {
+            try
+            {
+                
+                EmailCustomerTable customerTable = new EmailCustomerTable();
+                string emailId = Guid.NewGuid().ToString();
+
+                customerTable.emailC_Id = emailId;
+                customerTable.emailC_Email = contactModel.Email;
+                customerTable.emailC_IsDelete = false;
+                await _context.emailCustomerTable.AddAsync(customerTable);
+
+
+                ContactTable contactTable = new ContactTable();
+                contactTable.contact_Id = Guid.NewGuid().ToString();
+                contactTable.contact_Name = contactModel.Name;
+                contactTable.contact_EmailId = emailId;
+                contactTable.emailC_Subject = contactModel.Subject;
+                contactTable.emailC_Message = contactModel.Message;
+                contactTable.emailC_IsCheck = false;
+                await _context.contactTable.AddAsync(contactTable);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

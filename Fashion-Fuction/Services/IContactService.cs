@@ -11,5 +11,6 @@ namespace Fashion_Fuction.Services
     {
         public List<ContactModel> GetAllContact();
         public List<EmailModel> GetAllEmail();
+        public Task<bool> CreateContact(ContactModel contactModel);
     }
 }
