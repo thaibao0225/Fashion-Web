@@ -19,20 +19,9 @@ namespace Fashion_Web.Controllers
 
         // GET: ContactController
         [Route("/contact")]
-        public ActionResult Index()
+        public ActionResult Index(string message = "")
         {
-            return View();
-        }
-
-        // GET: ContactController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: ContactController/Create
-        public ActionResult Create()
-        {
+            ViewBag.Message = message;
             return View();
         }
 
@@ -72,7 +61,7 @@ namespace Fashion_Web.Controllers
                 await _context.contactTable.AddAsync(contactTable);
                 await _context.SaveChangesAsync();
 
-                return Redirect("/");
+                return RedirectToAction("Index", "Contact", new { message = "Successed" });
             }
             catch
             {
@@ -80,46 +69,6 @@ namespace Fashion_Web.Controllers
             }
         }
 
-        // GET: ContactController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: ContactController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: ContactController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ContactController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+       
     }
 }
