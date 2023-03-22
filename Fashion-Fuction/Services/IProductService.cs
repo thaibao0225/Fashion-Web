@@ -12,5 +12,8 @@ namespace Fashion_Fuction.Services
         public List<ProductModel> GetAllList(string page = "Admin");
         public List<ProductModel> GetProductList(int size, string page = "Admin");
         public ProductModel GetProductById(string id, string page = "Admin");
+        public Task<bool> DeleteProductById(string id);
+        public Task<bool> UpdateProductById(string id, ProductModel productModel);
+        public Task<bool> CreateProduct(ProductModel productModel);
     }
 }
