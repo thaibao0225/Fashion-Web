@@ -1,50 +1,30 @@
-﻿using Fashion_Fuction.DataCreated;
-using Fashion_Fuction.Services;
-using Fashion_Infrastructure.Data;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fashion_Web.Controllers
 {
-    public class ShopController : Controller
+    public class TestController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private ApplicationDbContext _context;
-        private IProductService _productService;
-
-        public ShopController(ILogger<HomeController> logger, ApplicationDbContext context)
-        {
-            _logger = logger;
-            _context = context;
-            _productService = new ProductService(context);
-        }
-
-
-        // GET: ShopController
-        [Route("/shop")]
+        // GET: TestController
+        [Route("/test")]
         public ActionResult Index()
         {
-
-            // Product
-
-            ViewBag.ProductList = _productService.GetProductList(9, DataAll.Web);
-
             return View();
         }
 
-        // GET: ShopController/Details/5
+        // GET: TestController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: ShopController/Create
+        // GET: TestController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ShopController/Create
+        // POST: TestController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -59,13 +39,13 @@ namespace Fashion_Web.Controllers
             }
         }
 
-        // GET: ShopController/Edit/5
+        // GET: TestController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: ShopController/Edit/5
+        // POST: TestController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -80,13 +60,13 @@ namespace Fashion_Web.Controllers
             }
         }
 
-        // GET: ShopController/Delete/5
+        // GET: TestController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: ShopController/Delete/5
+        // POST: TestController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
