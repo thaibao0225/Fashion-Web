@@ -1,33 +1,36 @@
 ﻿using Fashion_Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Fashion_Fuction.Services;
 
 namespace Fashion_Admin.Controllers
 {
     public class ProductsController : Controller
     {
         private ApplicationDbContext _context;
+        private IProductService _productService;
 
         public ProductsController(ApplicationDbContext context) 
         {
             _context = context;
+            _productService = new ProductService(context);
         }
         // GET: ProductsController
         [Route("/products")]
         public ActionResult Index()
         {
-            var query = _context.productsTable;
-
-            return View(query);
+            return View(_productService.GetAllList());
         }
 
         // GET: ProductsController/Details/5
-        public ActionResult Details(int id)
+        [Route("/products/details")]
+        public ActionResult Details(string id)
         {
-            return View();
+            return View(_productService.GetProductById(id));
         }
 
         // GET: ProductsController/Create
+        [Route("/products/create")]
         public ActionResult Create()
         {
             return View();
@@ -49,9 +52,10 @@ namespace Fashion_Admin.Controllers
         }
 
         // GET: ProductsController/Edit/5
-        public ActionResult Edit(int id)
+        [Route("/products/edit")]
+        public ActionResult Edit(string id)
         {
-            return View();
+            return View(_productService.GetProductById(id));
         }
 
         // POST: ProductsController/Edit/5
@@ -70,9 +74,10 @@ namespace Fashion_Admin.Controllers
         }
 
         // GET: ProductsController/Delete/5
-        public ActionResult Delete(int id)
+        [Route("/products/delete")]
+        public ActionResult Delete(string id)
         {
-            return View();
+            return View(_productService.GetProductById(id));
         }
 
         // POST: ProductsController/Delete/5

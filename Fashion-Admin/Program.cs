@@ -17,6 +17,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 
