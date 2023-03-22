@@ -56,8 +56,15 @@ namespace Fashion_Fuction.Models
         [DisplayName("CategoryId")]
         public string product_CategoryId { get; set; } = string.Empty;
         //public CategoriesTable product_CategoriesTable { get; set; }
-        public List<ColorInProductTable> product_colorInProductTablesList { get; set; }
-        public List<SizeInProductTable> product_sizeInProductTablesList { get; set; }
-        public List<CommentTable> product_CommentTableList { get; set; }
+        //public List<ColorInProductTable> product_colorInProductTablesList { get; set; }
+        //public List<SizeInProductTable> product_sizeInProductTablesList { get; set; }
+        //public List<CommentTable> product_CommentTableList { get; set; }
+
+        [DisplayName("Color")]
+        public string product_ColorName { get; set; } = string.Empty;
+        [DisplayName("Size")]
+        public string product_SizeName { get; set; } = string.Empty;
+        [DisplayName("Quantity")]
+        public string product_Quantity { get; set; } = string.Empty;
     }
 }

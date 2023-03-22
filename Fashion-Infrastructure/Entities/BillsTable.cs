@@ -6,7 +6,7 @@
         public int bill_Code { get; set; } 
         public string bill_UserId { get; set; }
         public UsersTable userTable_UserId { get; set; }
-        public int bill_Price { get; set; } 
+        public double bill_Price { get; set; } 
         public string bill_ProductsIdList { get; set; }
         public string bill_ProductPriceList { get; set; }
         public string bill_ProductUnitList { get; set; }
