@@ -41,7 +41,7 @@ namespace Fashion_Web.Controllers
         [HttpPost]
         [Route("/contact")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(IFormCollection collection)
         {
             try
             {
@@ -53,22 +53,26 @@ namespace Fashion_Web.Controllers
                 string Message = collection["Message"];
 
 
+                EmailCustomerTable customerTable = new EmailCustomerTable();
+                string emailId = Guid.NewGuid().ToString();
 
-                ////Contact Table
-                //string contact_Id = collection["contact_Id"];
-                //string contact_Name = collection["contact_Name"];
-                //string contact_EmailId = collection["contact_EmailId"];
-                //string emailC_Subject = collection["emailC_Subject"];
-                //string emailC_Message = collection["emailC_Message"];
-                //string emailC_IsCheck = collection["emailC_IsCheck"];
+                customerTable.emailC_Id = emailId;
+                customerTable.emailC_Email = Email;
+                customerTable.emailC_IsDelete = false;
+                await _context.emailCustomerTable.AddAsync(customerTable);
 
 
-                ////EmailCustomer Table
-                //string emailC_Id = collection["emailC_Id"];
-                //string emailC_Email = collection["emailC_Email"];
-                //string emailC_IsDelete = collection["emailC_IsDelete"];
+                ContactTable contactTable = new ContactTable();
+                contactTable.contact_Id = Guid.NewGuid().ToString();
+                contactTable.contact_Name = Name;
+                contactTable.contact_EmailId = emailId;
+                contactTable.emailC_Subject = Subject;
+                contactTable.emailC_Message = Message;
+                contactTable.emailC_IsCheck = false;
+                await _context.contactTable.AddAsync(contactTable);
+                await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                return Redirect("/");
             }
             catch
             {

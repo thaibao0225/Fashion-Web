@@ -1,6 +1,7 @@
 using Fashion_Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +30,15 @@ else
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+
+//app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+           Path.Combine(builder.Environment.ContentRootPath, "MyStaticFiles")),
+    RequestPath = "/StaticFiles"
+});
+
 
 app.UseRouting();
 
