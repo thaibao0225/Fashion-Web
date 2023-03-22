@@ -1,15 +1,27 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fashion_Fuction.Services;
+using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fashion_Admin.Controllers
 {
     public class EmailCustomerController : Controller
     {
+        private ApplicationDbContext _context;
+        private IContactService _contactService;
+        public EmailCustomerController(ApplicationDbContext context)
+        {
+            _context = context;
+            _contactService = new ContactService(context);
+        }
+
         // GET: EmailCustomerController
         [Route("/emailcustomer")]
         public ActionResult Index()
         {
-            return View();
+            //var query = _context.emailCustomerTable.Where(x => x.emailC_IsDelete == false);
+            return View(_contactService.GetAllEmail());
         }
 
         // GET: EmailCustomerController/Details/5

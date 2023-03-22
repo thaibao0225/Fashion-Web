@@ -11,7 +11,7 @@ namespace Fashion_Infrastructure.Configurations
             builder.ToTable("Products");
             builder.HasKey(t => new { t.product_Id });
 
-            builder.HasOne(t => t.productCategoryId).WithMany(ur => ur.Products)
+            builder.HasOne(t => t.product_CategoriesTable).WithMany(ur => ur.ProductsTableList)
             .HasForeignKey(pc => pc.product_CategoryId);
         }
     }

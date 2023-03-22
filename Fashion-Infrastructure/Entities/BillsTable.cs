@@ -12,5 +12,8 @@
         public string bill_ProductUnitList { get; set; }
         public string bill_ProductColorList { get; set; }
         public string bill_ProductSizeList { get; set; }
+        public DateTime bill_CreateOn { get; set; }
+        public bool bill_IsConfirm { get; set; }
+        public bool bill_IsPayment  { get; set; }
     }
 }

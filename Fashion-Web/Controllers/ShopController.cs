@@ -1,14 +1,34 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fashion_Fuction.DataCreated;
+using Fashion_Fuction.Services;
+using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fashion_Web.Controllers
 {
     public class ShopController : Controller
     {
+        private readonly ILogger<HomeController> _logger;
+        private ApplicationDbContext _context;
+        private IProductService _productService;
+
+        public ShopController(ILogger<HomeController> logger, ApplicationDbContext context)
+        {
+            _logger = logger;
+            _context = context;
+            _productService = new ProductService(context);
+        }
+
+
         // GET: ShopController
         [Route("/shop")]
         public ActionResult Index()
         {
+
+            // Product
+
+            ViewBag.ProductList = _productService.GetProductList(9, DataAll.Web);
+
             return View();
         }
 

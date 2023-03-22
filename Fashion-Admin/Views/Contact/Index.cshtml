@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Fashion_Fuction.Models.ContactModel>
+@{
+    int iRow = 0;
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subject</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            iRow++;
+            <tr>
+                <th scope="row">@iRow</th>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Subject</td>
+                <td>
+                    <a>Details</a>|
+                    <a>Edit</a>|
+                    <a>Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

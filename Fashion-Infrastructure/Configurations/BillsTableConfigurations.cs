@@ -14,7 +14,7 @@ namespace Fashion_Infrastructure.Configurations
             builder.HasOne(t => t.userTable_UserId).WithMany(ur => ur.billsTablesList)
             .HasForeignKey(pc => pc.bill_UserId);
 
-            
+
 
         }
     }
