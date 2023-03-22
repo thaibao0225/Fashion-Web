@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fashion_Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230321152433_init")]
+    [Migration("20230322172027_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,8 +56,8 @@ namespace Fashion_Infrastructure.Migrations
                     b.Property<bool>("bill_IsPayment")
                         .HasColumnType("bit");
 
-                    b.Property<int>("bill_Price")
-                        .HasColumnType("int");
+                    b.Property<double>("bill_Price")
+                        .HasColumnType("float");
 
                     b.Property<string>("bill_ProductColorList")
                         .IsRequired()
@@ -88,6 +88,68 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasIndex("bill_UserId");
 
                     b.ToTable("Bills", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            bill_Id = "2784b4eb-f49e-4bec-834b-24c2333b9543",
+                            CreateBy = "",
+                            CreateOn = new DateTime(2023, 3, 23, 0, 20, 26, 408, DateTimeKind.Local).AddTicks(275),
+                            IsDelete = false,
+                            UpdateBy = "",
+                            UpdateOn = new DateTime(2023, 3, 23, 0, 20, 26, 409, DateTimeKind.Local).AddTicks(547),
+                            bill_Code = 1,
+                            bill_CreateOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            bill_IsConfirm = false,
+                            bill_IsPayment = false,
+                            bill_Price = 0.0,
+                            bill_ProductColorList = "Red|Black|Green|Yellow",
+                            bill_ProductPriceList = "10|10|10|10|",
+                            bill_ProductSizeList = "X|XL|S|M",
+                            bill_ProductUnitList = "1|1|1|1|",
+                            bill_ProductsIdList = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b|034b3077-7ce5-420c-a103-ea795aeb01b6|9ff292f3-1087-49d9-841c-d37c022da2e0|e6cf8556-de00-4c4f-9199-9504357ae64d|",
+                            bill_UserId = "1fd3ca8a-9a44-4600-819c-804b6bd57b85"
+                        },
+                        new
+                        {
+                            bill_Id = "3f85fd19-d1aa-48f1-ac82-210151ecde1a",
+                            CreateBy = "",
+                            CreateOn = new DateTime(2023, 3, 23, 0, 20, 26, 408, DateTimeKind.Local).AddTicks(275),
+                            IsDelete = false,
+                            UpdateBy = "",
+                            UpdateOn = new DateTime(2023, 3, 23, 0, 20, 26, 409, DateTimeKind.Local).AddTicks(547),
+                            bill_Code = 1,
+                            bill_CreateOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            bill_IsConfirm = false,
+                            bill_IsPayment = false,
+                            bill_Price = 0.0,
+                            bill_ProductColorList = "Red|Black|Green|Yellow",
+                            bill_ProductPriceList = "10|10|10|10|",
+                            bill_ProductSizeList = "X|XL|S|M",
+                            bill_ProductUnitList = "1|1|1|1|",
+                            bill_ProductsIdList = "0b83fb38-7655-419e-bf7a-6da14af19b05|aaedc19f-219e-482f-8b55-b2a6ed29ae0a|d288e05b-9379-4743-9d0e-2d499e3c0065|98e2510d-d2b3-4582-b2a1-cf76399fd262|",
+                            bill_UserId = "a8c43797-7bdb-40aa-aad8-311ad447e64b"
+                        },
+                        new
+                        {
+                            bill_Id = "2d3bbad9-70e7-4876-8c13-86c377567a1a",
+                            CreateBy = "",
+                            CreateOn = new DateTime(2023, 3, 23, 0, 20, 26, 408, DateTimeKind.Local).AddTicks(275),
+                            IsDelete = false,
+                            UpdateBy = "",
+                            UpdateOn = new DateTime(2023, 3, 23, 0, 20, 26, 409, DateTimeKind.Local).AddTicks(547),
+                            bill_Code = 1,
+                            bill_CreateOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            bill_IsConfirm = false,
+                            bill_IsPayment = false,
+                            bill_Price = 0.0,
+                            bill_ProductColorList = "Red|Black|Green|Yellow",
+                            bill_ProductPriceList = "10|10|10|10|",
+                            bill_ProductSizeList = "X|XL|S|M",
+                            bill_ProductUnitList = "1|1|1|1|",
+                            bill_ProductsIdList = "6f8a9897-c004-4beb-b37d-5e50a5800f87|030f0480-1ed4-4aaf-bbad-ec3e6d2f7b52|eb1b9845-fb95-49e0-8c14-c38fa59e340c|56e3ad0d-ee46-4d9b-a5ff-c3974fd3568c|",
+                            bill_UserId = "6b181921-c620-4adc-8235-dfe9f1101f72"
+                        });
                 });
 
             modelBuilder.Entity("Fashion_Infrastructure.Entities.CategoriesTable", b =>
@@ -128,7 +190,7 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            category_Id = "bc01668e-651a-4ce5-8d3f-cce35ea7e2b2",
+                            category_Id = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -136,7 +198,7 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            category_Id = "a0d4702b-d615-40b1-ac8e-3709755fec96",
+                            category_Id = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -144,7 +206,7 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            category_Id = "a871d64f-fb05-4a24-b60d-225c07575f0a",
+                            category_Id = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -152,7 +214,7 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            category_Id = "3f8c8a3b-0ab2-4e19-87b7-c3d89cd24e2d",
+                            category_Id = "798decc8-17c8-4152-9652-61e55d5f5cce",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -160,7 +222,7 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            category_Id = "70384946-c313-4edf-b98a-66ed223b2168",
+                            category_Id = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
                             IsDelete = false,
                             category_Description = "",
                             category_IsDelete = false,
@@ -184,6 +246,32 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasIndex("cip_ProductId");
 
                     b.ToTable("ColorInProduct", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            cip_ColorId = "bed3d69f-f5db-483f-926f-52992acc3c9a",
+                            cip_ProductId = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "a6266efc-5930-4473-b9b9-4445cfe1dabd",
+                            cip_ProductId = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "ffc841ff-ff76-413a-8f33-f4a6c85af330",
+                            cip_ProductId = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            cip_IsDelete = false
+                        },
+                        new
+                        {
+                            cip_ColorId = "310eaf57-3ed1-427a-8684-66a1d18d480e",
+                            cip_ProductId = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
+                            cip_IsDelete = false
+                        });
                 });
 
             modelBuilder.Entity("Fashion_Infrastructure.Entities.ColorsTable", b =>
@@ -201,6 +289,32 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasKey("color_Id");
 
                     b.ToTable("Color", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            color_Id = "bed3d69f-f5db-483f-926f-52992acc3c9a",
+                            color_IdDelete = false,
+                            color_Name = "Red"
+                        },
+                        new
+                        {
+                            color_Id = "a6266efc-5930-4473-b9b9-4445cfe1dabd",
+                            color_IdDelete = false,
+                            color_Name = "Black"
+                        },
+                        new
+                        {
+                            color_Id = "ffc841ff-ff76-413a-8f33-f4a6c85af330",
+                            color_IdDelete = false,
+                            color_Name = "Green"
+                        },
+                        new
+                        {
+                            color_Id = "310eaf57-3ed1-427a-8684-66a1d18d480e",
+                            color_IdDelete = false,
+                            color_Name = "Yellow"
+                        });
                 });
 
             modelBuilder.Entity("Fashion_Infrastructure.Entities.CommentTable", b =>
@@ -388,9 +502,9 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            product_Id = "2fdff5bb-64a9-49b0-86a9-dddaa7c0aa1a",
+                            product_Id = "b2f4a5b4-4a71-49a5-8288-fc144d2eed0b",
                             IsDelete = false,
-                            product_CategoryId = "bc01668e-651a-4ce5-8d3f-cce35ea7e2b2",
+                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
                             product_Description = "Nike Air Jordan 1 Low Elevate Low ‘Iced Lilac’ hiện đã có sẵn tại Sneaker Daily Shop, đừng bỏ lỡ cơ hội của mình nhé!",
                             product_Img1 = "StaticFiles/p-1/product-1.png",
                             product_Img2 = "StaticFiles/p-1/product-2.png",
@@ -407,9 +521,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "9f92f5b4-9005-4a27-9fbe-631c9a111c89",
+                            product_Id = "034b3077-7ce5-420c-a103-ea795aeb01b6",
                             IsDelete = false,
-                            product_CategoryId = "bc01668e-651a-4ce5-8d3f-cce35ea7e2b2",
+                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
                             product_Description = "Nike Air Jordan 1 Elevate Low Neutral Grey (Women’s) DH7004-110",
                             product_Img1 = "StaticFiles/p-2/product-1.png",
                             product_Img2 = "StaticFiles/p-2/product-2.png",
@@ -426,9 +540,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "f3908318-4fae-4d84-b79f-7b63753de07b",
+                            product_Id = "9ff292f3-1087-49d9-841c-d37c022da2e0",
                             IsDelete = false,
-                            product_CategoryId = "bc01668e-651a-4ce5-8d3f-cce35ea7e2b2",
+                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
                             product_Description = "Nike Air Jordan 1 Retro High 85 ‘Black White’ BQ4422-001",
                             product_Img1 = "StaticFiles/p-3/product-1.png",
                             product_Img2 = "StaticFiles/p-3/product-2.png",
@@ -445,9 +559,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "574b85d2-195c-4f49-a0ce-04e6de1e3beb",
+                            product_Id = "e6cf8556-de00-4c4f-9199-9504357ae64d",
                             IsDelete = false,
-                            product_CategoryId = "bc01668e-651a-4ce5-8d3f-cce35ea7e2b2",
+                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
                             product_Description = "Nike Air Jordan 1 Mid SE ‘Coconut Milk’ DV1302-100",
                             product_Img1 = "StaticFiles/p-4/product-1.png",
                             product_Img2 = "StaticFiles/p-4/product-2.png",
@@ -464,9 +578,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "ccdbd6e4-a134-4cdf-a2fb-c320735cc534",
+                            product_Id = "0b83fb38-7655-419e-bf7a-6da14af19b05",
                             IsDelete = false,
-                            product_CategoryId = "bc01668e-651a-4ce5-8d3f-cce35ea7e2b2",
+                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
                             product_Description = "Nike Air Jordan 1 Low ‘Barely Grape’ (W) DC0774-501",
                             product_Img1 = "StaticFiles/p-5/product-1.png",
                             product_Img2 = "StaticFiles/p-5/product-2.png",
@@ -483,9 +597,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "dec7576d-36ef-4bde-b98f-9283e1d96881",
+                            product_Id = "aaedc19f-219e-482f-8b55-b2a6ed29ae0a",
                             IsDelete = false,
-                            product_CategoryId = "bc01668e-651a-4ce5-8d3f-cce35ea7e2b2",
+                            product_CategoryId = "480cf9fa-445a-4638-b75b-95a9d28b14d5",
                             product_Description = "Nike Air Jordan 1 Low ‘Desert’ (W) DC0774-201",
                             product_Img1 = "StaticFiles/p-6/product-1.png",
                             product_Img2 = "StaticFiles/p-6/product-2.png",
@@ -502,9 +616,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "dec0fff8-0e8c-4b43-8594-4bf86a49393c",
+                            product_Id = "d288e05b-9379-4743-9d0e-2d499e3c0065",
                             IsDelete = false,
-                            product_CategoryId = "a0d4702b-d615-40b1-ac8e-3709755fec96",
+                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
                             product_Description = "Nike Air Force 1 ’07 LV8 ‘Black Sail’ DV0794-001",
                             product_Img1 = "StaticFiles/p-7/product-1.png",
                             product_Img2 = "StaticFiles/p-7/product-2.png",
@@ -521,9 +635,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "406c5592-c009-460c-8901-5819ff1347ab",
+                            product_Id = "98e2510d-d2b3-4582-b2a1-cf76399fd262",
                             IsDelete = false,
-                            product_CategoryId = "a0d4702b-d615-40b1-ac8e-3709755fec96",
+                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
                             product_Description = "Nike Air Force 1 ’07 LV8 ‘Sanddrift Sail’ DV0794-100",
                             product_Img1 = "StaticFiles/p-8/product-1.png",
                             product_Img2 = "StaticFiles/p-8/product-2.png",
@@ -540,9 +654,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "8dc1e2a3-4d9f-4810-beee-a7432cb4050b",
+                            product_Id = "6f8a9897-c004-4beb-b37d-5e50a5800f87",
                             IsDelete = false,
-                            product_CategoryId = "a0d4702b-d615-40b1-ac8e-3709755fec96",
+                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
                             product_Description = "Nike Air Force 1 Low Shadow ‘Leopard’ CI0919-120",
                             product_Img1 = "StaticFiles/p-9/product-1.png",
                             product_Img2 = "StaticFiles/p-9/product-2.png",
@@ -559,9 +673,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "7acc888a-116d-4773-ae5f-430aa8a8354a",
+                            product_Id = "030f0480-1ed4-4aaf-bbad-ec3e6d2f7b52",
                             IsDelete = false,
-                            product_CategoryId = "a0d4702b-d615-40b1-ac8e-3709755fec96",
+                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
                             product_Description = "Nike Air Force 1 Low Shadow ‘Summit White University Red Black’ DR7883-102",
                             product_Img1 = "StaticFiles/p-10/product-1.png",
                             product_Img2 = "StaticFiles/p-10/product-2.png",
@@ -578,9 +692,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "0fa1c2ff-d765-468a-8fd5-419b4dbbdc1b",
+                            product_Id = "eb1b9845-fb95-49e0-8c14-c38fa59e340c",
                             IsDelete = false,
-                            product_CategoryId = "a0d4702b-d615-40b1-ac8e-3709755fec96",
+                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
                             product_Description = "Nike Air Force 1 ’07 LX Leap High FD4622-131",
                             product_Img1 = "StaticFiles/p-11/product-1.png",
                             product_Img2 = "StaticFiles/p-11/product-2.png",
@@ -597,9 +711,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "423b7b9f-07a5-4d46-80a2-c095b1c6cc5f",
+                            product_Id = "56e3ad0d-ee46-4d9b-a5ff-c3974fd3568c",
                             IsDelete = false,
-                            product_CategoryId = "a0d4702b-d615-40b1-ac8e-3709755fec96",
+                            product_CategoryId = "a633ff4a-3536-4fad-b81a-5c6e175f4aca",
                             product_Description = "Nike Air Force 1 ’07 Retro Color Of The Month University Red White FD7039-600",
                             product_Img1 = "StaticFiles/p-12/product-1.png",
                             product_Img2 = "StaticFiles/p-12/product-2.png",
@@ -616,9 +730,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "0e847f0e-2c7c-41ca-a704-78536b5f8ef8",
+                            product_Id = "97d75b09-2176-4eb2-8d39-f63f7421cf2a",
                             IsDelete = false,
-                            product_CategoryId = "a871d64f-fb05-4a24-b60d-225c07575f0a",
+                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
                             product_Description = "Adidas Yeezy Boost 350 V2 ‘Onyx’ HQ4540",
                             product_Img1 = "StaticFiles/p-13/product-1.png",
                             product_Img2 = "StaticFiles/p-13/product-2.png",
@@ -635,9 +749,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "e4fe45ce-1f9e-4e32-b769-b15cb828bcfc",
+                            product_Id = "d6b3ed05-29e8-4290-9cc3-9c6b8403a795",
                             IsDelete = false,
-                            product_CategoryId = "a871d64f-fb05-4a24-b60d-225c07575f0a",
+                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
                             product_Description = "Adidas Yeezy Boost 350 V2 ‘MX Oat’ GW3773",
                             product_Img1 = "StaticFiles/p-14/product-1.png",
                             product_Img2 = "StaticFiles/p-14/product-2.png",
@@ -654,9 +768,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "e3bcee6d-1992-45af-b02b-4cb0fbab41a4",
+                            product_Id = "387165a0-4f8c-4a61-a633-9122aaffe6be",
                             IsDelete = false,
-                            product_CategoryId = "a871d64f-fb05-4a24-b60d-225c07575f0a",
+                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
                             product_Description = "Adidas Yeezy Boost 350 V2 Sesame F99710",
                             product_Img1 = "StaticFiles/p-15/product-1.png",
                             product_Img2 = "StaticFiles/p-15/product-2.png",
@@ -673,9 +787,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "54f2ba97-25e9-45fd-87ab-a736318718ce",
+                            product_Id = "efd55c12-1e69-4153-86c4-db283a2e35b2",
                             IsDelete = false,
-                            product_CategoryId = "a871d64f-fb05-4a24-b60d-225c07575f0a",
+                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
                             product_Description = "Adidas Yeezy Boost 350 V2 ‘Salt’ HQ2060",
                             product_Img1 = "StaticFiles/p-16/product-1.png",
                             product_Img2 = "StaticFiles/p-16/product-2.png",
@@ -692,9 +806,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "088a0124-3569-4c1f-a896-2dde6aab9e75",
+                            product_Id = "84860176-0c20-493a-b754-564d80908858",
                             IsDelete = false,
-                            product_CategoryId = "a871d64f-fb05-4a24-b60d-225c07575f0a",
+                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
                             product_Description = "Adidas Originals Yeezy Foam Runner ‘Stone Sage’ GX4472",
                             product_Img1 = "StaticFiles/p-17/product-1.png",
                             product_Img2 = "StaticFiles/p-17/product-2.png",
@@ -711,9 +825,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "c436989b-45fd-4b29-bbfe-1c2865f2af1a",
+                            product_Id = "59c64d19-17fe-4f74-8820-064b08509842",
                             IsDelete = false,
-                            product_CategoryId = "a871d64f-fb05-4a24-b60d-225c07575f0a",
+                            product_CategoryId = "3e3c32ce-9fdf-4593-a0e8-853258c2e02a",
                             product_Description = "Adidas Yeezy Boost 350 V2 ‘Core Black Red’ BY9612",
                             product_Img1 = "StaticFiles/p-18/product-1.png",
                             product_Img2 = "StaticFiles/p-18/product-2.png",
@@ -730,9 +844,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "8b49901b-f441-4373-b525-57b24923b65a",
+                            product_Id = "8068924e-9800-430e-9565-29fa5f87648b",
                             IsDelete = false,
-                            product_CategoryId = "3f8c8a3b-0ab2-4e19-87b7-c3d89cd24e2d",
+                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
                             product_Description = "Adidas NMD_R1 ‘Black Solar Red’ GZ9274",
                             product_Img1 = "StaticFiles/p-19/product-1.png",
                             product_Img2 = "StaticFiles/p-19/product-2.png",
@@ -749,9 +863,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "c5cc27f3-5092-49f4-8047-bd2aad9627d9",
+                            product_Id = "82eb1194-49a4-4387-aae1-6b033f4d1060",
                             IsDelete = false,
-                            product_CategoryId = "3f8c8a3b-0ab2-4e19-87b7-c3d89cd24e2d",
+                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
                             product_Description = "Adidas BOSSK NMD_R1 SPECTOO ‘Black Yellow’ GX6792",
                             product_Img1 = "StaticFiles/p-20/product-1.png",
                             product_Img2 = "StaticFiles/p-20/product-2.png",
@@ -768,9 +882,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "44dc4584-2a09-4c38-a125-355be34ae44c",
+                            product_Id = "bbbad47c-0cef-4827-aa77-ca653828c1b9",
                             IsDelete = false,
-                            product_CategoryId = "3f8c8a3b-0ab2-4e19-87b7-c3d89cd24e2d",
+                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
                             product_Description = "Adidas NMD R1 ‘Off White Sand’ FV1793",
                             product_Img1 = "StaticFiles/p-21/product-1.png",
                             product_Img2 = "StaticFiles/p-21/product-2.png",
@@ -787,9 +901,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "13e053e3-da04-4fc0-84ad-3ebfbd42e11f",
+                            product_Id = "c61362a0-fe0f-4306-ab2c-b6b45cfeeb38",
                             IsDelete = false,
-                            product_CategoryId = "3f8c8a3b-0ab2-4e19-87b7-c3d89cd24e2d",
+                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
                             product_Description = "Adidas NMD R1 Pixar ‘Black’ GX0997",
                             product_Img1 = "StaticFiles/p-22/product-1.png",
                             product_Img2 = "StaticFiles/p-22/product-2.png",
@@ -806,9 +920,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "216dc317-0b19-4a65-bd0e-4e1a5fe95932",
+                            product_Id = "51737ad4-cc97-4e26-86fd-08524731e243",
                             IsDelete = false,
-                            product_CategoryId = "3f8c8a3b-0ab2-4e19-87b7-c3d89cd24e2d",
+                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
                             product_Description = "Originals Unisex adidas Nmd R1 ‘Cloud White’ GX0996",
                             product_Img1 = "StaticFiles/p-23/product-1.png",
                             product_Img2 = "StaticFiles/p-23/product-2.png",
@@ -825,9 +939,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "38ba1e10-fb63-4a19-984b-061b5b3e3f8b",
+                            product_Id = "6f1a4ab3-773b-4eda-9be8-04758f4a59b1",
                             IsDelete = false,
-                            product_CategoryId = "3f8c8a3b-0ab2-4e19-87b7-c3d89cd24e2d",
+                            product_CategoryId = "798decc8-17c8-4152-9652-61e55d5f5cce",
                             product_Description = "Adidas EQ19 Run H00933",
                             product_Img1 = "StaticFiles/p-24/product-1.png",
                             product_Img2 = "StaticFiles/p-24/product-2.png",
@@ -844,9 +958,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "fcab161d-73e6-4617-b60d-190a002d50c3",
+                            product_Id = "84aef9e1-27be-4c34-ad38-699ee22595dc",
                             IsDelete = false,
-                            product_CategoryId = "70384946-c313-4edf-b98a-66ed223b2168",
+                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
                             product_Description = "MLB Playball Mule Dia Monogram New York Yankees ‘Black’ 3AMUMDA2N-50BKS",
                             product_Img1 = "StaticFiles/p-25/product-1.png",
                             product_Img2 = "StaticFiles/p-25/product-2.png",
@@ -863,9 +977,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "3690f375-a3f0-42cc-9b53-9e29ae4f3bb1",
+                            product_Id = "6e19f645-cdd0-4ffd-bc30-c8c17f01178b",
                             IsDelete = false,
-                            product_CategoryId = "70384946-c313-4edf-b98a-66ed223b2168",
+                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
                             product_Description = "MLB Playball Mule Dia Monogram New York Yankees ‘Beige’ 3AMUMDA2N-50BGS",
                             product_Img1 = "StaticFiles/p-26/product-1.png",
                             product_Img2 = "StaticFiles/p-26/product-2.png",
@@ -882,9 +996,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "4e07c925-1793-4c60-9a06-92cd484870d7",
+                            product_Id = "9690b826-043a-4168-9326-dcf01b789fd9",
                             IsDelete = false,
-                            product_CategoryId = "70384946-c313-4edf-b98a-66ed223b2168",
+                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
                             product_Description = "MLB Playball Mule Dia Monogram New York Yankees ‘Cream’ 3AMUM212N-50BGD",
                             product_Img1 = "StaticFiles/p-27/product-1.png",
                             product_Img2 = "StaticFiles/p-27/product-2.png",
@@ -901,9 +1015,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "53aa7691-ef7c-4e29-9b57-360035eee347",
+                            product_Id = "b27dbbf8-c6bf-4a0f-ad86-5b99b94e03be",
                             IsDelete = false,
-                            product_CategoryId = "70384946-c313-4edf-b98a-66ed223b2168",
+                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
                             product_Description = "MLB Playball Origin Mule New York Yankees Black 32SHS1111-50L",
                             product_Img1 = "StaticFiles/p-28/product-1.png",
                             product_Img2 = "StaticFiles/p-28/product-2.png",
@@ -920,9 +1034,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "74756599-e683-4987-87dd-cb003d09dd31",
+                            product_Id = "b92050ff-1fbd-4cc1-88af-ddbc1d69866d",
                             IsDelete = false,
-                            product_CategoryId = "70384946-c313-4edf-b98a-66ed223b2168",
+                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
                             product_Description = "MLB Mule Playball Fur Diamond Monogram New York Yankees Black 3AMUUFS26-50BKS",
                             product_Img1 = "StaticFiles/p-29/product-1.png",
                             product_Img2 = "StaticFiles/p-29/product-2.png",
@@ -939,9 +1053,9 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            product_Id = "41dc43f6-b300-4c15-bda8-14fd283bb534",
+                            product_Id = "98cbcb02-246e-42b3-a377-a61f85ccb015",
                             IsDelete = false,
-                            product_CategoryId = "70384946-c313-4edf-b98a-66ed223b2168",
+                            product_CategoryId = "736dfef6-8baa-434a-b295-e6a3c8e8c898",
                             product_Description = "MLB Mule Playball Fur Diamond Monogram Boston Red Sox D.Beige 3AMUUFS26-43BGD",
                             product_Img1 = "StaticFiles/p-30/product-1.png",
                             product_Img2 = "StaticFiles/p-30/product-2.png",
@@ -1188,13 +1302,18 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "d5f3b54e-c721-4b91-8135-01a2e7191a92",
-                            RoleId = "31bd0872-e289-4a8f-96fb-a0b7fc5bfb80"
+                            UserId = "1fd3ca8a-9a44-4600-819c-804b6bd57b85",
+                            RoleId = "c4669085-8d1d-42e2-9dc3-c37cea478060"
                         },
                         new
                         {
-                            UserId = "69420e08-6de1-4ffe-a733-f32ff388847b",
-                            RoleId = "ecc2b10f-36a9-465b-90d6-e7a3ab3d4522"
+                            UserId = "a8c43797-7bdb-40aa-aad8-311ad447e64b",
+                            RoleId = "796fc75d-47ad-4186-b58e-7bfa954942c4"
+                        },
+                        new
+                        {
+                            UserId = "6b181921-c620-4adc-8235-dfe9f1101f72",
+                            RoleId = "c4669085-8d1d-42e2-9dc3-c37cea478060"
                         });
                 });
 
@@ -1231,16 +1350,16 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "31bd0872-e289-4a8f-96fb-a0b7fc5bfb80",
-                            ConcurrencyStamp = "990266ce-ea2b-494d-aebb-10ceeca3a9b1",
+                            Id = "c4669085-8d1d-42e2-9dc3-c37cea478060",
+                            ConcurrencyStamp = "f56d0f38-1b2b-4153-84ab-6e9d5b4cf4a5",
                             Name = "Admin",
                             NormalizedName = "admin",
                             IsDelete = false
                         },
                         new
                         {
-                            Id = "ecc2b10f-36a9-465b-90d6-e7a3ab3d4522",
-                            ConcurrencyStamp = "91f829b8-fe4c-499f-a51a-5a45f50e3eb9",
+                            Id = "796fc75d-47ad-4186-b58e-7bfa954942c4",
+                            ConcurrencyStamp = "cf6ab091-6f65-45d2-a0f9-88a595c48303",
                             Name = "Staff",
                             NormalizedName = "staff",
                             IsDelete = false
@@ -1271,19 +1390,19 @@ namespace Fashion_Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d5f3b54e-c721-4b91-8135-01a2e7191a92",
+                            Id = "1fd3ca8a-9a44-4600-819c-804b6bd57b85",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5a675c82-b4d4-460d-bb71-6752e1ea8c7b",
+                            ConcurrencyStamp = "a66692d4-18d1-45ef-b011-c3bf8e017ae0",
                             Email = "staff@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "STAFF@GMAIL.COM",
                             NormalizedUserName = "STAFF@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECwG5tJVGQoRItGfzBgoJHZy7DmvLncF1FpiZD4F28SvjQ2C9ss2l/lP4EMPSrBVyQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBT4oD4wzygk2gwIvuznJnPyw43A++Q/JzwK6B3sSG5q4i0DDT9BOUpi4IPm9fhFMw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cb7c7843-9549-41ed-8cae-b406509975ea",
+                            SecurityStamp = "a8e57601-cb56-4e8e-93ec-00bc6bf53eab",
                             TwoFactorEnabled = false,
-                            UserName = "Staft",
+                            UserName = "Staff",
                             Address = "",
                             FirstName = "",
                             IsDelete = false,
@@ -1291,19 +1410,39 @@ namespace Fashion_Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = "69420e08-6de1-4ffe-a733-f32ff388847b",
+                            Id = "a8c43797-7bdb-40aa-aad8-311ad447e64b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "adf341b5-b4a0-4a0d-b42a-16fa8dd78fce",
+                            ConcurrencyStamp = "bbaa70d6-cd0f-4d34-8627-07dea345d8e2",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEN7SA5jDKOz+2qsHCSmHdi0r2KmcV4H8Rzj7SDWk31buIjPpvVxZEFW+AItLetw3/g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHdztSxoYW7McWUumOHU6L88qM0Mmb6vlxhXVwBrkbQd13x1SSoHelNRw639Vq3JDw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cb0471fa-a6bc-4770-a420-633586d9c3ca",
+                            SecurityStamp = "d889eec7-dd5e-4cdd-b5b7-3674a10cc40f",
                             TwoFactorEnabled = false,
                             UserName = "Admin",
+                            Address = "",
+                            FirstName = "",
+                            IsDelete = false,
+                            LastName = ""
+                        },
+                        new
+                        {
+                            Id = "6b181921-c620-4adc-8235-dfe9f1101f72",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "9c31f342-71da-489c-b3e9-da4ddf0518d8",
+                            Email = "staff2@gmail.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "STAFF2@GMAIL.COM",
+                            NormalizedUserName = "STAFF2@GMAIL.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBcUPL9v9wdBEej0T0xFACRM+WnTZGygPqOqwkFNUV9XR6LmbXSaLhO9cGP7fq8joA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "932271e0-df8a-4e13-a9b0-b262381ba8fe",
+                            TwoFactorEnabled = false,
+                            UserName = "Staff2",
                             Address = "",
                             FirstName = "",
                             IsDelete = false,

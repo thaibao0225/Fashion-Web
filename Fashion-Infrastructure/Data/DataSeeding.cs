@@ -48,7 +48,7 @@ namespace Fashion_Infrastructure.Data
                 new UsersTable()
                 {
                     Id = newUser_Id1,
-                    UserName = "Staft",
+                    UserName = "Staff",
                     FirstName = "",
                     LastName = "",
                     NormalizedUserName = "STAFF@GMAIL.COM",
@@ -72,6 +72,20 @@ namespace Fashion_Infrastructure.Data
                     PasswordHash = hasher.HashPassword(null, "123456Aa@"),
                     SecurityStamp = Guid.NewGuid().ToString(),
                     IsDelete = false
+                },
+                new UsersTable()
+                {
+                    Id = newUser_Id3,
+                    UserName = "Staff2",
+                    FirstName = "",
+                    LastName = "",
+                    NormalizedUserName = "STAFF2@GMAIL.COM",
+                    NormalizedEmail = "STAFF2@GMAIL.COM",
+                    Email = "staff2@gmail.com",
+                    EmailConfirmed = true,
+                    PasswordHash = hasher.HashPassword(null, "123456Aa@"),
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    IsDelete = false
                 }
                 );
 
@@ -87,71 +101,12 @@ namespace Fashion_Infrastructure.Data
                {
                    RoleId = newRole_Id2,
                    UserId = newUser_Id2
+               },
+               new IdentityUserRole<string>
+               {
+                   RoleId = newRole_Id1,
+                   UserId = newUser_Id3
                });
-
-
-            //// Table Bills
-            //string newBill_Id1 = Guid.NewGuid().ToString();
-            //string newBill_Id2 = Guid.NewGuid().ToString();
-            //string newBill_Id3 = Guid.NewGuid().ToString();
-
-
-            //builder.Entity<BillsTable>().HasData(
-            //    new BillsTable()
-            //    {
-            //        bill_Id = newBill_Id1,
-            //        bill_Code = 1,
-            //        bill_UserId = newUser_Id1,
-            //        bill_Price = 0,
-            //        bill_ProductsIdList = "",
-            //        bill_ProductPriceList = "",
-            //        bill_ProductUnitList = "",
-            //        bill_ProductColorList = "",
-            //        bill_ProductSizeList = "",
-
-            //        CreateBy = BaseData.CreateBy,
-            //        CreateOn = BaseData.CreateOn,
-            //        UpdateBy = BaseData.UpdateBy,
-            //        UpdateOn = BaseData.UpdateOn,
-            //        IsDelete = false
-            //    },
-            //    new BillsTable()
-            //    {
-            //        bill_Id = newBill_Id2,
-            //        bill_Code = 1,
-            //        bill_UserId = newUser_Id1,
-            //        bill_Price = 0,
-            //        bill_ProductsIdList = "",
-            //        bill_ProductPriceList = "",
-            //        bill_ProductUnitList = "",
-            //        bill_ProductColorList = "",
-            //        bill_ProductSizeList = "",
-
-            //        CreateBy = BaseData.CreateBy,
-            //        CreateOn = BaseData.CreateOn,
-            //        UpdateBy = BaseData.UpdateBy,
-            //        UpdateOn = BaseData.UpdateOn,
-            //        IsDelete = false
-            //    },
-            //    new BillsTable()
-            //    {
-            //        bill_Id = newBill_Id3,
-            //        bill_Code = 1,
-            //        bill_UserId = newUser_Id2,
-            //        bill_Price = 0,
-            //        bill_ProductsIdList = "",
-            //        bill_ProductPriceList = "",
-            //        bill_ProductUnitList = "",
-            //        bill_ProductColorList = "",
-            //        bill_ProductSizeList = "",
-
-            //        CreateBy = BaseData.CreateBy,
-            //        CreateOn = BaseData.CreateOn,
-            //        UpdateBy = BaseData.UpdateBy,
-            //        UpdateOn = BaseData.UpdateOn,
-            //        IsDelete = false
-            //    }
-            //    );
 
 
             // Category Table
@@ -805,7 +760,128 @@ namespace Fashion_Infrastructure.Data
                 }
                 );
 
+            // Color Table
+            string newColor_Id1 = Guid.NewGuid().ToString();
+            string newColor_Id2 = Guid.NewGuid().ToString();
+            string newColor_Id3 = Guid.NewGuid().ToString();
+            string newColor_Id4 = Guid.NewGuid().ToString();
 
+            builder.Entity<ColorsTable>().HasData(
+                new ColorsTable()
+                {
+                    color_Id = newColor_Id1,
+                    color_Name = BaseData.RedName,
+                    color_IdDelete = false
+                },
+                new ColorsTable()
+                {
+                    color_Id = newColor_Id2,
+                    color_Name = BaseData.BlackName,
+                    color_IdDelete = false
+                },
+                new ColorsTable()
+                {
+                    color_Id = newColor_Id3,
+                    color_Name = BaseData.GreenName,
+                    color_IdDelete = false
+                },
+                new ColorsTable()
+                {
+                    color_Id = newColor_Id4,
+                    color_Name = BaseData.YellowName,
+                    color_IdDelete = false
+                }
+                );
+
+            // Color Table
+
+            builder.Entity<ColorInProductTable>().HasData(
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id1,
+                    cip_ProductId = newProduct_Id1,
+                    cip_IsDelete = false
+                }, 
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id2,
+                    cip_ProductId = newProduct_Id1,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id3,
+                    cip_ProductId = newProduct_Id1,
+                    cip_IsDelete = false
+                },
+                new ColorInProductTable()
+                {
+                    cip_ColorId = newColor_Id4,
+                    cip_ProductId = newProduct_Id1,
+                    cip_IsDelete = false
+                }
+                );
+
+            // Table Bills
+            string newBill_Id1 = Guid.NewGuid().ToString();
+            string newBill_Id2 = Guid.NewGuid().ToString();
+            string newBill_Id3 = Guid.NewGuid().ToString();
+
+
+            builder.Entity<BillsTable>().HasData(
+                new BillsTable()
+                {
+                    bill_Id = newBill_Id1,
+                    bill_Code = 1,
+                    bill_UserId = newUser_Id1,
+                    bill_Price = 0,
+                    bill_ProductsIdList = newProduct_Id1+"|"+ newProduct_Id2 + "|" + newProduct_Id3 + "|" + newProduct_Id4 + "|",
+                    bill_ProductPriceList = "10|10|10|10|",
+                    bill_ProductUnitList = "1|1|1|1|",
+                    bill_ProductColorList = "Red|Black|Green|Yellow",
+                    bill_ProductSizeList = "X|XL|S|M",
+
+                    CreateBy = BaseData.CreateBy,
+                    CreateOn = BaseData.CreateOn,
+                    UpdateBy = BaseData.UpdateBy,
+                    UpdateOn = BaseData.UpdateOn,
+                    IsDelete = false
+                }, new BillsTable()
+                {
+                    bill_Id = newBill_Id2,
+                    bill_Code = 1,
+                    bill_UserId = newUser_Id2,
+                    bill_Price = 0,
+                    bill_ProductsIdList = newProduct_Id5 + "|" + newProduct_Id6 + "|" + newProduct_Id7 + "|" + newProduct_Id8 + "|",
+                    bill_ProductPriceList = "10|10|10|10|",
+                    bill_ProductUnitList = "1|1|1|1|",
+                    bill_ProductColorList = "Red|Black|Green|Yellow",
+                    bill_ProductSizeList = "X|XL|S|M",
+
+                    CreateBy = BaseData.CreateBy,
+                    CreateOn = BaseData.CreateOn,
+                    UpdateBy = BaseData.UpdateBy,
+                    UpdateOn = BaseData.UpdateOn,
+                    IsDelete = false
+                }, new BillsTable()
+                {
+                    bill_Id = newBill_Id3,
+                    bill_Code = 1,
+                    bill_UserId = newUser_Id3,
+                    bill_Price = 0,
+                    bill_ProductsIdList = newProduct_Id9 + "|" + newProduct_Id10 + "|" + newProduct_Id11 + "|" + newProduct_Id12 + "|",
+                    bill_ProductPriceList = "10|10|10|10|",
+                    bill_ProductUnitList = "1|1|1|1|",
+                    bill_ProductColorList = "Red|Black|Green|Yellow",
+                    bill_ProductSizeList = "X|XL|S|M",
+
+                    CreateBy = BaseData.CreateBy,
+                    CreateOn = BaseData.CreateOn,
+                    UpdateBy = BaseData.UpdateBy,
+                    UpdateOn = BaseData.UpdateOn,
+                    IsDelete = false
+                }
+                );
 
         }
     }

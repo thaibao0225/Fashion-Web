@@ -120,6 +120,70 @@ namespace Fashion_Fuction.Services
             return true;
         }
 
+        public async Task<bool> ChangeStatusConfirmBillById(string billId)
+        {
+            var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id == billId);
+            if (billQuery != null)
+            {
+                billQuery.bill_IsConfirm = true;
+
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
+        }
+        public async Task<bool> ChangeStatusUnconfirmBillById(string billId)
+        {
+            var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id == billId);
+            if (billQuery != null)
+            {
+                billQuery.bill_IsConfirm = false;
+
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
+        }
+
+        public async Task<bool> ChangeStatusPaymentBillById(string billId)
+        {
+            var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id == billId);
+            if (billQuery != null)
+            {
+                billQuery.bill_IsPayment = true;
+
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
+        }
+
+        public async Task<bool> ChangeStatusUnpaymentBillById(string billId)
+        {
+            var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id == billId);
+            if (billQuery != null)
+            {
+                billQuery.bill_IsPayment = false;
+
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
+        }
+
+        public async Task<bool> DeletePayment(string billId)
+        {
+            var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id == billId);
+            if (billQuery != null)
+            {
+                billQuery.IsDelete = true;
+
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
+        }
+
         //public List<ProductModel> UnGenProductString(
         //    string productIdString,
         //    string productPriceString,
@@ -151,7 +215,7 @@ namespace Fashion_Fuction.Services
 
 
         //    }
-            
+
 
         //    return null;
         //}

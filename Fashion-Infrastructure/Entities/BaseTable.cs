@@ -9,7 +9,7 @@ namespace Fashion_Infrastructure.Entities
         public DateTime? CreateOn { get; set; }
         public string? UpdateBy { get; set; }
         public DateTime? UpdateOn { get; set; }
-        public Boolean IsDelete { get; set; } = false;
+        public bool IsDelete { get; set; } = false;
 
     }
 }
