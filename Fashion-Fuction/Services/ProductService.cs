@@ -41,6 +41,7 @@ namespace Fashion_Fuction.Services
                 product.product_Img2 = prefix + item.product_Img2;
                 product.product_Img3 = prefix + item.product_Img3;
                 product.product_Img4 = prefix + item.product_Img4;
+                product.product_Img5 = prefix + item.product_Img5;
                 product.product_Sold = item.product_Sold;
                 product.product_Rate = item.product_Rate;
 
@@ -82,6 +83,7 @@ namespace Fashion_Fuction.Services
                 product.product_Img2 = prefix + item.product_Img2;
                 product.product_Img3 = prefix + item.product_Img3;
                 product.product_Img4 = prefix + item.product_Img4;
+                product.product_Img5 = prefix + item.product_Img5;
                 product.product_Sold = item.product_Sold;
                 product.product_Rate = item.product_Rate;
 
@@ -117,12 +119,28 @@ namespace Fashion_Fuction.Services
                     product.product_Img2 = prefix + productQuery.product_Img2;
                     product.product_Img3 = prefix + productQuery.product_Img3;
                     product.product_Img4 = prefix + productQuery.product_Img4;
+                    product.product_Img5 = prefix + productQuery.product_Img5;
                     product.product_Sold = productQuery.product_Sold;
                     product.product_Rate = productQuery.product_Rate;
+                    product.product_ViewNumber = productQuery.product_ViewNumber;
+                    product.product_Type = productQuery.product_Type;
+
+                    var categoryQuery = _context.categoriesTable.FirstOrDefault(x => x.category_Id == productQuery.product_CategoryId);
+
+                    if (categoryQuery != null)
+                    {
+                        product.product_CategoryName = categoryQuery.category_Name;
+                    }
+                    else
+                    {
+                        product.product_CategoryName = "";
+                    }
+                    
+                    
 
                     return product;
                 }
-                return null;
+                return new ProductModel();
             }
             catch (Exception)
             {
@@ -164,15 +182,31 @@ namespace Fashion_Fuction.Services
                     produceQuery.product_Description = productModel.product_Description;
                     produceQuery.product_ShortDescription = productModel.product_ShortDescription;
                     produceQuery.product_Price = productModel.product_Price;
-                    produceQuery.product_Sold = productModel.product_Sold;
-                    produceQuery.product_Rate = productModel.product_Rate;
-                    produceQuery.product_Img1 = productModel.product_Img1;
-                    produceQuery.product_Img2 = productModel.product_Img2;
-                    produceQuery.product_Img3 = productModel.product_Img3;
-                    produceQuery.product_Img4 = productModel.product_Img4;
-                    produceQuery.product_Img5 = productModel.product_Img5;
+                    //produceQuery.product_Sold = productModel.product_Sold;
+                    //produceQuery.product_Rate = productModel.product_Rate;
+                    if (productModel.product_Img1 != "")
+                    {
+                        produceQuery.product_Img1 = productModel.product_Img1;
+                    }
+                    if (productModel.product_Img2 != "")
+                    {
+                        produceQuery.product_Img2 = productModel.product_Img2;
+                    }
+                    if (productModel.product_Img3 != "")
+                    {
+                        produceQuery.product_Img3 = productModel.product_Img3;
+                    }
+                    if (productModel.product_Img4 != "")
+                    {
+                        produceQuery.product_Img4 = productModel.product_Img4;
+                    }
+                    if (productModel.product_Img5 != "")
+                    {
+                        produceQuery.product_Img5 = productModel.product_Img5;
+                    }
+
                     produceQuery.product_Type = productModel.product_Type;
-                    produceQuery.product_ViewNumber = productModel.product_ViewNumber;
+                    //produceQuery.product_ViewNumber = productModel.product_ViewNumber;
                     produceQuery.product_CategoryId = productModel.product_CategoryId;
 
                     await _context.SaveChangesAsync();

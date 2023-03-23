@@ -1,3 +1,4 @@
+using Fashion_Fuction.Extension;
 using Fashion_Fuction.Services;
 using Fashion_Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
@@ -18,6 +19,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IBufferedFileUploadService, BufferedFileUploadService>();
 
 var app = builder.Build();
 
@@ -39,7 +42,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-           Path.Combine(builder.Environment.ContentRootPath, "MyStaticFiles")),
+           Path.Combine(builder.Environment.ContentRootPath, "StaticFiles")),
     RequestPath = "/StaticFiles"
 });
 
