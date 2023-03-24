@@ -25,12 +25,14 @@ namespace Fashion_Admin.Controllers
         }
 
         // GET: CategoriesController/Details/5
-        public ActionResult Details(int id)
+        [Route("/categories/details")]
+        public ActionResult Details(string id)
         {
-            return View();
+            return View(_categoryService.GetCategoryById(id));
         }
 
         // GET: CategoriesController/Create
+        [Route("/categories/create")]
         public ActionResult Create()
         {
             return View();
@@ -38,6 +40,7 @@ namespace Fashion_Admin.Controllers
 
         // POST: CategoriesController/Create
         [HttpPost]
+        [Route("/categories/create")]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
@@ -52,6 +55,7 @@ namespace Fashion_Admin.Controllers
         }
 
         // GET: CategoriesController/Edit/5
+        [Route("/categories/edit")]
         public ActionResult Edit(int id)
         {
             return View();
@@ -59,6 +63,7 @@ namespace Fashion_Admin.Controllers
 
         // POST: CategoriesController/Edit/5
         [HttpPost]
+        [Route("/categories/edit")]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
@@ -73,6 +78,7 @@ namespace Fashion_Admin.Controllers
         }
 
         // GET: CategoriesController/Delete/5
+        [Route("/categories/delete")]
         public ActionResult Delete(int id)
         {
             return View();
@@ -80,6 +86,7 @@ namespace Fashion_Admin.Controllers
 
         // POST: CategoriesController/Delete/5
         [HttpPost]
+        [Route("/categories/delete")]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {

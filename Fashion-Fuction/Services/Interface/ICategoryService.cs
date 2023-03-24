@@ -13,6 +13,7 @@ namespace Fashion_Fuction.Services.Interface
         public Task<bool> UpdateCategory(string id, CategoryModel categoryModel);
         public Task<bool> DeleteCategory(string id);
         public List<CategoryModel> GetAllCategory();
+        public CategoryModel GetCategoryById(string categoryId);
 
     }
 }
