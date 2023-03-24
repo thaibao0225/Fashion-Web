@@ -52,6 +52,8 @@ namespace Fashion_Admin.Controllers
         {
 
             ViewBag.categoryList = _categoryService.GetAllCategory();
+
+
             return View();
         }
 
@@ -59,16 +61,68 @@ namespace Fashion_Admin.Controllers
         [HttpPost]
         [Route("/products/create")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(IFormCollection collection, IFormFile product_ImgFile1)
+        public async Task<ActionResult> Create(IFormCollection collection,
+            IFormFile product_ImgFile1,
+            IFormFile product_ImgFile2,
+            IFormFile product_ImgFile3,
+            IFormFile product_ImgFile4,
+            IFormFile product_ImgFile5)
         {
             try
             {
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                ProductModel productModel = new ProductModel();
+                productModel.product_Id = collection["product_Id"];
+                productModel.product_Name = collection["product_Name"];
+                productModel.product_Description = collection["product_Description"];
+                productModel.product_ShortDescription = collection["product_ShortDescription"];
+                productModel.product_Price = double.Parse(collection["product_Price"]);
+                productModel.product_Type = collection["product_Type"];
+                productModel.product_CategoryId = collection["product_CategoryId"];
 
-                string ideaFileName = product_ImgFile1.FileName;
-                string ideaFilePath = userId + "-" + product_ImgFile1.FileName;
 
-                await _bufferedFileUploadService.UploadFile(product_ImgFile1, ideaFileName, "1");
+                string productFileName1 = "";
+                string productFileName2 = "";
+                string productFileName3 = "";
+                string productFileName4 = "";
+                string productFileName5 = "";
+
+                if (product_ImgFile1 != null)
+                {
+                    productFileName1 = product_ImgFile1.FileName;
+                    productModel.product_Img1 = BaseData.ImgUrl + productModel.product_Id + "/" + productFileName1;
+                }
+
+                if (product_ImgFile2 != null)
+                {
+                    productFileName2 = product_ImgFile2.FileName;
+                    productModel.product_Img2 = BaseData.ImgUrl + productModel.product_Id + "/" + productFileName2;
+                }
+
+                if (product_ImgFile3 != null)
+                {
+                    productFileName3 = product_ImgFile3.FileName;
+                    productModel.product_Img3 = BaseData.ImgUrl + productModel.product_Id + "/" + productFileName3;
+                }
+
+                if (product_ImgFile4 != null)
+                {
+                    productFileName4 = product_ImgFile4.FileName;
+                    productModel.product_Img4 = BaseData.ImgUrl + productModel.product_Id + "/" + productFileName4;
+                }
+
+                if (product_ImgFile5 != null)
+                {
+                    productFileName5 = product_ImgFile5.FileName;
+                    productModel.product_Img5 = BaseData.ImgUrl + productModel.product_Id + "/" + productFileName5;
+                }
+
+                await _bufferedFileUploadService.UploadFile(product_ImgFile1, productFileName1, productModel.product_Id);
+                await _bufferedFileUploadService.UploadFile(product_ImgFile2, productFileName2, productModel.product_Id);
+                await _bufferedFileUploadService.UploadFile(product_ImgFile3, productFileName3, productModel.product_Id);
+                await _bufferedFileUploadService.UploadFile(product_ImgFile4, productFileName4, productModel.product_Id);
+                await _bufferedFileUploadService.UploadFile(product_ImgFile5, productFileName5, productModel.product_Id);
+
+                await _productService.CreateProduct(productModel);
 
                 return RedirectToAction(nameof(Index));
             }

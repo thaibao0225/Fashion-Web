@@ -9,6 +9,7 @@ using Fashion_Infrastructure.Data;
 using Abp.Domain.Uow;
 using Fashion_Fuction.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
+using Fashion_Infrastructure.Entities;
 
 namespace Fashion_Fuction.Services
 {
@@ -242,14 +243,14 @@ namespace Fashion_Fuction.Services
         {
             try
             {
-                ProductModel produceQuery = new ProductModel();
+                ProductsTable produceQuery = new ProductsTable();
                 produceQuery.product_Id = Guid.NewGuid().ToString();
                 produceQuery.product_Name = productModel.product_Name;
                 produceQuery.product_Description = productModel.product_Description;
                 produceQuery.product_ShortDescription = productModel.product_ShortDescription;
                 produceQuery.product_Price = productModel.product_Price;
                 produceQuery.product_Sold = productModel.product_Sold;
-                produceQuery.product_Rate = productModel.product_Rate;
+                produceQuery.product_Rate = 3;
                 produceQuery.product_Img1 = productModel.product_Img1;
                 produceQuery.product_Img2 = productModel.product_Img2;
                 produceQuery.product_Img3 = productModel.product_Img3;
@@ -259,6 +260,8 @@ namespace Fashion_Fuction.Services
                 produceQuery.product_ViewNumber = productModel.product_ViewNumber;
                 produceQuery.product_CategoryId = productModel.product_CategoryId;
 
+
+                await _context.productsTable.AddAsync(produceQuery);
                 await _context.SaveChangesAsync();
 
                 return false;
