@@ -1,9 +1,13 @@
 using Fashion_Fuction.Extension;
+using Fashion_Fuction.Models;
 using Fashion_Fuction.Services;
+using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
+using Fashion_Infrastructure.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using System.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +17,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+//    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddDefaultIdentity<UsersTable>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<RolesTable>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IContactService, ContactService>();
@@ -45,6 +55,7 @@ app.UseStaticFiles(new StaticFileOptions
            Path.Combine(builder.Environment.ContentRootPath, "StaticFiles")),
     RequestPath = "/StaticFiles"
 });
+
 
 
 app.UseRouting();

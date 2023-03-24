@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fashion_Fuction.Services
+namespace Fashion_Fuction.Services.Interface
 {
     public interface IContactService
     {

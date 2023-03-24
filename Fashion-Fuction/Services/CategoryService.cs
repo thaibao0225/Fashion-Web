@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Fashion_Fuction.DataCreated;
 using Fashion_Fuction.Models;
+using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
 using Fashion_Infrastructure.Entities;
 

@@ -1,4 +1,4 @@
-﻿namespace Fashion_Fuction.Services
+﻿namespace Fashion_Fuction.Services.Interface
 {
     public interface IRoleService
     {

@@ -1,4 +1,5 @@
-﻿using Fashion_Infrastructure.Data;
+﻿using Fashion_Fuction.Services.Interface;
+using Fashion_Infrastructure.Data;
 
 namespace Fashion_Fuction.Services
 {

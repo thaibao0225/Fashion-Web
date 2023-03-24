@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Fashion_Fuction.Models;
 using Fashion_Fuction.Services;
+using Fashion_Fuction.Services.Interface;
 
 namespace Fashion_Admin.Controllers
 {

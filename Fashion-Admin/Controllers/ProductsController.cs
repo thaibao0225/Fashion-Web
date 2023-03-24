@@ -6,6 +6,9 @@ using System.Security.Claims;
 using Fashion_Fuction.Extension;
 using Fashion_Fuction.Models;
 using Fashion_Infrastructure.Data.StaticData;
+using Abp.Domain.Uow;
+using Fashion_Fuction.Services.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fashion_Admin.Controllers
 {
@@ -15,13 +18,19 @@ namespace Fashion_Admin.Controllers
         private IProductService _productService;
         private IBufferedFileUploadService _bufferedFileUploadService;
         private ICategoryService _categoryService;
+        //private readonly IUnitOfWorkManager _unitOfWorkManager;
 
-        public ProductsController(ApplicationDbContext context, IBufferedFileUploadService bufferedFileUploadService) 
+        public ProductsController(ApplicationDbContext context, IBufferedFileUploadService bufferedFileUploadService
+            //, IUnitOfWorkManager unitOfWorkManager
+            ,IProductService productService
+            )
         {
             _context = context;
-            _productService = new ProductService(context);
+            //_productService = new ProductService(context);
+            _productService = productService;
             _categoryService = new CategoryService(context);
             _bufferedFileUploadService = bufferedFileUploadService;
+            //_unitOfWorkManager = unitOfWorkManager;
         }
         // GET: ProductsController
         [Route("/products")]
@@ -75,14 +84,14 @@ namespace Fashion_Admin.Controllers
         {
             ViewBag.categoryList = _categoryService.GetAllCategory();
 
-            return View(_productService.GetProductById(id));
+            return View(_productService.GetProductById( id));
         }
 
         // POST: ProductsController/Edit/5
         [Route("/products/edit")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(IFormCollection collection, 
+        public async Task<ActionResult> Edit(IFormCollection collection,
             IFormFile product_ImgFile1,
             IFormFile product_ImgFile2,
             IFormFile product_ImgFile3,
@@ -109,10 +118,10 @@ namespace Fashion_Admin.Controllers
                 string productFileName4 = "";
                 string productFileName5 = "";
 
-                if (product_ImgFile1!= null)
+                if (product_ImgFile1 != null)
                 {
                     productFileName1 = product_ImgFile1.FileName;
-                    productModel.product_Img1 = BaseData.ImgUrl + productModel.product_Id +  "/" + productFileName1;
+                    productModel.product_Img1 = BaseData.ImgUrl + productModel.product_Id + "/" + productFileName1;
                 }
 
                 if (product_ImgFile2 != null)
@@ -165,11 +174,18 @@ namespace Fashion_Admin.Controllers
 
         // POST: ProductsController/Delete/5
         [HttpPost]
+        [Route("/products/delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        [UnitOfWork]
+        public async Task<ActionResult> Delete(string id, IFormCollection collection)
         {
             try
             {
+                string productId = collection["product_Id"];
+
+                await _productService.DeleteProductById(productId);
+
+
                 return RedirectToAction(nameof(Index));
             }
             catch

@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 using Fashion_Fuction.Models;
 using Fashion_Fuction.DataCreated;
 using Fashion_Infrastructure.Data;
-
+using Abp.Domain.Uow;
+using Fashion_Fuction.Services.Interface;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Fashion_Fuction.Services
 {
     public class ProductService : IProductService
     {
         private ApplicationDbContext _context;
-
-        public ProductService(ApplicationDbContext context)
+        public ProductService(
+            ApplicationDbContext context
+            )
         {
             _context = context;
+
         }
         public List<ProductModel> GetAllList(string page = "Admin")
         {
@@ -25,7 +29,7 @@ namespace Fashion_Fuction.Services
             {
                 prefix = DataAll.AdminUrl;
             }
-            var productQuery = _context.productsTable;
+            var productQuery = _context.productsTable.Where(x => x.IsDelete == false);
 
 
             List<ProductModel> productModelList = new List<ProductModel>();
@@ -64,7 +68,7 @@ namespace Fashion_Fuction.Services
             {
                 prefix = DataAll.AdminUrl;
             }
-            var productQuery = _context.productsTable;
+            var productQuery = _context.productsTable.Where(x => x.IsDelete == false);
 
 
             List<ProductModel> productModelList = new List<ProductModel>();
@@ -135,8 +139,8 @@ namespace Fashion_Fuction.Services
                     {
                         product.product_CategoryName = "";
                     }
-                    
-                    
+
+
 
                     return product;
                 }
@@ -148,18 +152,28 @@ namespace Fashion_Fuction.Services
             }
         }
 
+
+
         public async Task<bool> DeleteProductById(string id)
         {
             try
             {
+
                 var produceQuery = _context.productsTable.FirstOrDefault(x => x.product_Id == id);
 
-                if (produceQuery != null) 
+
+                if (produceQuery != null)
                 {
-                    _context.productsTable.Remove(produceQuery);
+                    produceQuery.IsDelete = true;
                     await _context.SaveChangesAsync();
                     return true;
                 }
+
+
+
+
+
+
                 return false;
             }
             catch (Exception)
@@ -167,6 +181,9 @@ namespace Fashion_Fuction.Services
 
                 throw;
             }
+
+
+
         }
 
         public async Task<bool> UpdateProductById(string id, ProductModel productModel)
