@@ -30,6 +30,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IBillService, BillService>();
 builder.Services.AddScoped<IBufferedFileUploadService, BufferedFileUploadService>();
 
 var app = builder.Build();

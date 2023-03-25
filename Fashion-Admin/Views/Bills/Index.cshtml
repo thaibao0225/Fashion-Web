@@ -1,41 +1,42 @@
-﻿@model IEnumerable<Fashion_Infrastructure.Entities.BillsTable>
+﻿@model IEnumerable<Fashion_Fuction.Models.BillModel>
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    int iRow = 0;
 }
 
 <table class="table">
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">First Name</th>
-            <th scope="col">IsActive</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Create On</th>
+            <th scope="col">Is Confirm</th>
+            <th scope="col">Is Payment</th>
+            
             <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
+            iRow++;
             <tr>
 
-                <th scope="row">1</th>
-                <td>@item.bill_Code</td>
+                <th scope="row">@iRow</th>
+                <th>@item.bill_UserName</th>
                 <td>@item.bill_Price</td>
-                <td></td>
+                <td>@item.bill_CreateOn</td>
+                <td>@item.bill_IsConfirm</td>
+                <td>@item.bill_IsPayment</td>
+                <td>
+                    <a asp-action="Details" asp-route-Id="@item.bill_Id">Details</a>|
+                    <a asp-action="Delete" asp-route-Id="@item.bill_Id">Delete</a>
+                </td>
 
             </tr>
         }
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td></td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td></td>
-            <td></td>
-        </tr>
     </tbody>
 </table>

@@ -11,5 +11,11 @@ namespace Fashion_Fuction.Services.Interface
     {
         public BillModel PrepareBill(string userId, List<ProductModel> productList, int discount = 0);
         public Task<bool> CreateBill(string userId, BillModel bill);
+        public Task<bool> ChangeStatusConfirmBillById(string billId);
+        public Task<bool> ChangeStatusUnconfirmBillById(string billId);
+        public Task<bool> ChangeStatusPaymentBillById(string billId);
+        public Task<bool> ChangeStatusUnpaymentBillById(string billId);
+        public Task<bool> DeletePayment(string billId);
+        public List<BillModel> GetBill();
     }
 }

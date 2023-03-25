@@ -12,6 +12,7 @@ namespace Fashion_Fuction.Models
         public string bill_Id { get; set; }
         public int bill_Code { get; set; }
         public string bill_UserId { get; set; }
+        public string bill_UserName { get; set; }
         public double bill_Price { get; set; }
         //public string bill_ProductsIdList { get; set; }
         //public string bill_ProductPriceList { get; set; }
