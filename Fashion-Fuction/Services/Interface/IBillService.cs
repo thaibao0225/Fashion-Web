@@ -16,6 +16,8 @@ namespace Fashion_Fuction.Services.Interface
         public Task<bool> ChangeStatusPaymentBillById(string billId);
         public Task<bool> ChangeStatusUnpaymentBillById(string billId);
         public Task<bool> DeletePayment(string billId);
+        public BillModel GetBillById(string billId);
         public List<BillModel> GetBill();
+        public Task<bool> DeleteBill(string billId);
     }
 }

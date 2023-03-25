@@ -1945,8 +1945,8 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductsIdList = newProduct_Id1+"|"+ newProduct_Id2 + "|" + newProduct_Id3 + "|" + newProduct_Id4 + "|",
                     bill_ProductPriceList = "10|10|10|10|",
                     bill_ProductUnitList = "1|1|1|1|",
-                    bill_ProductColorList = "Red|Black|Green|Yellow",
-                    bill_ProductSizeList = "X|XL|S|M",
+                    bill_ProductColorList = "Red|Black|Green|Yellow|",
+                    bill_ProductSizeList = "X|XL|S|M|",
 
                     CreateBy = BaseData.CreateBy,
                     CreateOn = BaseData.CreateOn,
@@ -1962,8 +1962,8 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductsIdList = newProduct_Id5 + "|" + newProduct_Id6 + "|" + newProduct_Id7 + "|" + newProduct_Id8 + "|",
                     bill_ProductPriceList = "10|10|10|10|",
                     bill_ProductUnitList = "1|1|1|1|",
-                    bill_ProductColorList = "Red|Black|Green|Yellow",
-                    bill_ProductSizeList = "X|XL|S|M",
+                    bill_ProductColorList = "Red|Black|Green|Yellow|",
+                    bill_ProductSizeList = "X|XL|S|M|",
 
                     CreateBy = BaseData.CreateBy,
                     CreateOn = BaseData.CreateOn,
@@ -1979,8 +1979,8 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductsIdList = newProduct_Id9 + "|" + newProduct_Id10 + "|" + newProduct_Id11 + "|" + newProduct_Id12 + "|",
                     bill_ProductPriceList = "10|10|10|10|",
                     bill_ProductUnitList = "1|1|1|1|",
-                    bill_ProductColorList = "Red|Black|Green|Yellow",
-                    bill_ProductSizeList = "X|XL|S|M",
+                    bill_ProductColorList = "Red|Black|Green|Yellow|",
+                    bill_ProductSizeList = "X|XL|S|M|",
 
                     CreateBy = BaseData.CreateBy,
                     CreateOn = BaseData.CreateOn,
@@ -2026,6 +2026,87 @@ namespace Fashion_Infrastructure.Data
                     comment_UserId = newUser_Id1
                 }
                 );
+
+
+            // Email table 
+            string newEmail_Id1 = Guid.NewGuid().ToString();
+            string newEmail_Id2 = Guid.NewGuid().ToString();
+            string newEmail_Id3 = Guid.NewGuid().ToString();
+            string newEmail_Id4 = Guid.NewGuid().ToString();
+
+
+            builder.Entity<EmailCustomerTable>().HasData(
+                new EmailCustomerTable()
+                {
+                    emailC_Id = newEmail_Id1,
+                    emailC_Email = "test@gmail.com",
+                    emailC_IsDelete = false
+                }, new EmailCustomerTable()
+                {
+                    emailC_Id = newEmail_Id2,
+                    emailC_Email = "test@gmail.com",
+                    emailC_IsDelete = false
+                }, new EmailCustomerTable()
+                {
+                    emailC_Id = newEmail_Id3,
+                    emailC_Email = "test@gmail.com",
+                    emailC_IsDelete = false
+                }, new EmailCustomerTable()
+                {
+                    emailC_Id = newEmail_Id4,
+                    emailC_Email = "test@gmail.com",
+                    emailC_IsDelete = false
+                }
+                );
+
+
+            // Contact table 
+            string newContact_Id1 = Guid.NewGuid().ToString();
+            string newContact_Id2 = Guid.NewGuid().ToString();
+            string newContact_Id3 = Guid.NewGuid().ToString();
+            string newContact_Id4 = Guid.NewGuid().ToString();
+
+
+            builder.Entity<ContactTable>().HasData(
+                new ContactTable()
+                {
+                    contact_Id = newContact_Id1,
+                    contact_EmailId = newEmail_Id1,
+                    contact_Name = "Name",
+                    contact_Message = "Message",
+                    contact_Subject = "Subject",
+                    contact_IsCheck = false
+                },
+                new ContactTable()
+                {
+                    contact_Id = newContact_Id2,
+                    contact_EmailId = newEmail_Id2,
+                    contact_Name = "Name",
+                    contact_Message = "Message",
+                    contact_Subject = "Subject",
+                    contact_IsCheck = false
+                },
+                new ContactTable()
+                {
+                    contact_Id = newContact_Id3,
+                    contact_EmailId = newEmail_Id3,
+                    contact_Name = "Name",
+                    contact_Message = "Message",
+                    contact_Subject = "Subject",
+                    contact_IsCheck = true
+                },
+                new ContactTable()
+                {
+                    contact_Id = newContact_Id4,
+                    contact_EmailId = newEmail_Id4,
+                    contact_Name = "Name",
+                    contact_Message = "Message",
+                    contact_Subject = "Subject",
+                    contact_IsCheck = false
+                }
+                );
+
+
 
         }
     }

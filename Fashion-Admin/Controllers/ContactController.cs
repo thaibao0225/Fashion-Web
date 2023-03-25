@@ -27,24 +27,21 @@ namespace Fashion_Admin.Controllers
         }
 
         // GET: ContactController/Details/5
-        public ActionResult Details(int id)
+        [Route("/contact/details")]
+        public ActionResult Details(string id)
         {
-            return View();
+
+            return View(_contactService.GetContactById(id));
         }
 
         // GET: ContactController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: ContactController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Checked(string id)
         {
             try
             {
+
+                await _contactService.Checked(id);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -52,6 +49,8 @@ namespace Fashion_Admin.Controllers
                 return View();
             }
         }
+
+       
 
         // GET: ContactController/Edit/5
         public ActionResult Edit(int id)

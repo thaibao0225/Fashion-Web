@@ -19,71 +19,77 @@ namespace Fashion_Admin.Controllers
         [Route("/bills")]
         public ActionResult Index()
         {
-     
+            
+
             return View(_billService.GetBill());
         }
 
         // GET: BillsController/Details/5
-        public ActionResult Details(int id)
+        [Route("/bills/details")]
+        public ActionResult Details(string id, string message ="")
         {
-            return View();
+
+            ViewBag.Message = message;
+            return View(_billService.GetBillById(id));
         }
 
-        // GET: BillsController/Create
-        public ActionResult Create()
+
+        // GET: BillsController/Details/5
+        [Route("/bills/confirm")]
+        public async Task<ActionResult> Confirm(string billId)
         {
-            return View();
+            await _billService.ChangeStatusConfirmBillById(billId);
+            return RedirectToAction("Details", "bills", new { id = billId, message = "Success" });
         }
 
-        // POST: BillsController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        // GET: BillsController/Details/5
+        [Route("/bills/unconfirm")]
+        public async Task<ActionResult> Unconfirm(string billId)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+
+            await _billService.ChangeStatusUnconfirmBillById(billId);
+            return RedirectToAction("Details", "bills", new { id = billId, message = "Success" });
         }
 
-        // GET: BillsController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
 
-        // POST: BillsController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //// GET: BillsController/Edit/5
+        //public ActionResult Edit(int id)
+        //{
+        //    return View();
+        //}
+
+        //// POST: BillsController/Edit/5
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit(int id, IFormCollection collection)
+        //{
+        //    try
+        //    {
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
 
         // GET: BillsController/Delete/5
-        public ActionResult Delete(int id)
+        [Route("/bills/delete")]
+        public ActionResult Delete(string id)
         {
-            return View();
+            return View(_billService.GetBillById(id));
         }
 
         // POST: BillsController/Delete/5
         [HttpPost]
+        [Route("/bills/delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(string id, IFormCollection collection)
         {
             try
             {
+                await _billService.DeleteBill(collection["bill_Id"]);
+
                 return RedirectToAction(nameof(Index));
             }
             catch

@@ -218,15 +218,26 @@ namespace Fashion_Fuction.Services
                 int index = 0;
                 foreach (var item in productIdArray)
                 {
-                    ProductModel productModel = new ProductModel();
-                    productModel.product_Id = productIdArray[index];
-                    productModel.product_Price = double.Parse(productPriceArray[index]);
-                    productModel.product_Quantity = productQuantityArray[index];
-                    productModel.product_ColorName = productColorArray[index];
-                    productModel.product_SizeName = productSizeArray[index];
+                    if (productIdArray[index] != "")
+                    {
+                        ProductModel productModel = new ProductModel();
+                        productModel.product_Id = productIdArray[index];
 
-                    productsList.Add(productModel);
-                    index++;
+                        var productQuery = _context.productsTable.FirstOrDefault(x => x.product_Id == productIdArray[index]);
+                        if (productQuery != null)
+                        {
+                            productModel.product_Name = productQuery.product_Name;
+                        }
+                        
+                        productModel.product_Price = double.Parse(productPriceArray[index]);
+                        productModel.product_Quantity = productQuantityArray[index];
+                        productModel.product_ColorName = productColorArray[index];
+                        productModel.product_SizeName = productSizeArray[index];
+
+                        productsList.Add(productModel);
+                        index++;
+                    }
+                    
                 }
 
 
@@ -244,6 +255,11 @@ namespace Fashion_Fuction.Services
                 BillModel billModel = new BillModel();
                 billModel.bill_Id = billId;
                 billModel.bill_UserId = billQuery.bill_UserId;
+                var userQuery = _context.usersTable.FirstOrDefault(x => x.Id == billQuery.bill_UserId);
+                if (userQuery != null)
+                {
+                    billModel.bill_UserName = userQuery.UserName;
+                }
                 billModel.bill_CreateOn = billQuery.bill_CreateOn;
                 billModel.bill_IsConfirm = billQuery.bill_IsConfirm;
                 billModel.bill_IsPayment = billQuery.bill_IsPayment;
@@ -295,6 +311,30 @@ namespace Fashion_Fuction.Services
                 return billList;
             }
             return new List<BillModel>();
+        }
+
+        public async Task<bool> DeleteBill(string billId)
+        {
+            try
+            {
+                var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id == billId);
+
+                if (billQuery != null)
+                {
+                    billQuery.IsDelete = true;
+                    await _context.SaveChangesAsync();
+
+
+                    return true;
+                }
+                return false;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
     }
