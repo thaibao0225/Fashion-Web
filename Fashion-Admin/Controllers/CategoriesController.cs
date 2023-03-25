@@ -64,17 +64,24 @@ namespace Fashion_Admin.Controllers
         [Route("/categories/edit")]
         public ActionResult Edit(string id)
         {
-            return View();
+            return View(_categoryService.GetCategoryById(id));
         }
 
         // POST: CategoriesController/Edit/5
         [HttpPost]
         [Route("/categories/edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(string id, IFormCollection collection)
         {
             try
             {
+                CategoryModel categoryModel = new CategoryModel();
+                categoryModel.category_Id = collection["category_Id"];
+                categoryModel.category_Name = collection["category_Name"];
+
+                await _categoryService.UpdateCategory(categoryModel.category_Id, categoryModel);
+
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -85,19 +92,23 @@ namespace Fashion_Admin.Controllers
 
         // GET: CategoriesController/Delete/5
         [Route("/categories/delete")]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
-            return View();
+            return View(_categoryService.GetCategoryById(id));
         }
 
         // POST: CategoriesController/Delete/5
         [HttpPost]
         [Route("/categories/delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(string id, IFormCollection collection)
         {
             try
-            {
+            {   
+                string categoryId = collection["category_Id"];
+
+                await _categoryService.DeleteCategory(categoryId);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
