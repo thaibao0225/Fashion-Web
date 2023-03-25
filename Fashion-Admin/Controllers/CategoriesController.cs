@@ -1,4 +1,5 @@
-﻿using Fashion_Fuction.Services.Interface;
+﻿using Fashion_Fuction.Models;
+using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -42,10 +43,15 @@ namespace Fashion_Admin.Controllers
         [HttpPost]
         [Route("/categories/create")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(IFormCollection collection)
         {
             try
             {
+                CategoryModel categoryModel = new CategoryModel();
+                categoryModel.category_Id = collection["category_Id"];
+                categoryModel.category_Name = collection["category_Name"];
+                await _categoryService.CreateCategory(categoryModel);
+
                 return RedirectToAction(nameof(Index));
             }
             catch

@@ -26,9 +26,9 @@ namespace Fashion_Fuction.Services
             {
                 CategoriesTable categoryCreate = new CategoriesTable();
 
-                categoryCreate.category_Id = categoryModel.category_Id;
+                categoryCreate.category_Id = Guid.NewGuid().ToString();
                 categoryCreate.category_Name = categoryModel.category_Name;
-                categoryCreate.category_IsDelete = false;
+                categoryCreate.IsDelete = false;
 
                 await _context.categoriesTable.AddAsync(categoryCreate);
                 var result = await _context.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace Fashion_Fuction.Services
                 var categoryQuery = _context.categoriesTable.FirstOrDefault(x => x.category_Id == id);
                 if (categoryQuery != null)
                 {
-                    _context.categoriesTable.Remove(categoryQuery);
+                    categoryQuery.IsDelete = true;
 
                     await _context.SaveChangesAsync();
                     return true;
