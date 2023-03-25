@@ -1,7 +1,9 @@
-﻿@model IEnumerable<Fashion_Infrastructure.Entities.RolesTable>
+﻿@model IEnumerable<Fashion_Fuction.Models.RoleModel>
 @{
     int iRow = 0;
 }
+<br />
+<a asp-action="Create">Create</a>
 <table class="table">
     <thead>
         <tr>
@@ -16,7 +18,7 @@
             iRow++;
             <tr>
                 <th scope="row">@iRow</th>
-                <td>@item.Name</td>
+                <td>@item.RoleName</td>
                 <td>
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a>|
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|

@@ -1,9 +1,13 @@
-﻿namespace Fashion_Fuction.Services.Interface
+﻿using Fashion_Fuction.Models;
+
+namespace Fashion_Fuction.Services.Interface
 {
     public interface IRoleService
     {
-        public string GetRoleId(string userId);
-
-        public string GetRoleName(string roleId);
+        public List<RoleModel> GetAllRole();
+        public RoleModel GetRoleById(string roleId);
+        public Task<bool> CreateRole(RoleModel roleModel);
+        public Task<bool> DeleteRoleById(string roleId);
+        public Task<bool> UpdateRole(RoleModel roleModel);
     }
 }
