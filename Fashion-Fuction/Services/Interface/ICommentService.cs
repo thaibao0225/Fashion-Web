@@ -13,5 +13,6 @@ namespace Fashion_Fuction.Services.Interface
         public Task<bool> CreateCommentInProduct(string productId, string userId, string commentText);
         public Task<bool> DeleteComment(string commentId);
         public string GetProductIdByCommentId(string commentId);
+        public List<CommentModel> GetAllComment();
     }
 }

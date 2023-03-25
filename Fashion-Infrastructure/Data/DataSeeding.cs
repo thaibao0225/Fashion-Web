@@ -1947,7 +1947,7 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductUnitList = "1|1|1|1|",
                     bill_ProductColorList = "Red|Black|Green|Yellow|",
                     bill_ProductSizeList = "X|XL|S|M|",
-
+                    bill_CreateOn = BaseData.CreateOn,
                     CreateBy = BaseData.CreateBy,
                     CreateOn = BaseData.CreateOn,
                     UpdateBy = BaseData.UpdateBy,
@@ -1964,7 +1964,7 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductUnitList = "1|1|1|1|",
                     bill_ProductColorList = "Red|Black|Green|Yellow|",
                     bill_ProductSizeList = "X|XL|S|M|",
-
+                    bill_CreateOn = BaseData.CreateOn,
                     CreateBy = BaseData.CreateBy,
                     CreateOn = BaseData.CreateOn,
                     UpdateBy = BaseData.UpdateBy,
@@ -1981,7 +1981,7 @@ namespace Fashion_Infrastructure.Data
                     bill_ProductUnitList = "1|1|1|1|",
                     bill_ProductColorList = "Red|Black|Green|Yellow|",
                     bill_ProductSizeList = "X|XL|S|M|",
-
+                    bill_CreateOn = BaseData.CreateOn,
                     CreateBy = BaseData.CreateBy,
                     CreateOn = BaseData.CreateOn,
                     UpdateBy = BaseData.UpdateBy,
@@ -2000,28 +2000,28 @@ namespace Fashion_Infrastructure.Data
                 new CommentTable()
                 {
                     comment_Id = newComment_Id1,
-                    comment_Text = BaseData.RedName,
+                    comment_Text = "Test comment",
                     comment_ProductId = newProduct_Id1,
                     comment_UserId = newUser_Id1
                 },
                 new CommentTable()
                 {
                     comment_Id = newComment_Id2,
-                    comment_Text = BaseData.RedName,
+                    comment_Text = "Test comment",
                     comment_ProductId = newProduct_Id1,
                     comment_UserId = newUser_Id2
                 },
                 new CommentTable()
                 {
                     comment_Id = newComment_Id3,
-                    comment_Text = BaseData.RedName,
+                    comment_Text = "Test comment",
                     comment_ProductId = newProduct_Id1,
                     comment_UserId = newUser_Id3
                 },
                 new CommentTable()
                 {
                     comment_Id = newComment_Id4,
-                    comment_Text = BaseData.RedName,
+                    comment_Text = "Test comment",
                     comment_ProductId = newProduct_Id2,
                     comment_UserId = newUser_Id1
                 }
