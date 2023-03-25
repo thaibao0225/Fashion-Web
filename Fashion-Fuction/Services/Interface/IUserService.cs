@@ -1,7 +1,12 @@
-﻿namespace Fashion_Fuction.Services.Interface
+﻿using Fashion_Fuction.Models;
+
+namespace Fashion_Fuction.Services.Interface
 {
     public interface IUserService
     {
-        public string GetRoleNameOfUser(string userId);
+        public List<UserModel> GetAllUser();
+        public UserModel GetUserById(string userId);
+        public Task<UserModel> UpdateUser(UserModel userModel);
+        public Task<bool> DeleteUser(string userId);
     }
 }

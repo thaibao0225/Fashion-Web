@@ -28,10 +28,12 @@ builder.Services.AddDefaultIdentity<UsersTable>(options => options.SignIn.Requir
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IBillService, BillService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
+
 builder.Services.AddScoped<IBufferedFileUploadService, BufferedFileUploadService>();
 
 var app = builder.Build();

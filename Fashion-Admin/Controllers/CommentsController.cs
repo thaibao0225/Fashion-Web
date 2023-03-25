@@ -22,6 +22,24 @@ namespace Fashion_Admin.Controllers
         }
 
         // GET: CommentsController/Details/5
+        public async Task<ActionResult> BlockComment(string id)
+        {
+
+            try
+            {
+
+                await _commentService.DeleteComment(id);
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
+        // GET: CommentsController/Details/5
         public ActionResult Details(int id)
         {
             return View();

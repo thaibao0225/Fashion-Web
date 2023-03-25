@@ -20,8 +20,6 @@ namespace Fashion_Admin.Controllers
         [Route("/categories")]
         public ActionResult Index()
         {
-
-
             return View(_categoryService.GetAllCategory());
         }
 
