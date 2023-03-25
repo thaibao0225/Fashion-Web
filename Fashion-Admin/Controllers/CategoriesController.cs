@@ -62,7 +62,7 @@ namespace Fashion_Admin.Controllers
 
         // GET: CategoriesController/Edit/5
         [Route("/categories/edit")]
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
             return View();
         }
