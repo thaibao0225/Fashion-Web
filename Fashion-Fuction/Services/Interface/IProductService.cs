@@ -17,5 +17,7 @@ namespace Fashion_Fuction.Services.Interface
         public Task<bool> DeleteProductById( string id);
         public Task<bool> UpdateProductById( string id, ProductModel productModel);
         public Task<bool> CreateProduct( ProductModel productModel);
+        public ProductModel GetCurrentSizeOfProduct(ProductModel productModel);
+        public ProductModel GetCurrentColorOfProduct(ProductModel productModel);
     }
 }

@@ -106,7 +106,7 @@ namespace Fashion_Fuction.Services
             try
             {
                 string prefix = "";
-                if (page == "Web")
+                if (page == DataAll.Web)
                 {
                     prefix = DataAll.AdminUrl;
                 }
@@ -169,12 +169,6 @@ namespace Fashion_Fuction.Services
                     await _context.SaveChangesAsync();
                     return true;
                 }
-
-
-
-
-
-
                 return false;
             }
             catch (Exception)
@@ -265,6 +259,70 @@ namespace Fashion_Fuction.Services
                 await _context.SaveChangesAsync();
 
                 return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public ProductModel GetCurrentSizeOfProduct(ProductModel productModel)
+        {
+            try
+            {
+                var sizeQuery = from a in _context.sizeInProductTable
+                                join b in _context.sizeTable on a.sip_Id equals b.size_Id
+                                where a.sip_ProductId == productModel.product_Id && a.sip_QuantityExisting > 0
+                                select new { a, b };
+
+                productModel.product_SizeList = new List<SizeModel>();
+
+                
+                foreach (var sizeItem in sizeQuery)
+                {
+                    SizeModel sizeModel = new SizeModel();
+
+                    sizeModel.Id = sizeItem.b.size_Id;
+                    sizeModel.Size = sizeItem.b.size_Name;
+                    sizeModel.QuantityExisting = sizeItem.a.sip_QuantityExisting;
+
+                    productModel.product_SizeList.Add(sizeModel);
+                }
+
+                return productModel;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public ProductModel GetCurrentColorOfProduct(ProductModel productModel)
+        {
+            try
+            {
+                var colorQuery = from a in _context.colorInProductTable
+                                 join b in _context.colorsTable on a.cip_ColorId equals b.color_Id
+                                 where a.cip_ProductId == productModel.product_Id && a.cip_QuantityExisting > 0
+                                 select new { a, b };
+
+                productModel.product_ColorList = new List<ColorModel>();
+
+                foreach (var colorItem in colorQuery)
+                {
+                    ColorModel colorModel = new ColorModel();
+
+                    colorModel.Id = colorItem.b.color_Id;
+                    colorModel.Name = colorItem.b.color_Name;
+                    colorModel.QuantityExisting = colorItem.a.cip_QuantityExisting;
+
+                    productModel.product_ColorList.Add(colorModel);
+                }
+
+
+                return productModel;
             }
             catch (Exception)
             {

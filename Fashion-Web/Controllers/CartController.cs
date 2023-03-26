@@ -13,8 +13,19 @@ namespace Fashion_Web.Controllers
         }
 
         // GET: CartController/Details/5
-        public ActionResult Details(int id)
+        
+        [HttpPost]
+        [Route("/cart/addtocart")]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddToCart(IFormCollection collection)
         {
+
+            string productId =  collection["product_Id"];
+            string sizeId =  collection["product_SizeId"];
+            string colorId = collection["product_ColorId"];
+            int Quantity =  int.Parse(collection["product_Quantity"]);
+
+
             return View();
         }
 

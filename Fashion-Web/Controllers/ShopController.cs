@@ -34,9 +34,35 @@ namespace Fashion_Web.Controllers
         }
 
         // GET: ShopController/Details/5
-        public ActionResult Details(int id)
+        [Route("/shop/details")]
+        public ActionResult Details(string id)
         {
-            return View();
+            //ViewBag.ProductFirst = _productService.GetProductById(id, DataAll.Web);
+            var productDetail = _productService.GetProductById(id, DataAll.Web);
+            productDetail = _productService.GetCurrentSizeOfProduct(productDetail);
+            productDetail = _productService.GetCurrentColorOfProduct(productDetail);
+
+            return View(productDetail);
+        }
+
+        // POST: ShopController/Create
+        [HttpPost]
+        [Route("/shop/rating")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Rating(IFormCollection collection)
+        {
+            try
+            {
+                string productId = collection["product_Id"];
+                string commentRating = collection["comment_Rating"];
+                string Comment = collection["Comment"];
+
+                return RedirectToAction("Details", "shop", new { id = productId});
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: ShopController/Create

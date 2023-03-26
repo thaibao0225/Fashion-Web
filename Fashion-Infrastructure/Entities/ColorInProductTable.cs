@@ -7,6 +7,7 @@
 
         public string cip_ProductId { get; set; }
         public ProductsTable cip_Product { get; set; }
+        public int cip_QuantityExisting { get; set; }
 
         public bool cip_IsDelete { get; set; }
     }
