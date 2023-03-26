@@ -1,11 +1,14 @@
 ﻿using Fashion_Fuction.Models;
 using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Staff")]
     public class CategoriesController : Controller
     {
         private ApplicationDbContext _context;

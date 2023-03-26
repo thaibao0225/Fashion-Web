@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using Fashion_Fuction.Models;
 using Fashion_Fuction.Services;
 using Fashion_Fuction.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Staff")]
     public class ContactController : Controller
     {
         private ApplicationDbContext _context;

@@ -37,7 +37,18 @@ builder.Services.AddScoped<ICommentService, CommentService>();
 
 builder.Services.AddScoped<IBufferedFileUploadService, BufferedFileUploadService>();
 
+builder.Services.ConfigureApplicationCookie (options => {
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+    options.LoginPath = $"/login/";
+    options.LogoutPath = $"/logout/";
+    options.AccessDeniedPath = $"/accessdenied";
+});
+
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

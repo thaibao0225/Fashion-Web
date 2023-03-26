@@ -3,9 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Fashion_Infrastructure.Data;
 using Fashion_Fuction.Services.Interface;
 using Fashion_Fuction.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UsersController : Controller
     {
         private ApplicationDbContext _context;

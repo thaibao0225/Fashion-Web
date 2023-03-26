@@ -2,9 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Fashion_Infrastructure.Data;
 using Fashion_Fuction.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Staff")]
     public class BillsController : Controller
     {
         private ApplicationDbContext _context;

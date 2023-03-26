@@ -1,10 +1,13 @@
 ﻿using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Staff")]
     public class CommentsController : Controller
     {
         private ApplicationDbContext _context;

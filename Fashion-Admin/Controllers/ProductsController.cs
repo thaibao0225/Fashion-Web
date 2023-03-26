@@ -9,9 +9,12 @@ using Fashion_Infrastructure.Data.StaticData;
 using Abp.Domain.Uow;
 using Fashion_Fuction.Services.Interface;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Staff")]
     public class ProductsController : Controller
     {
         private ApplicationDbContext _context;
