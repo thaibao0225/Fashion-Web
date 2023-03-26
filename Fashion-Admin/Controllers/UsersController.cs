@@ -10,10 +10,12 @@ namespace Fashion_Admin.Controllers
     {
         private ApplicationDbContext _context;
         private IUserService _userService;
-        public UsersController(ApplicationDbContext context, IUserService userService)
+        private IRoleService _roleService;
+        public UsersController(ApplicationDbContext context, IUserService userService, IRoleService roleService)
         {
             _context = context;
             _userService = userService;
+            _roleService = roleService;
         }
 
 
@@ -36,6 +38,9 @@ namespace Fashion_Admin.Controllers
         [Route("/users/edit")]
         public ActionResult Edit(string id)
         {
+            ViewBag.RoleNameSelect = _roleService.GetAllRole();
+
+
             return View(_userService.GetUserById(id));
         }
 
@@ -52,6 +57,7 @@ namespace Fashion_Admin.Controllers
                 userModel.Id = collection["Id"];
                 userModel.UserName = collection["UserName"];
                 userModel.Email = collection["Email"];
+                userModel.user_RoleIdNew = collection["user_RoleIdNew"];
 
                 if (userModel != null)
                 {
@@ -89,6 +95,14 @@ namespace Fashion_Admin.Controllers
             {
                 return View();
             }
+        }
+
+
+        // GET: UsersController/Delete/5
+        [Route("/users/assigntorole")]
+        public ActionResult AssignToRole(string id)
+        {
+            return View(_userService.GetUserById(id));
         }
     }
 }

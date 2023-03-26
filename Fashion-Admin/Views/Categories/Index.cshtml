@@ -21,7 +21,8 @@
                 <td>
                     <a asp-action="Details" asp-route-Id="@item.category_Id">Details</a>|
                     <a asp-action="Edit" asp-route-Id="@item.category_Id">Edit</a>|
-                    <a asp-action="Delete" asp-route-Id="@item.category_Id">Delete</a>
+                    <a asp-action="Delete" asp-route-Id="@item.category_Id">Delete</a>|
+                    <a asp-action="AssignToRole" asp-route-Id="@item.category_Id">Role</a>
                 </td>
             </tr>
         }

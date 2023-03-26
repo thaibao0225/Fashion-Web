@@ -8,5 +8,6 @@ namespace Fashion_Fuction.Services.Interface
         public UserModel GetUserById(string userId);
         public Task<UserModel> UpdateUser(UserModel userModel);
         public Task<bool> DeleteUser(string userId);
+        public Task<bool> AssignToRole(string userId, string roleIdNew);
     }
 }
