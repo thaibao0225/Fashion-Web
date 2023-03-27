@@ -19,5 +19,7 @@ namespace Fashion_Fuction.Services.Interface
         public Task<bool> CreateProduct( ProductModel productModel);
         public ProductModel GetCurrentSizeOfProduct(ProductModel productModel);
         public ProductModel GetCurrentColorOfProduct(ProductModel productModel);
+        public int GetSize(string sizeId);
+        public string GetColor(string colorId);
     }
 }

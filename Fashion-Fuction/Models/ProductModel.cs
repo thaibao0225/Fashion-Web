@@ -73,10 +73,10 @@ namespace Fashion_Fuction.Models
         public string product_ColorName { get; set; } = string.Empty;
         public string product_ColorId { get; set; } = string.Empty;
         [DisplayName("Size")]
-        public string product_SizeName { get; set; } = string.Empty;
+        public int product_SizeName { get; set; }
         public string product_SizeId { get; set; } = string.Empty;
         [DisplayName("Quantity")]
-        public string product_Quantity { get; set; } = string.Empty;
+        public int product_Quantity { get; set; }
 
         public List<SizeModel> product_SizeList { get; set; }
         public List<ColorModel> product_ColorList { get; set; }

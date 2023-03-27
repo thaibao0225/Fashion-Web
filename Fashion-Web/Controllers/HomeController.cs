@@ -7,6 +7,7 @@ using System.Diagnostics;
 using Fashion_Fuction.DataCreated;
 using Fashion_Fuction.Services.Interface;
 
+
 namespace Fashion_Web.Controllers
 {
     public class HomeController : Controller
@@ -24,6 +25,16 @@ namespace Fashion_Web.Controllers
 
         public IActionResult Index()
         {
+            // Create cookie Cart
+
+            if (!HttpContext.Request.Cookies.ContainsKey(KeyCookie.cart_Product))
+            {
+                CookieOptions option = new CookieOptions();
+                option.Expires = DateTime.Now.AddDays(1);
+                HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, "", option);
+            }
+
+
             //Category
             var queryCategory = _context.categoriesTable;
 

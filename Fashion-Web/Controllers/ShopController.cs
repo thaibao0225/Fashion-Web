@@ -9,15 +9,17 @@ namespace Fashion_Web.Controllers
 {
     public class ShopController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ShopController> _logger;
         private ApplicationDbContext _context;
         private IProductService _productService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public ShopController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public ShopController(ILogger<ShopController> logger, ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
             _context = context;
             _productService = new ProductService(context);
+            _httpContextAccessor = httpContextAccessor;
         }
 
 

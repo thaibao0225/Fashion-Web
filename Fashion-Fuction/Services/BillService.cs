@@ -230,9 +230,9 @@ namespace Fashion_Fuction.Services
                         }
                         
                         productModel.product_Price = double.Parse(productPriceArray[index]);
-                        productModel.product_Quantity = productQuantityArray[index];
+                        productModel.product_Quantity = int.Parse(productQuantityArray[index]);
                         productModel.product_ColorName = productColorArray[index];
-                        productModel.product_SizeName = productSizeArray[index];
+                        productModel.product_SizeName = int.Parse(productSizeArray[index]);
 
                         productsList.Add(productModel);
                         index++;

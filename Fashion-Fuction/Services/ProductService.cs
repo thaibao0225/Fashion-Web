@@ -330,5 +330,42 @@ namespace Fashion_Fuction.Services
                 throw;
             }
         }
+
+
+        public int GetSize(string sizeId)
+        {
+            try
+            {
+                var sizeQuery = _context.sizeTable.FirstOrDefault(x => x.size_Id == sizeId);
+                if (sizeQuery != null)
+                {
+                    return sizeQuery.size_Name;
+                }
+                return 0;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public string GetColor(string colorId)
+        {
+            try
+            {
+                var colorQuery = _context.colorsTable.FirstOrDefault(x => x.color_Id == colorId);
+                if (colorQuery != null)
+                {
+                    return colorQuery.color_Name;
+                }
+                return "";
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

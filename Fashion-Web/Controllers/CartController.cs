@@ -1,10 +1,34 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fashion_Fuction.Services.Interface;
+using Fashion_Fuction.Services;
+using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Fashion_Fuction.DataCreated;
+using Fashion_Fuction.Models;
+using System.Text.Json.Nodes;
 
 namespace Fashion_Web.Controllers
 {
     public class CartController : Controller
     {
+        private readonly ILogger<ShopController> _logger;
+        private ApplicationDbContext _context;
+        private IProductService _productService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public CartController(ILogger<ShopController> logger, ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
+        {
+            _logger = logger;
+            _context = context;
+            _productService = new ProductService(context);
+            this._httpContextAccessor = httpContextAccessor;
+        }
+
         // GET: CartController
         [Route("/cart")]
         public ActionResult Index()
@@ -13,20 +37,91 @@ namespace Fashion_Web.Controllers
         }
 
         // GET: CartController/Details/5
-        
+
         [HttpPost]
         [Route("/cart/addtocart")]
         [ValidateAntiForgeryToken]
         public ActionResult AddToCart(IFormCollection collection)
         {
 
-            string productId =  collection["product_Id"];
-            string sizeId =  collection["product_SizeId"];
+            string productId = collection["product_Id"];
+            string sizeId = collection["product_SizeId"];
             string colorId = collection["product_ColorId"];
-            int Quantity =  int.Parse(collection["product_Quantity"]);
+            int Quantity = int.Parse(collection["product_Quantity"]);
+
+            CartModel cartModel = new CartModel();
+            cartModel.productList = new List<ProductModel>();
+            
+
+            
+
+            if (!HttpContext.Request.Cookies.ContainsKey(KeyCookie.cart_Product))
+            {
+                if ((productId != null) && (sizeId != null) && (colorId != null) && (Quantity != 0))
+                {
+                    ProductModel productModel = new ProductModel();
+                    productModel.product_Id = productId;
+                    productModel.product_SizeId = sizeId;
+                    productModel.product_SizeName = _productService.GetSize(sizeId);
+                    productModel.product_ColorId = colorId;
+                    productModel.product_ColorName = "";
+                    productModel.product_Quantity = Quantity;
+                    cartModel.productList.Add(productModel);
 
 
-            return View();
+                    string stringjson = JsonConvert.SerializeObject(cartModel);
+                    Console.WriteLine(stringjson);
+
+                    CookieOptions option = new CookieOptions();
+                    option.Expires = DateTime.Now.AddDays(1);
+                    HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
+                }
+            }
+            else
+            {
+                string cookieValueFromCart = HttpContext.Request.Cookies[KeyCookie.cart_Product];
+                if (cookieValueFromCart != null)
+                {
+                    CartModel records = JsonConvert.DeserializeObject<CartModel>(cookieValueFromCart);
+                }
+
+                
+
+                if ((productId != null) && (sizeId != null) && (colorId != null) && (Quantity != 0))
+                {
+
+                    ProductModel productModel = new ProductModel();
+                    productModel.product_Id = productId;
+                    productModel.product_SizeId = sizeId;
+                    productModel.product_SizeName = _productService.GetSize(sizeId);
+                    productModel.product_ColorId = colorId;
+                    productModel.product_ColorName = "";
+                    productModel.product_Quantity = Quantity;
+
+                    string stringjson = JsonConvert.SerializeObject(productModel);
+                    Console.WriteLine(stringjson);
+
+                    CookieOptions option = new CookieOptions();
+                    option.Expires = DateTime.Now.AddDays(1);
+                    HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
+                }
+                
+
+                ////read cookie from Request object  
+                //string cookieValueFromReq = HttpContext.Request.Cookies["first_request"];
+                //Console.WriteLine("Cookie = " + cookieValueFromContext);
+                //CookieOptions option = new CookieOptions();
+                //option.Expires = DateTime.Now.AddDays(1);
+                //HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
+            }
+
+
+
+
+
+
+
+            return RedirectToAction("Details", "shop", new { id = productId });
         }
 
         // GET: CartController/Create
