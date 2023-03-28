@@ -153,6 +153,69 @@ namespace Fashion_Fuction.Services
             }
         }
 
+        public List<ProductModel> GetProductByModelId(List<ProductModel> productList, string page = "Admin")
+        {
+            try
+            {
+
+                List<ProductModel> productListNew = new List<ProductModel>();
+
+                string prefix = "";
+                if (page == DataAll.Web)
+                {
+                    prefix = DataAll.AdminUrl;
+                }
+                foreach (var productInList in productList)
+                {
+                    var productQuery = _context.productsTable.FirstOrDefault(x => x.product_Id == productInList.product_Id);
+
+                    if (productQuery != null)
+                    {
+                        ProductModel product = new ProductModel();
+                        product.product_Id = productQuery.product_Id;
+                        product.product_Name = productQuery.product_Name;
+                        product.product_Description = productQuery.product_Description;
+                        product.product_ShortDescription = productQuery.product_ShortDescription;
+                        product.product_Price = productQuery.product_Price;
+                        product.product_Img1 = prefix + productQuery.product_Img1;
+                        product.product_Img2 = prefix + productQuery.product_Img2;
+                        product.product_Img3 = prefix + productQuery.product_Img3;
+                        product.product_Img4 = prefix + productQuery.product_Img4;
+                        product.product_Img5 = prefix + productQuery.product_Img5;
+                        product.product_Sold = productQuery.product_Sold;
+                        product.product_Rate = productQuery.product_Rate;
+                        product.product_ViewNumber = productQuery.product_ViewNumber;
+                        product.product_Type = productQuery.product_Type;
+
+                        // For cart
+                        product.product_Quantity = productInList.product_Quantity;
+                        product.product_ColorId = productInList.product_ColorId;
+                        product.product_ColorName = productInList.product_ColorName;
+                        product.product_SizeId = productInList.product_SizeId;
+                        product.product_SizeName = productInList.product_SizeName;
+
+                        var categoryQuery = _context.categoriesTable.FirstOrDefault(x => x.category_Id == productQuery.product_CategoryId);
+
+                        if (categoryQuery != null)
+                        {
+                            product.product_CategoryName = categoryQuery.category_Name;
+                        }
+                        else
+                        {
+                            product.product_CategoryName = "";
+                        }
+
+                        productListNew.Add(product);
+                    }
+                }
+                return productListNew;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
 
         public async Task<bool> DeleteProductById(string id)

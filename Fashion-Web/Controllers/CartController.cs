@@ -33,7 +33,24 @@ namespace Fashion_Web.Controllers
         [Route("/cart")]
         public ActionResult Index()
         {
-            return View();
+            if (HttpContext.Request.Cookies.ContainsKey(KeyCookie.cart_Product)) // existing 
+            {
+                string cookieValueFromCart = HttpContext.Request.Cookies[KeyCookie.cart_Product];
+                if (cookieValueFromCart != null)
+                {
+                    //CartModel records = JsonConvert.DeserializeObject<CartModel>(cookieValueFromCart);
+                    List<ProductModel> records = JsonConvert.DeserializeObject<List<ProductModel>>(cookieValueFromCart);
+                    return View(_productService.GetProductByModelId(records));
+                }
+
+                
+            }
+            return NotFound();
+        }
+
+        public List<ProductModel> unGenJsonCookie(string json)
+        {
+            return JsonConvert.DeserializeObject<List<ProductModel>>(json);
         }
 
         // GET: CartController/Details/5
@@ -55,21 +72,24 @@ namespace Fashion_Web.Controllers
 
             
 
-            if (!HttpContext.Request.Cookies.ContainsKey(KeyCookie.cart_Product))
+            if (!HttpContext.Request.Cookies.ContainsKey(KeyCookie.cart_Product)) // existing 
             {
                 if ((productId != null) && (sizeId != null) && (colorId != null) && (Quantity != 0))
                 {
+                    List<ProductModel> productModelList = new List<ProductModel>();
+
                     ProductModel productModel = new ProductModel();
                     productModel.product_Id = productId;
                     productModel.product_SizeId = sizeId;
                     productModel.product_SizeName = _productService.GetSize(sizeId);
                     productModel.product_ColorId = colorId;
-                    productModel.product_ColorName = "";
+                    productModel.product_ColorName = _productService.GetColor(colorId);
                     productModel.product_Quantity = Quantity;
-                    cartModel.productList.Add(productModel);
+                    //cartModel.productList.Add(productModel);
 
-
-                    string stringjson = JsonConvert.SerializeObject(cartModel);
+                    productModelList.Add(productModel);
+                    //string stringjson = JsonConvert.SerializeObject(cartModel);
+                    string stringjson = JsonConvert.SerializeObject(productModelList);
                     Console.WriteLine(stringjson);
 
                     CookieOptions option = new CookieOptions();
@@ -82,31 +102,55 @@ namespace Fashion_Web.Controllers
                 string cookieValueFromCart = HttpContext.Request.Cookies[KeyCookie.cart_Product];
                 if (cookieValueFromCart != null)
                 {
-                    CartModel records = JsonConvert.DeserializeObject<CartModel>(cookieValueFromCart);
+                    //CartModel records = JsonConvert.DeserializeObject<CartModel>(cookieValueFromCart);
+                    List<ProductModel> records = JsonConvert.DeserializeObject<List<ProductModel>>(cookieValueFromCart);
+
+
+                    //var checkExistingRecords = records.productList.FirstOrDefault(x => x.product_Id == productId 
+                    //&& x.product_SizeId == sizeId
+                    //&& x.product_ColorId == colorId);
+
+                    var checkExistingRecords = records.FirstOrDefault(x => x.product_Id == productId
+                    && x.product_SizeId == sizeId
+                    && x.product_ColorId == colorId);
+
+                    if (checkExistingRecords != null)
+                    {
+
+                        checkExistingRecords.product_Quantity = checkExistingRecords.product_Quantity + Quantity;
+
+
+                        string stringjson = JsonConvert.SerializeObject(records);
+                        Console.WriteLine(stringjson);
+
+                        CookieOptions option = new CookieOptions();
+                        option.Expires = DateTime.Now.AddDays(1);
+                        HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
+                    }
+                    else
+                    {
+                        if ((productId != null) && (sizeId != null) && (colorId != null) && (Quantity != 0))
+                        {
+
+                            ProductModel productModel = new ProductModel();
+                            productModel.product_Id = productId;
+                            productModel.product_SizeId = sizeId;
+                            productModel.product_SizeName = _productService.GetSize(sizeId);
+                            productModel.product_ColorId = colorId;
+                            productModel.product_ColorName = _productService.GetColor(colorId);
+                            productModel.product_Quantity = Quantity;
+
+                            records.Add(productModel);
+
+                            string stringjson = JsonConvert.SerializeObject(records);
+                            Console.WriteLine(stringjson);
+
+                            CookieOptions option = new CookieOptions();
+                            option.Expires = DateTime.Now.AddDays(1);
+                            HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
+                        }
+                    }
                 }
-
-                
-
-                if ((productId != null) && (sizeId != null) && (colorId != null) && (Quantity != 0))
-                {
-
-                    ProductModel productModel = new ProductModel();
-                    productModel.product_Id = productId;
-                    productModel.product_SizeId = sizeId;
-                    productModel.product_SizeName = _productService.GetSize(sizeId);
-                    productModel.product_ColorId = colorId;
-                    productModel.product_ColorName = "";
-                    productModel.product_Quantity = Quantity;
-
-                    string stringjson = JsonConvert.SerializeObject(productModel);
-                    Console.WriteLine(stringjson);
-
-                    CookieOptions option = new CookieOptions();
-                    option.Expires = DateTime.Now.AddDays(1);
-                    HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
-                }
-                
-
                 ////read cookie from Request object  
                 //string cookieValueFromReq = HttpContext.Request.Cookies["first_request"];
                 //Console.WriteLine("Cookie = " + cookieValueFromContext);
@@ -114,15 +158,11 @@ namespace Fashion_Web.Controllers
                 //option.Expires = DateTime.Now.AddDays(1);
                 //HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
             }
-
-
-
-
-
-
-
             return RedirectToAction("Details", "shop", new { id = productId });
         }
+
+
+        
 
         // GET: CartController/Create
         public ActionResult Create()

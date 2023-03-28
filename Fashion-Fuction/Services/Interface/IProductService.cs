@@ -21,5 +21,6 @@ namespace Fashion_Fuction.Services.Interface
         public ProductModel GetCurrentColorOfProduct(ProductModel productModel);
         public int GetSize(string sizeId);
         public string GetColor(string colorId);
+        public List<ProductModel> GetProductByModelId(List<ProductModel> productList, string page = "Admin");
     }
 }
