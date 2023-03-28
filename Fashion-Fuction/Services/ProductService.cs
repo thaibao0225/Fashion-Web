@@ -430,5 +430,20 @@ namespace Fashion_Fuction.Services
                 throw;
             }
         }
+
+        public int GetSumNumberOfProduct(List<ProductModel> productList)
+        {
+            int sum = 0;
+            if (productList != null)
+            {
+                foreach (var item in productList)
+                {
+                    sum = sum + item.product_Quantity;
+                }
+            }
+            
+
+            return sum;
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Fashion_Web.StaticsFunction;
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -141,7 +144,7 @@
                             </a>
                             <a href="/cart" class="btn px-0 ml-3">
                                 <i class="fas fa-shopping-cart text-primary"></i>
-                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">@CartStatics.GetNumberOfProductInCart</span>
                             </a>
                         </div>
                     </div>

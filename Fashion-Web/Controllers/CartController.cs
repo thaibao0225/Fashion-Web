@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using Fashion_Fuction.DataCreated;
 using Fashion_Fuction.Models;
 using System.Text.Json.Nodes;
+using Fashion_Web.StaticsFunction;
 
 namespace Fashion_Web.Controllers
 {
@@ -40,7 +41,9 @@ namespace Fashion_Web.Controllers
                 {
                     //CartModel records = JsonConvert.DeserializeObject<CartModel>(cookieValueFromCart);
                     List<ProductModel> records = JsonConvert.DeserializeObject<List<ProductModel>>(cookieValueFromCart);
-                    return View(_productService.GetProductByModelId(records));
+                    CartStatics.GetNumberOfProductInCart = _productService.GetSumNumberOfProduct(records);
+
+                    return View(_productService.GetProductByModelId(records, DataAll.Web));
                 }
 
                 
@@ -85,10 +88,11 @@ namespace Fashion_Web.Controllers
                     productModel.product_ColorId = colorId;
                     productModel.product_ColorName = _productService.GetColor(colorId);
                     productModel.product_Quantity = Quantity;
-                    //cartModel.productList.Add(productModel);
-
+    
                     productModelList.Add(productModel);
-                    //string stringjson = JsonConvert.SerializeObject(cartModel);
+
+                    CartStatics.GetNumberOfProductInCart = Quantity;
+
                     string stringjson = JsonConvert.SerializeObject(productModelList);
                     Console.WriteLine(stringjson);
 
@@ -102,13 +106,7 @@ namespace Fashion_Web.Controllers
                 string cookieValueFromCart = HttpContext.Request.Cookies[KeyCookie.cart_Product];
                 if (cookieValueFromCart != null)
                 {
-                    //CartModel records = JsonConvert.DeserializeObject<CartModel>(cookieValueFromCart);
                     List<ProductModel> records = JsonConvert.DeserializeObject<List<ProductModel>>(cookieValueFromCart);
-
-
-                    //var checkExistingRecords = records.productList.FirstOrDefault(x => x.product_Id == productId 
-                    //&& x.product_SizeId == sizeId
-                    //&& x.product_ColorId == colorId);
 
                     var checkExistingRecords = records.FirstOrDefault(x => x.product_Id == productId
                     && x.product_SizeId == sizeId
@@ -122,7 +120,7 @@ namespace Fashion_Web.Controllers
 
                         string stringjson = JsonConvert.SerializeObject(records);
                         Console.WriteLine(stringjson);
-
+                        CartStatics.GetNumberOfProductInCart = _productService.GetSumNumberOfProduct(records);
                         CookieOptions option = new CookieOptions();
                         option.Expires = DateTime.Now.AddDays(1);
                         HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
@@ -139,8 +137,9 @@ namespace Fashion_Web.Controllers
                             productModel.product_ColorId = colorId;
                             productModel.product_ColorName = _productService.GetColor(colorId);
                             productModel.product_Quantity = Quantity;
-
                             records.Add(productModel);
+
+                            CartStatics.GetNumberOfProductInCart = _productService.GetSumNumberOfProduct(records);
 
                             string stringjson = JsonConvert.SerializeObject(records);
                             Console.WriteLine(stringjson);
@@ -151,12 +150,6 @@ namespace Fashion_Web.Controllers
                         }
                     }
                 }
-                ////read cookie from Request object  
-                //string cookieValueFromReq = HttpContext.Request.Cookies["first_request"];
-                //Console.WriteLine("Cookie = " + cookieValueFromContext);
-                //CookieOptions option = new CookieOptions();
-                //option.Expires = DateTime.Now.AddDays(1);
-                //HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, stringjson, option);
             }
             return RedirectToAction("Details", "shop", new { id = productId });
         }
