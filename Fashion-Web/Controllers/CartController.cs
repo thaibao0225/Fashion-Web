@@ -39,7 +39,6 @@ namespace Fashion_Web.Controllers
                 string cookieValueFromCart = HttpContext.Request.Cookies[KeyCookie.cart_Product];
                 if (cookieValueFromCart != null)
                 {
-                    //CartModel records = JsonConvert.DeserializeObject<CartModel>(cookieValueFromCart);
                     List<ProductModel> records = JsonConvert.DeserializeObject<List<ProductModel>>(cookieValueFromCart);
                     CartStatics.GetNumberOfProductInCart = _productService.GetSumNumberOfProduct(records);
 

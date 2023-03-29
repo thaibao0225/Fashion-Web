@@ -23,6 +23,7 @@
         public List<ColorInProductTable> product_colorInProductTablesList { get; set; }
         public List<SizeInProductTable> product_sizeInProductTablesList { get; set; }
         public List<CommentTable> product_CommentTableList { get; set; }
+        public List<CartTable> product_CartTableList { get; set; }
 
     }
 }

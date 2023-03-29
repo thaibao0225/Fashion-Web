@@ -7,5 +7,6 @@
         public bool size_IsDelete {  get; set; }
 
         public List<SizeInProductTable> size_sizeInProductTablesList { get; set; }
+        public List<CartTable> size_CartTableList { get; set; }
     }
 }

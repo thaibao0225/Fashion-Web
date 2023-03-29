@@ -7,5 +7,6 @@
         public bool color_IdDelete { get; set; }
 
         public List<ColorInProductTable> color_InProductsList { get; set;}
+        public List<CartTable> color_CartTableList { get; set; }
     }
 }
