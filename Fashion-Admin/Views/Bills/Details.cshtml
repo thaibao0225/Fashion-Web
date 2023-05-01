@@ -1,0 +1,112 @@
+﻿@model Fashion_Fuction.Models.BillModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    int iRow = 0;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BillsTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.bill_Code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.bill_Code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.bill_UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.bill_UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.bill_Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.bill_Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.bill_CreateOn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.bill_CreateOn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.bill_IsConfirm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.bill_IsConfirm)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.bill_IsPayment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.bill_IsPayment)
+        </dd>
+    </dl>
+
+    <div>
+        @if (Model.bill_IsConfirm)
+        {
+            <a asp-action="Unconfirm" asp-route-billid="@Model.bill_Id" class="btn btn-warning col-sm-1">Unconfirm</a>
+        }
+        else
+        {
+            <a asp-action="Confirm" asp-route-billid="@Model.bill_Id" class="btn btn-success col-sm-1">Confirm</a>
+        }
+
+
+        @if (ViewBag.Message == "Success")
+        {
+            <span class="text-success">Success</span>
+        }
+        
+    </div>
+
+    <hr />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Color</th>
+                <th scope="col">Size</th>
+
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.productsList)
+            {
+                iRow++;
+                <tr>
+
+                    <th scope="row">@iRow</th>
+                    <th>@item.product_Name</th>
+                    <td>@item.product_Price</td>
+                    <td>@item.product_Quantity</td>
+                    <td>@item.product_ColorName</td>
+                    <td>@item.product_SizeName</td>
+                    <td>
+                        <a asp-controller="Products" asp-action="Details" asp-route-Id="@item.product_Id">Details</a>
+                        @*|<a asp-controller="Products" asp-action="Delete" asp-route-Id="@item.product_Id">Delete</a>*@
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.bill_Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

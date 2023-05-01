@@ -1,5 +1,6 @@
 ﻿using Fashion_Fuction.DataCreated;
 using Fashion_Fuction.Services;
+using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,15 +9,17 @@ namespace Fashion_Web.Controllers
 {
     public class ShopController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ShopController> _logger;
         private ApplicationDbContext _context;
         private IProductService _productService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public ShopController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public ShopController(ILogger<ShopController> logger, ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
             _context = context;
             _productService = new ProductService(context);
+            _httpContextAccessor = httpContextAccessor;
         }
 
 
@@ -33,9 +36,35 @@ namespace Fashion_Web.Controllers
         }
 
         // GET: ShopController/Details/5
-        public ActionResult Details(int id)
+        [Route("/shop/details")]
+        public ActionResult Details(string id)
         {
-            return View();
+            //ViewBag.ProductFirst = _productService.GetProductById(id, DataAll.Web);
+            var productDetail = _productService.GetProductById(id, DataAll.Web);
+            productDetail = _productService.GetCurrentSizeOfProduct(productDetail);
+            productDetail = _productService.GetCurrentColorOfProduct(productDetail);
+
+            return View(productDetail);
+        }
+
+        // POST: ShopController/Create
+        [HttpPost]
+        [Route("/shop/rating")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Rating(IFormCollection collection)
+        {
+            try
+            {
+                string productId = collection["product_Id"];
+                string commentRating = collection["comment_Rating"];
+                string Comment = collection["Comment"];
+
+                return RedirectToAction("Details", "shop", new { id = productId});
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: ShopController/Create

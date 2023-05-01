@@ -36,6 +36,7 @@ namespace Fashion_Infrastructure.Data
             builder.ApplyConfiguration(new SizeInProductTableConfigurations());
             builder.ApplyConfiguration(new SizeTableConfigurations());
             builder.ApplyConfiguration(new UsersTableConfigurations());
+            builder.ApplyConfiguration(new CartTableConfigurations());
 
             builder.Seed();
 
@@ -54,5 +55,6 @@ namespace Fashion_Infrastructure.Data
         public DbSet<SizeInProductTable> sizeInProductTable { set; get; }
         public DbSet<SizeTable> sizeTable { set; get; }
         public DbSet<UsersTable> usersTable { set; get; }
+        public DbSet<CartTable> cartTable { set; get; }
     }
 }

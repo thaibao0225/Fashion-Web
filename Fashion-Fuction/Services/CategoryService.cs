@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Fashion_Fuction.DataCreated;
 using Fashion_Fuction.Models;
+using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
 using Fashion_Infrastructure.Entities;
 
@@ -19,15 +20,15 @@ namespace Fashion_Fuction.Services
             _context = context;
         }
 
-        public async Task<bool> CreateCategory(CategoryModel categoryModel) 
+        public async Task<bool> CreateCategory(CategoryModel categoryModel)
         {
             try
             {
                 CategoriesTable categoryCreate = new CategoriesTable();
 
-                categoryCreate.category_Id = categoryModel.category_Id;
+                categoryCreate.category_Id = Guid.NewGuid().ToString();
                 categoryCreate.category_Name = categoryModel.category_Name;
-                categoryCreate.category_IsDelete = false;
+                categoryCreate.IsDelete = false;
 
                 await _context.categoriesTable.AddAsync(categoryCreate);
                 var result = await _context.SaveChangesAsync();
@@ -70,7 +71,7 @@ namespace Fashion_Fuction.Services
                 var categoryQuery = _context.categoriesTable.FirstOrDefault(x => x.category_Id == id);
                 if (categoryQuery != null)
                 {
-                    _context.categoriesTable.Remove(categoryQuery);
+                    categoryQuery.IsDelete = true;
 
                     await _context.SaveChangesAsync();
                     return true;
@@ -91,7 +92,7 @@ namespace Fashion_Fuction.Services
                 var categoryQuery = _context.categoriesTable.Where(x => x.IsDelete == false);
 
                 List<CategoryModel> categoryModelList = new List<CategoryModel>();
-                foreach (var categoryItem in categoryQuery) 
+                foreach (var categoryItem in categoryQuery)
                 {
                     CategoryModel category = new CategoryModel();
                     category.category_Id = categoryItem.category_Id;
@@ -100,6 +101,30 @@ namespace Fashion_Fuction.Services
                 }
 
                 return categoryModelList;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public CategoryModel GetCategoryById(string categoryId)
+        {
+            try
+            {
+                var categoryQuery = _context.categoriesTable.FirstOrDefault(x => x.IsDelete == false && x.category_Id == categoryId);
+
+                if (categoryQuery != null)
+                {
+                    CategoryModel category = new CategoryModel();
+                    category.category_Id = categoryQuery.category_Id;
+                    category.category_Name = categoryQuery.category_Name;
+
+
+                    return category;
+                }
+                return new CategoryModel();
+
             }
             catch (Exception)
             {

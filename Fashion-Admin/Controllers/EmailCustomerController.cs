@@ -1,11 +1,15 @@
 ﻿using Fashion_Fuction.Services;
+using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Staff")]
     public class EmailCustomerController : Controller
     {
         private ApplicationDbContext _context;

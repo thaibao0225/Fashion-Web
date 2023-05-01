@@ -1,4 +1,5 @@
 ﻿using Fashion_Fuction.Models;
+using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Fashion_Fuction.Services
 {
-    public class CommentService
+    public class CommentService : ICommentService
     {
         private ApplicationDbContext _context;
 
@@ -91,6 +92,36 @@ namespace Fashion_Fuction.Services
             }
             
         }
+        public List<CommentModel> GetAllComment()
+        {
 
+            var commentQuery = from a in _context.commentTable
+                               join b in _context.productsTable on a.comment_ProductId equals b.product_Id
+                               orderby a.CreateOn descending
+                               where a.IsDelete == false
+                               select a;
+            List<CommentModel> commentList = new List<CommentModel>();
+
+            foreach (var comment in commentQuery)
+            {
+                CommentModel commentModel = new CommentModel();
+
+                commentModel.Id = comment.comment_Id;
+                commentModel.Comment = comment.comment_Text;
+                commentModel.CreateOn = comment.CreateOn;
+                commentModel.ProductId = comment.comment_ProductId;
+                commentModel.UserId = comment.comment_UserId;
+                var userQuery = _context.usersTable.FirstOrDefault(x=> x.Id == comment.comment_UserId);
+                if (userQuery != null)
+                {
+                    commentModel.UserName = userQuery.UserName;
+                }
+                
+
+                commentList.Add(commentModel);
+            }
+            return commentList;
+
+        }
     }
 }

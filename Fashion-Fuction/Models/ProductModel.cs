@@ -1,4 +1,5 @@
 ﻿using Fashion_Infrastructure.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,18 +20,23 @@ namespace Fashion_Fuction.Models
 
         [DisplayName("Img1")]
         public string product_Img1 { get; set; } = string.Empty;
+        public IFormFile product_ImgFile1 { get; set; }
 
         [DisplayName("Img2")]
         public string product_Img2 { get; set; } = string.Empty;
+        public IFormFile? product_ImgFile2 { get; set; }
 
         [DisplayName("Img3")]
         public string product_Img3 { get; set; } = string.Empty;
+        public IFormFile? product_ImgFile3 { get; set; }
 
         [DisplayName("Img4")]
         public string product_Img4 { get; set; } = string.Empty;
+        public IFormFile? product_ImgFile4 { get; set; }
 
         [DisplayName("Img5")]
         public string product_Img5 { get; set; } = string.Empty;
+        public IFormFile? product_ImgFile5 { get; set; }
 
         [DisplayName("Description")]
         public string product_Description { get; set; } = string.Empty;
@@ -55,16 +61,24 @@ namespace Fashion_Fuction.Models
 
         [DisplayName("CategoryId")]
         public string product_CategoryId { get; set; } = string.Empty;
+
+        [DisplayName("CategoryName")]
+        public string product_CategoryName { get; set; } = string.Empty;
         //public CategoriesTable product_CategoriesTable { get; set; }
-        //public List<ColorInProductTable> product_colorInProductTablesList { get; set; }
+        
         //public List<SizeInProductTable> product_sizeInProductTablesList { get; set; }
         //public List<CommentTable> product_CommentTableList { get; set; }
 
         [DisplayName("Color")]
         public string product_ColorName { get; set; } = string.Empty;
+        public string product_ColorId { get; set; } = string.Empty;
         [DisplayName("Size")]
-        public string product_SizeName { get; set; } = string.Empty;
+        public int product_SizeName { get; set; }
+        public string product_SizeId { get; set; } = string.Empty;
         [DisplayName("Quantity")]
-        public string product_Quantity { get; set; } = string.Empty;
+        public int product_Quantity { get; set; }
+
+        public List<SizeModel> product_SizeList { get; set; }
+        public List<ColorModel> product_ColorList { get; set; }
     }
 }

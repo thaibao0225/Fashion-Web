@@ -14,5 +14,6 @@ namespace Fashion_Infrastructure.Entities
         public List<CommentTable> CommentTableList { get; set; }
         
         public List<BillsTable> billsTablesList { get; set; }
+        public List<CartTable> cartTableList { get; set; }
     }
 }

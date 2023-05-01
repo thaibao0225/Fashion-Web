@@ -1,7 +1,8 @@
-﻿@model IEnumerable<Fashion_Infrastructure.Entities.CategoriesTable>
+﻿@model IEnumerable<Fashion_Fuction.Models.CategoryModel>
 @{
     int iRow = 0;
 }
+<a asp-action="Create">Create</a>
 <table class="table">
     <thead>
         <tr>
@@ -18,9 +19,10 @@
                 <th scope="row">@iRow</th>
                 <td>@item.category_Name</td>
                 <td>
-                    <a>Details</a>|
-                    <a>Edit</a>|
-                    <a>Delete</a>
+                    <a asp-action="Details" asp-route-Id="@item.category_Id">Details</a>|
+                    <a asp-action="Edit" asp-route-Id="@item.category_Id">Edit</a>|
+                    <a asp-action="Delete" asp-route-Id="@item.category_Id">Delete</a>|
+                    <a asp-action="AssignToRole" asp-route-Id="@item.category_Id">Role</a>
                 </td>
             </tr>
         }

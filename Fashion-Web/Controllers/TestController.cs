@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fashion_Fuction.DataCreated;
+using Fashion_Fuction.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Fashion_Web.Controllers
 {
@@ -9,7 +12,19 @@ namespace Fashion_Web.Controllers
         [Route("/test")]
         public ActionResult Index()
         {
+            string cookieValueFromCart = HttpContext.Request.Cookies[KeyCookie.cart_Product];
+            if (cookieValueFromCart != null)
+            {
+
+                List<ProductModel> Result = unGenJsonCookie(cookieValueFromCart);
+            }
+
             return View();
+        }
+
+        public List<ProductModel> unGenJsonCookie(string json)
+        {
+            return JsonConvert.DeserializeObject<List<ProductModel>>(json);
         }
 
         // GET: TestController/Details/5

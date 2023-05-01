@@ -1,16 +1,46 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fashion_Fuction.Services.Interface;
+using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Staff")]
     public class CommentsController : Controller
     {
+        private ApplicationDbContext _context;
+        private ICommentService _commentService;
+        public CommentsController(ApplicationDbContext context, ICommentService commentService)
+        {
+            _context = context;
+            _commentService = commentService;
+        }
         // GET: CommentsController
         [Route("/comments")]
         public ActionResult Index()
         {
-            return View();
+            return View(_commentService.GetAllComment());
         }
+
+        // GET: CommentsController/Details/5
+        public async Task<ActionResult> BlockComment(string id)
+        {
+
+            try
+            {
+
+                await _commentService.DeleteComment(id);
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
 
         // GET: CommentsController/Details/5
         public ActionResult Details(int id)

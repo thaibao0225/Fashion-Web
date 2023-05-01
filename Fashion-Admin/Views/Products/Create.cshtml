@@ -11,11 +11,11 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group" hidden>
                 <label asp-for="product_Id" class="control-label"></label>
-                <input asp-for="product_Id" class="form-control" />
+                <input asp-for="product_Id" class="form-control" value="xxx" />
                 <span asp-validation-for="product_Id" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -25,28 +25,33 @@
             </div>
             <div class="form-group">
                 <label asp-for="product_Img1" class="control-label"></label>
-                <input asp-for="product_Img1" class="form-control" />
-                <span asp-validation-for="product_Img1" class="text-danger"></span>
+                @*<img src="../@Html.DisplayFor(model => model.product_Img1)" class="img-thumbnail" width="70" />*@
+                <input asp-for="product_ImgFile1" class="form-control" />
+                <span asp-validation-for="product_ImgFile1" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="product_Img2" class="control-label"></label>
-                <input asp-for="product_Img2" class="form-control" />
-                <span asp-validation-for="product_Img2" class="text-danger"></span>
+                @*<img src="../@Html.DisplayFor(model => model.product_Img2)" class="img-thumbnail" width="70" />*@
+                <input asp-for="product_ImgFile2" class="form-control" />
+                <span asp-validation-for="product_ImgFile2" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="product_Img3" class="control-label"></label>
-                <input asp-for="product_Img3" class="form-control" />
-                <span asp-validation-for="product_Img3" class="text-danger"></span>
+                @*<img src="../@Html.DisplayFor(model => model.product_Img3)" class="img-thumbnail" width="70" />*@
+                <input asp-for="product_ImgFile3" class="form-control" />
+                <span asp-validation-for="product_ImgFile3" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="product_Img4" class="control-label"></label>
-                <input asp-for="product_Img4" class="form-control" />
-                <span asp-validation-for="product_Img4" class="text-danger"></span>
+                @*<img src="../@Html.DisplayFor(model => model.product_Img4)" class="img-thumbnail" width="70" />*@
+                <input asp-for="product_ImgFile4" class="form-control" />
+                <span asp-validation-for="product_ImgFile4" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="product_Img5" class="control-label"></label>
-                <input asp-for="product_Img5" class="form-control" />
-                <span asp-validation-for="product_Img5" class="text-danger"></span>
+                @*<img src="../@Html.DisplayFor(model => model.product_Img5)" class="img-thumbnail" width="70" />*@
+                <input asp-for="product_ImgFile5" class="form-control" />
+                <span asp-validation-for="product_ImgFile5" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="product_Description" class="control-label"></label>
@@ -68,10 +73,24 @@
                 <input asp-for="product_Type" class="form-control" />
                 <span asp-validation-for="product_Type" class="text-danger"></span>
             </div>
-@*            <div class="form-group">
-                <label asp-for="product_CategoryId" class="control-label"></label>
-                <select asp-for="product_CategoryId" class ="form-control" asp-items="ViewBag.product_CategoryId"></select>
-            </div>*@
+
+            @if (ViewBag.categoryList != null)
+            {
+                <div class="form-group">
+                    <label asp-for="product_CategoryId" class="control-label"> Category New</label>
+                    <select multiple class="form-control" asp-for="product_CategoryId" required>
+                        @foreach (var categoryName in ViewBag.categoryList)
+                        {
+
+
+
+                            <option value="@categoryName.category_Id">@categoryName.category_Name</option>
+
+                        }
+                    </select>
+                    <span asp-validation-for="product_CategoryId" class="text-danger"></span>
+                </div>
+            }
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -84,5 +103,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

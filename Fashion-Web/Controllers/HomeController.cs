@@ -5,6 +5,9 @@ using Fashion_Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Fashion_Fuction.DataCreated;
+using Fashion_Fuction.Services.Interface;
+using Fashion_Web.StaticsFunction;
+using Newtonsoft.Json;
 
 namespace Fashion_Web.Controllers
 {
@@ -23,6 +26,27 @@ namespace Fashion_Web.Controllers
 
         public IActionResult Index()
         {
+            // Create cookie Cart
+
+            if (!HttpContext.Request.Cookies.ContainsKey(KeyCookie.cart_Product))
+            {
+                CookieOptions option = new CookieOptions();
+                option.Expires = DateTime.Now.AddDays(1);
+                HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, "", option);
+            }
+            else
+            {
+                string cookieValueFromCart = HttpContext.Request.Cookies[KeyCookie.cart_Product];
+                if (cookieValueFromCart != null)
+                {
+                    //CartModel records = JsonConvert.DeserializeObject<CartModel>(cookieValueFromCart);
+                    List<ProductModel> records = JsonConvert.DeserializeObject<List<ProductModel>>(cookieValueFromCart);
+                    CartStatics.GetNumberOfProductInCart = _productService.GetSumNumberOfProduct(records);
+
+                }
+            }
+
+
             //Category
             var queryCategory = _context.categoriesTable;
 

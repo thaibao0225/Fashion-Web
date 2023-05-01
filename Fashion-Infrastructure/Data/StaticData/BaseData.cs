@@ -13,5 +13,9 @@
         public static string YellowName = "Yellow";
 
 
+        public static string ImgUrl = "StaticFiles/Product/";
+        public static string ImgPath = "StaticFiles";
+        public static string ProductPath = "Product";
+
     }
 }

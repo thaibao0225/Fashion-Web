@@ -55,9 +55,9 @@ namespace Fashion_Web.Controllers
                 contactTable.contact_Id = Guid.NewGuid().ToString();
                 contactTable.contact_Name = Name;
                 contactTable.contact_EmailId = emailId;
-                contactTable.emailC_Subject = Subject;
-                contactTable.emailC_Message = Message;
-                contactTable.emailC_IsCheck = false;
+                contactTable.contact_Subject = Subject;
+                contactTable.contact_Message = Message;
+                contactTable.contact_IsCheck = false;
                 await _context.contactTable.AddAsync(contactTable);
                 await _context.SaveChangesAsync();
 

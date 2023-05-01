@@ -1,15 +1,17 @@
 ﻿using Fashion_Fuction.Models;
+using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
 using Fashion_Infrastructure.Entities;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Fashion_Fuction.Services
 {
-    public class BillService
+    public class BillService : IBillService
     {
         private ApplicationDbContext _context;
 
@@ -184,41 +186,156 @@ namespace Fashion_Fuction.Services
             return false;
         }
 
-        //public List<ProductModel> UnGenProductString(
-        //    string productIdString,
+        //string productIdString,
         //    string productPriceString,
         //    string productQuantityString,
         //    string productColorString,
         //    string productSizeString
-        //    )
-        //{
+
+        public List<ProductModel> UnGenProductString(
+            string productIdString,
+            string productPriceString,
+            string productQuantityString,
+            string productColorString,
+            string productSizeString
+            )
+        {
+            List<ProductModel> productsList = new List<ProductModel>();
+            var productIdArray = productIdString.Split('|');
+            var productPriceArray = productPriceString.Split('|');
+            var productQuantityArray = productQuantityString.Split('|');
+            var productColorArray = productColorString.Split('|');
+            var productSizeArray = productSizeString.Split('|');
+
+            int lengthArray = productIdArray.Length;
+
+            if ((productIdArray.Length == lengthArray) &&
+                (productPriceArray.Length == lengthArray) &&
+                (productQuantityArray.Length == lengthArray) &&
+                (productColorArray.Length == lengthArray) &&
+                (productSizeArray.Length == lengthArray))
+            {
+                int index = 0;
+                foreach (var item in productIdArray)
+                {
+                    if (productIdArray[index] != "")
+                    {
+                        ProductModel productModel = new ProductModel();
+                        productModel.product_Id = productIdArray[index];
+
+                        var productQuery = _context.productsTable.FirstOrDefault(x => x.product_Id == productIdArray[index]);
+                        if (productQuery != null)
+                        {
+                            productModel.product_Name = productQuery.product_Name;
+                        }
+                        
+                        productModel.product_Price = double.Parse(productPriceArray[index]);
+                        productModel.product_Quantity = int.Parse(productQuantityArray[index]);
+                        productModel.product_ColorName = productColorArray[index];
+                        productModel.product_SizeName = int.Parse(productSizeArray[index]);
+
+                        productsList.Add(productModel);
+                        index++;
+                    }
+                    
+                }
 
 
+                return productsList;
+            }
+            return new List<ProductModel>();
+        }
 
-        //    return null;
-        //}
+        public BillModel GetBillById(string billId)
+        {
+            var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id == billId);
 
-        //public BillModel GetBillById(string billId)
-        //{
-        //    var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id ==  billId);
+            if (billQuery != null)
+            {
+                BillModel billModel = new BillModel();
+                billModel.bill_Id = billId;
+                billModel.bill_UserId = billQuery.bill_UserId;
+                var userQuery = _context.usersTable.FirstOrDefault(x => x.Id == billQuery.bill_UserId);
+                if (userQuery != null)
+                {
+                    billModel.bill_UserName = userQuery.UserName;
+                }
+                billModel.bill_CreateOn = billQuery.bill_CreateOn;
+                billModel.bill_IsConfirm = billQuery.bill_IsConfirm;
+                billModel.bill_IsPayment = billQuery.bill_IsPayment;
+                billModel.bill_Price = billQuery.bill_Price;
+                billModel.productsList = UnGenProductString(billQuery.bill_ProductsIdList,
+                                                            billQuery.bill_ProductPriceList,
+                                                            billQuery.bill_ProductUnitList,
+                                                            billQuery.bill_ProductColorList,
+                                                            billQuery.bill_ProductSizeList);
 
-        //    if (billQuery != null)
-        //    {
-        //        BillModel billModel = new BillModel();
-        //        billModel.bill_Id = billId;
-        //        billModel.bill_UserId = billQuery.bill_UserId;
-        //        billModel.bill_CreateOn = billQuery.bill_CreateOn;
-        //        billModel.bill_IsConfirm = billQuery.bill_IsConfirm;
-        //        billModel.bill_IsPayment = billQuery.bill_IsPayment;
-        //        billModel.bill_Price = billQuery.bill_Price;
-        //        billModel.bill_Price = billQuery.bill_Price;
+
+                return billModel;
+            }
+            return new BillModel();
+        }
+
+        public List<BillModel> GetBill()
+        {
+
+            List<BillModel> billList = new List<BillModel>();
+            var billQuery = _context.billsTable.Where(x => x.IsDelete == false);
+
+            if (billQuery != null)
+            {
+                foreach (var item in billQuery)
+                {
+                    BillModel billModel = new BillModel();
+                    billModel.bill_Id = item.bill_Id;
+                    billModel.bill_UserId = item.bill_UserId;
+                    billModel.bill_Code = item.bill_Code;
+                    var userQuery = _context.usersTable.FirstOrDefault(x => x.Id == item.bill_UserId);
+                    if (userQuery != null)
+                    {
+                        billModel.bill_UserName = userQuery.UserName;
+                    }
+                    billModel.bill_CreateOn = item.bill_CreateOn;
+                    billModel.bill_IsConfirm = item.bill_IsConfirm;
+                    billModel.bill_IsPayment = item.bill_IsPayment;
+                    billModel.bill_Price = item.bill_Price;
+                    //billModel.productsList = UnGenProductString(billQuery.bill_ProductsIdList,
+                    //                                            billQuery.bill_ProductPriceList,
+                    //                                            billQuery.bill_ProductUnitList,
+                    //                                            billQuery.bill_ProductColorList,
+                    //                                            billQuery.bill_ProductSizeList);
+                    billList.Add(billModel);
+                }
+                
+
+                return billList;
+            }
+            return new List<BillModel>();
+        }
+
+        public async Task<bool> DeleteBill(string billId)
+        {
+            try
+            {
+                var billQuery = _context.billsTable.FirstOrDefault(x => x.bill_Id == billId);
+
+                if (billQuery != null)
+                {
+                    billQuery.IsDelete = true;
+                    await _context.SaveChangesAsync();
 
 
-        //    }
+                    return true;
+                }
+                return false;
 
+            }
+            catch (Exception)
+            {
 
-        //    return null;
-        //}
+                throw;
+            }
+        }
 
     }
 }

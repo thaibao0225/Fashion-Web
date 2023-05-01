@@ -6,8 +6,7 @@ namespace Fashion_Infrastructure.Entities
     {
         public string category_Id { get; set; } = string.Empty;
         public string category_Name { get; set; } = string.Empty;
-        public string category_Description { get; set; } = string.Empty;
-        public bool category_IsDelete { get; set; }
+        public string? category_Description { get; set; } = string.Empty;
 
 
 
