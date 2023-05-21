@@ -14,5 +14,6 @@ namespace Fashion_Fuction.Services.Interface
         public Task<bool> DeleteComment(string commentId);
         public string GetProductIdByCommentId(string commentId);
         public List<CommentModel> GetAllComment();
+        public int CountAllComment();
     }
 }

@@ -14,5 +14,6 @@ namespace Fashion_Fuction.Services.Interface
         public Task<bool> CreateContact(ContactModel contactModel);
         public ContactModel GetContactById(string contactId);
         public Task<bool> Checked(string contactId);
+        public int CountContact();
     }
 }

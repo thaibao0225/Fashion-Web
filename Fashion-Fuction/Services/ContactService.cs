@@ -169,5 +169,17 @@ namespace Fashion_Fuction.Services
                 throw;
             }
         }
+
+        public int CountContact()
+        {
+            int sum = 0;
+            var query = _context.contactTable;
+            if (query != null)
+            {
+                sum = query.Count();
+            }
+
+            return sum;
+        }
     }
 }

@@ -445,5 +445,17 @@ namespace Fashion_Fuction.Services
 
             return sum;
         }
+
+        public int CountProduct()
+        {
+            int sum = 0;
+            var query = _context.productsTable.Where(x => x.IsDelete == false);
+            if (query != null)
+            {
+                sum = query.Count();
+            }
+
+            return sum;
+        }
     }
 }

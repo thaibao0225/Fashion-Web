@@ -126,5 +126,17 @@ namespace Fashion_Fuction.Services
             return commentList;
 
         }
+
+        public int CountAllComment()
+        {
+            int sum = 0;
+            var query = _context.commentTable;
+            if (query != null)
+            {
+                sum = query.Count();
+            }
+
+            return sum;
+        }
     }
 }

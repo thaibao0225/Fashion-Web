@@ -14,6 +14,7 @@ namespace Fashion_Fuction.Services.Interface
         public Task<bool> DeleteCategory(string id);
         public List<CategoryModel> GetAllCategory();
         public CategoryModel GetCategoryById(string categoryId);
+        public int CountContact();
 
     }
 }

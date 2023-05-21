@@ -24,6 +24,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddTransient<IBillService, BillService>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<ICommentService, CommentService>();
+builder.Services.AddTransient<IContactService, ContactService>();
 
 var app = builder.Build();
 
