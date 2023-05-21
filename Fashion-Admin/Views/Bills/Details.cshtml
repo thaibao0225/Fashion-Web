@@ -61,12 +61,28 @@
             <a asp-action="Confirm" asp-route-billid="@Model.bill_Id" class="btn btn-success col-sm-1">Confirm</a>
         }
 
+        
+    </div>
 
+    <div>
+        @if (Model.bill_IsPayment)
+        {
+            <a asp-action="UnPayment" asp-route-billid="@Model.bill_Id" class="btn btn-warning col-sm-1">UnPayment</a>
+        }
+        else
+        {
+            <a asp-action="Payment" asp-route-billid="@Model.bill_Id" class="btn btn-success col-sm-1">Payment</a>
+        }
+
+
+        
+
+    </div>
+    <div>
         @if (ViewBag.Message == "Success")
         {
             <span class="text-success">Success</span>
         }
-        
     </div>
 
     <hr />

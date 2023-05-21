@@ -54,6 +54,23 @@ namespace Fashion_Admin.Controllers
             return RedirectToAction("Details", "bills", new { id = billId, message = "Success" });
         }
 
+        // GET: BillsController/Details/5
+        [Route("/bills/payment")]
+        public async Task<ActionResult> Payment(string billId)
+        {
+            await _billService.ChangeStatusPaymentBillById(billId);
+            return RedirectToAction("Details", "bills", new { id = billId, message = "Success" });
+        }
+
+        // GET: BillsController/Details/5
+        [Route("/bills/unpayment")]
+        public async Task<ActionResult> UnPayment(string billId)
+        {
+
+            await _billService.ChangeStatusUnpaymentBillById(billId);
+            return RedirectToAction("Details", "bills", new { id = billId, message = "Success" });
+        }
+
 
         //// GET: BillsController/Edit/5
         //public ActionResult Edit(int id)
