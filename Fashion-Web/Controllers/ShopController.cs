@@ -53,6 +53,7 @@ namespace Fashion_Web.Controllers
             if(comments.Count > 0)
             {
                 ViewBag.CommentsCount = comments.Count;
+                ViewBag.Comments = comments;
 
             }
             ViewBag.Message = message;

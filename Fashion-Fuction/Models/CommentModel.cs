@@ -16,5 +16,6 @@ namespace Fashion_Fuction.Models
         public string ProductId { get; set; }
         public int comment_Rating { get; set; }
 
+
     }
 }

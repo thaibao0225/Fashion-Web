@@ -38,6 +38,7 @@ namespace Fashion_Fuction.Services
                 commentModel.CreateOn = comment.CreateOn;
                 commentModel.ProductId = comment.comment_ProductId;
                 commentModel.UserId = comment.comment_UserId;
+                commentModel.comment_Rating = comment.comment_Rating;
 
                 commentList.Add(commentModel);
             }
