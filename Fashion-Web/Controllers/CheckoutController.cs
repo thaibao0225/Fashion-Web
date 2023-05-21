@@ -89,12 +89,7 @@ namespace Fashion_Web.Controllers
                         CookieOptions option = new CookieOptions();
                         option.Expires = DateTime.Now.AddDays(1);
                         HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, "", option);
-
-                        
-
                     }
-
-
                 }
                 return Redirect("/complete");
             }

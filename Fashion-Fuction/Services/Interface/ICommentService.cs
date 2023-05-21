@@ -10,7 +10,7 @@ namespace Fashion_Fuction.Services.Interface
     public interface ICommentService
     {
         public List<CommentModel> GetCommentByProductId(string productId);
-        public Task<bool> CreateCommentInProduct(string productId, string userId, string commentText);
+        public Task<bool> CreateCommentInProduct(string productId, string userId, string commentText, int commentRating);
         public Task<bool> DeleteComment(string commentId);
         public string GetProductIdByCommentId(string commentId);
         public List<CommentModel> GetAllComment();

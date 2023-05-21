@@ -1,9 +1,11 @@
 ﻿using Fashion_Fuction.DataCreated;
+using Fashion_Fuction.Models;
 using Fashion_Fuction.Services;
 using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Fashion_Web.Controllers
 {
@@ -13,13 +15,15 @@ namespace Fashion_Web.Controllers
         private ApplicationDbContext _context;
         private IProductService _productService;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ICommentService _commentService;
 
-        public ShopController(ILogger<ShopController> logger, ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
+        public ShopController(ILogger<ShopController> logger, ApplicationDbContext context, IHttpContextAccessor httpContextAccessor, ICommentService commentService)
         {
             _logger = logger;
             _context = context;
             _productService = new ProductService(context);
             _httpContextAccessor = httpContextAccessor;
+            _commentService = commentService;
         }
 
 
@@ -43,6 +47,14 @@ namespace Fashion_Web.Controllers
             var productDetail = _productService.GetProductById(id, DataAll.Web);
             productDetail = _productService.GetCurrentSizeOfProduct(productDetail);
             productDetail = _productService.GetCurrentColorOfProduct(productDetail);
+
+            ViewBag.CommentsCount = 0;
+            List<CommentModel> comments = _commentService.GetCommentByProductId(id);
+            if(comments.Count > 0)
+            {
+                ViewBag.CommentsCount = comments.Count;
+
+            }
             ViewBag.Message = message;
             return View(productDetail);
         }
@@ -51,13 +63,17 @@ namespace Fashion_Web.Controllers
         [HttpPost]
         [Route("/shop/rating")]
         [ValidateAntiForgeryToken]
-        public ActionResult Rating(IFormCollection collection)
+        public async Task<ActionResult> Rating(IFormCollection collection)
         {
             try
             {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
                 string productId = collection["product_Id"];
                 string commentRating = collection["comment_Rating"];
                 string Comment = collection["Comment"];
+
+                await _commentService.CreateCommentInProduct(productId, userId, Comment, Int32.Parse(commentRating));
 
                 return RedirectToAction("Details", "shop", new { id = productId});
             }

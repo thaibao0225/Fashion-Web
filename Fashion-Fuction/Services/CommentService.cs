@@ -1,6 +1,7 @@
 ﻿using Fashion_Fuction.Models;
 using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
+using Fashion_Infrastructure.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,18 +46,19 @@ namespace Fashion_Fuction.Services
         }
 
 
-        public async Task<bool> CreateCommentInProduct(string productId, string userId, string commentText)
+        public async Task<bool> CreateCommentInProduct(string productId, string userId, string commentText, int commentRating)
         {
 
-            CommentModel commentModel = new CommentModel();
+            CommentTable commentModel = new CommentTable();
 
-            commentModel.Id = Guid.NewGuid().ToString();
-            commentModel.Comment = commentText;
+            commentModel.comment_Id = Guid.NewGuid().ToString();
+            commentModel.comment_Text = commentText;
             commentModel.CreateOn = DateTime.Now;
-            commentModel.ProductId = productId;
-            commentModel.UserId = userId;
+            commentModel.comment_ProductId = productId;
+            commentModel.comment_UserId = userId;
+            commentModel.comment_Rating = commentRating;
 
-            await _context.AddAsync(commentModel);
+            await _context.commentTable.AddAsync(commentModel);
             await _context.SaveChangesAsync();
 
             return true;
