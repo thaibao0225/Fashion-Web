@@ -105,7 +105,7 @@ namespace Fashion_Fuction.Services
         {
             BillsTable billsTable = new BillsTable();
             billsTable.bill_Id = bill.bill_Id;
-            billsTable.bill_UserId = bill.bill_UserId;
+            billsTable.bill_UserId = userId;
             billsTable.bill_CreateOn = bill.bill_CreateOn;
             billsTable.bill_IsConfirm = bill.bill_IsConfirm;
             billsTable.bill_IsPayment = bill.bill_IsPayment;

@@ -37,13 +37,13 @@ namespace Fashion_Web.Controllers
 
         // GET: ShopController/Details/5
         [Route("/shop/details")]
-        public ActionResult Details(string id)
+        public ActionResult Details(string id, string message = "")
         {
             //ViewBag.ProductFirst = _productService.GetProductById(id, DataAll.Web);
             var productDetail = _productService.GetProductById(id, DataAll.Web);
             productDetail = _productService.GetCurrentSizeOfProduct(productDetail);
             productDetail = _productService.GetCurrentColorOfProduct(productDetail);
-
+            ViewBag.Message = message;
             return View(productDetail);
         }
 
