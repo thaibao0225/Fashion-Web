@@ -27,7 +27,7 @@ namespace Fashion_Web.Controllers
         public IActionResult Index()
         {
             // Create cookie Cart
-
+            CartStatics.GetNumberOfProductInCart = 0;
             if (!HttpContext.Request.Cookies.ContainsKey(KeyCookie.cart_Product))
             {
                 CookieOptions option = new CookieOptions();

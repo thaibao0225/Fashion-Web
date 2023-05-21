@@ -8,6 +8,10 @@ namespace Fashion_Infrastructure.Entities
 
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
+        public string bill_Address1 { set; get; } = string.Empty;
+        public string bill_City { set; get; } = string.Empty;
+        public string bill_State { set; get; } = string.Empty;
+        public string bill_PostalCode { set; get; } = string.Empty;
 
         public Boolean IsDelete { get; set; } = false;
 

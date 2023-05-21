@@ -83,18 +83,20 @@ namespace Fashion_Web.Controllers
                         var prepareBill = _billService.PrepareBill(userId, _productService.GetProductByModelId(records, DataAll.Web), 0);
                         await _billService.CreateBill(userId, prepareBill);
 
-                        //return View(_productService.GetProductByModelId(records, DataAll.Web));
+                        CookieOptions option = new CookieOptions();
+                        option.Expires = DateTime.Now.AddDays(1);
+                        HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, "", option);
 
 
                     }
 
 
                 }
-                return RedirectToAction(nameof(Index));
+                return Redirect("/complete");
             }
             catch
             {
-                return View();
+                return RedirectToAction(nameof(Index));
             }
         }
 

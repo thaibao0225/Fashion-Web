@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Fashion_Admin.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Staff")]
     public class UsersController : Controller
     {
         private ApplicationDbContext _context;

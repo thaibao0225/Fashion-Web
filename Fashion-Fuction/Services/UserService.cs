@@ -2,6 +2,7 @@
 using Fashion_Fuction.Models;
 using Fashion_Fuction.Services.Interface;
 using Fashion_Infrastructure.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
 using static Castle.MicroKernel.ModelBuilder.Descriptors.InterceptorDescriptor;
@@ -114,6 +115,45 @@ namespace Fashion_Fuction.Services
                 }
 
                 return new UserModel();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public async Task<bool> UpdateUserBill(IFormCollection collection, string userId)
+        {
+            try
+            {
+                string firstName = collection["firstName"];
+                string lastName = collection["lastName"];
+                string country = collection["country"];
+                string address = collection["address"];
+                string city = collection["city"];
+                string zip = collection["zip"];
+                string phone = collection["phone"];
+                string email = collection["email"];
+                string discount = collection["discount"];
+
+                // Add information
+                var user = _context.usersTable.FirstOrDefault(x => x.Id == userId);
+
+                if (user != null)
+                {
+                    user.FirstName = firstName;
+                    user.LastName = lastName;
+                    user.bill_Address1 = address;
+                    user.bill_City = city;
+                    user.bill_PostalCode = zip;
+                    user.PhoneNumber = phone;
+                    user.Email = email;
+                    _context.usersTable.Update(user);
+                }
+
+                return true;
             }
             catch (Exception)
             {
