@@ -18,14 +18,17 @@ namespace Fashion_Web.Controllers
         private IProductService _productService;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IBillService _billService;
+        private readonly IUserService _userService;
 
-        public CheckoutController(ILogger<CheckoutController> logger, ApplicationDbContext context, IHttpContextAccessor httpContextAccessor, IBillService billService)
+        public CheckoutController(ILogger<CheckoutController> logger, ApplicationDbContext context, IHttpContextAccessor httpContextAccessor, IBillService billService
+            , IUserService userService)
         {
             _logger = logger;
             _context = context;
             _productService = new ProductService(context);
             this._httpContextAccessor = httpContextAccessor;
             _billService = billService;
+            _userService = userService;
         }
         // GET: CheckoutController
         [Route("/checkout")]
@@ -82,11 +85,12 @@ namespace Fashion_Web.Controllers
                         CartStatics.GetNumberOfProductInCart = _productService.GetSumNumberOfProduct(records);
                         var prepareBill = _billService.PrepareBill(userId, _productService.GetProductByModelId(records, DataAll.Web), 0);
                         await _billService.CreateBill(userId, prepareBill);
-
+                        await _userService.UpdateUserBill(collection, userId);
                         CookieOptions option = new CookieOptions();
                         option.Expires = DateTime.Now.AddDays(1);
                         HttpContext.Response.Cookies.Append(KeyCookie.cart_Product, "", option);
 
+                        
 
                     }
 

@@ -1,4 +1,5 @@
 ﻿using Fashion_Fuction.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Fashion_Fuction.Services.Interface
 {
@@ -9,5 +10,6 @@ namespace Fashion_Fuction.Services.Interface
         public Task<UserModel> UpdateUser(UserModel userModel);
         public Task<bool> DeleteUser(string userId);
         public Task<bool> AssignToRole(string userId, string roleIdNew);
+        public Task<bool> UpdateUserBill(IFormCollection collection, string userId);
     }
 }
